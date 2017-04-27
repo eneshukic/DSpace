@@ -9,8 +9,18 @@ ul.ds-simple-list.vocabulary ul {
     list-style: none;
 }
 
-header .navbar-brand img{
-    height: 22px;
+header .navbar-default {
+    margin-top: -10px;
+}
+
+header .navbar-brand img-responsive{
+    height: 175px;
+    width: 30px;
+}
+
+.trail-wrapper {
+  background-color: #ccc;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (max-width: $screen-xs-max) {

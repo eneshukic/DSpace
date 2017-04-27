@@ -7,7 +7,41 @@
  */
 // Preset Bootstrap variables
 // ----------------------
-$brand-primary: #607890 !default;
+$brand-primary: #FF0000 !default;
 
-$navbar-inverse-bg: #1F3F5E !default;
-$navbar-inverse-link-color: #eee !default;
+$navbar-inverse-bg: #ffffff !default;
+$navbar-inverse-link-color: #FF0000 !default;
+
+/**
+* Colours CSS
+**/
+
+$brand-primary:          #FF0000;
+$brand-warning:          #ff9b33;
+$brand-success:          #5cb85c;
+$brand-info:             #5bc0de;
+$brand-danger:           #d9534f;
+
+$gray-base:              #000;
+$gray-darker:            #222;
+$gray-dark:              #333;
+$gray:                   #555;
+$gray-light:             #777;
+$gray-lighter:           #eee;
+
+/**
+* Body background CSS
+**/
+$body-bg:               $gray-lighter !default;
+
+/**
+* Links CSS
+**/
+$link-color:            $brand-primary;
+$link-hover-color:      $brand-warning;
+$link-hover-decoration: underline;
+
+/**
+* Text CSS
+**/
+$text-color:            $gray-dark !default;
