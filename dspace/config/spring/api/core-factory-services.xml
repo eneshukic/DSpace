@@ -46,6 +46,7 @@
     <bean id="workflowServiceFactory" class="org.dspace.workflowbasic.factory.BasicWorkflowServiceFactoryImpl"/>
     <!--Configurable workflow services, uncomment to enable-->
     <!--<bean id="workflowServiceFactory" class="org.dspace.xmlworkflow.factory.XmlWorkflowServiceFactoryImpl"/>-->
+    <bean id="rateServiceFactory" class="org.dspace.rate.factory.RateServiceFactoryImpl" />
 
 
 

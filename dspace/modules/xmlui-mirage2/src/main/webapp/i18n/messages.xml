@@ -1017,7 +1017,9 @@
 	<message key="xmlui.administrative.Navigation.administrative_registries">Registries</message>
 	<message key="xmlui.administrative.Navigation.administrative_metadata">Metadata</message>
 	<message key="xmlui.administrative.Navigation.administrative_format">Format</message>
-    <message key="xmlui.administrative.Navigation.administrative_content">Content Administration</message>
+        <!-- new rate menu item EH -->
+    <message key="xmlui.administrative.Navigation.administrative_rate">Rate</message>
+        <message key="xmlui.administrative.Navigation.administrative_content">Content Administration</message>
 	<message key="xmlui.administrative.Navigation.administrative_items">Items</message>
     <message key="xmlui.administrative.Navigation.administrative_withdrawn">Withdrawn Items</message>
     <message key="xmlui.administrative.Navigation.administrative_private">Private Items</message>
@@ -2507,6 +2509,64 @@
     <message key="xmlui.Submission.submit.StartSubmissionLookupStep.submit_publication_item">Imported publication Record</message>
     <message key="xmlui.Submission.submit.progressbar.lookup">Lookup</message>
     <message key="xmlui.ChoiceLookupTransformer.lookup">Lookup</message>
+    
+    <!--Rate feature messages -->
+    <message key="xmlui.administrative.registries.general.rate_registry_trail">Rate registry</message>
+    <!-- org.dspace.app.xmlui.administrative.registries.FormatRegistryMain.java -->
+	<message key="xmlui.administrative.registries.RateRegistryMain.title">Rate Registry</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.head">Tarrif registry</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.para1">This list of active tarrifs and rates. You can edit or add new tarrif with this tool.</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.new_link">Add a new rate</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.column1"></message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.column2">ID</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.column3">Rate Grade</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.column4">Calculation Unit</message>
+	<message key="xmlui.administrative.registries.RateRegistryMain.column5">Rate Price</message>
+        <message key="xmlui.administrative.registries.RateRegistryMain.column6">Rate Description</message>
+	
+	<message key="xmlui.administrative.registries.RateRegistryMain.submit_delete">Delete rates</message>
+        <!-- org.dspace.app.xmlui.administrative.registries.EditRateRegistry.java -->
+	<message key="xmlui.administrative.registries.EditRateRegistry.title">Rate Registry</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.trail">Rate registry</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.head1">Rate Registry: "{0}"</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.para1">This is the rate registry for "{0}". You may add new or update existing rates. Rates may also be selected for deletion. </message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.head2">Rate fields</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.column1"></message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.column2">ID</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.column3">Rate Grade</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.column4">Calculation Unit</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.empty">No rates</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.submit_delete">Delete rates</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.head3">Add new rate</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.rateGrade">Rate Grade</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.calculationUnit">Calculation Unit</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.rateDescription">Rate Description.</message>
+        <message key="xmlui.administrative.registries.EditRateRegistry.price">Price.</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.submit_add">Add new rate</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.head4">Update Rate: {0}</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.submit_update">Update rate</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error">Error</message>
+        <message key="xmlui.administrative.registries.EditRateRegistry.error_rate_grade">Enter rate grade</message>
+        <message key="xmlui.administrative.registries.EditRateRegistry.error_price">Enter price</message>
+        <message key="xmlui.administrative.registries.EditRateRegistry.calculation_unit">Enter calculation unit</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error_duplicate_field">The rate grade is already in use, all rate grades must be unique.</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_empty">The rate's element is required.</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">The rates's element contains a bad character. The element may NOT contain: periods, underscores, or spaces.</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_tolong">The rate's element is to long, it must be less than 50 characters.</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_tolong">The rate's qualifier is to long, it must be less than 32 characters.</message>
+	<message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">The rate's qualifier contains a bad character. The qualifier may NOT contain: periods, underscores, or spaces.</message>
+        
+        <message key="xmlui.administrative.registries.DeleteRateConfirm.title">Delete Rate</message>
+	<message key="xmlui.administrative.registries.DeleteRateConfirm.trail">Delete rate</message>
+	<message key="xmlui.administrative.registries.DeleteRateConfirm.head">Confirm Deletion</message>
+	<message key="xmlui.administrative.registries.DeleteRateConfirm.para1">Are you sure the rate should be deleted? Any existing rates of will be reverted to the unknown bitstream format.</message>
+	<message key="xmlui.administrative.registries.DeleteRateConfirm.column1">ID</message>
+	<message key="xmlui.administrative.registries.DeleteRateConfirm.column2">Rate Grade</message>
+        
+        <message key="xmlui.administrative.FlowRateRegistryUtils.edit_rate_success_notice">The rate was successfully saved.</message>
+	<message key="xmlui.administrative.FlowRateRegistryUtils.delete_rate_success_notice">The rate(s) were successfully deleted.</message>
+	
+        <!--end rate feature messages-->
 
 
 </catalogue>

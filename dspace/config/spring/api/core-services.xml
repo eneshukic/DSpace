@@ -115,5 +115,7 @@
     <bean class="org.dspace.xmlworkflow.XmlWorkflowServiceImpl"/>
     <bean class="org.dspace.xmlworkflow.WorkflowRequirementsServiceImpl"/>
     <bean class="org.dspace.xmlworkflow.XmlWorkflowFactoryImpl"/>-->
+    
+    <bean class="org.dspace.rate.RateServiceImpl" />
 
 </beans>
