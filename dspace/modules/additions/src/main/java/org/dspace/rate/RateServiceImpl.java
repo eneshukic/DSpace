@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  
 import java.sql.SQLException;
 import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -58,6 +59,11 @@ public class RateServiceImpl implements RateService {
     public Rate findByRateGrade(Context context, String rateGrade) throws SQLException {
         return rateDAO.findRateByRateGrade(context,rateGrade);
     }
+    
+   /* @Override
+    public List<Object[]> calculateCost(Context context, UUID Id, String  costTypeId) throws SQLException {
+        return rateDAO.calculateRateCost(context, Id, costTypeId);
+    }*/
  
  
 }

@@ -5,9 +5,9 @@
  */
 package org.dspace.rate.dao.impl;
 
-import org.dspace.rate.Rate;
-import org.dspace.rate.dao.RateDAO;
 import org.dspace.core.AbstractHibernateDAO;
+import org.dspace.rate.CostCalculation;
+import org.dspace.rate.dao.CostCalculationDAO;
 import org.dspace.core.Context;
 import org.dspace.eperson.EPerson;
 import org.hibernate.Criteria;
@@ -17,22 +17,13 @@ import org.hibernate.criterion.Restrictions;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
-
 /**
  *
  * @author Enes
  */
-public class RateDAOImpl extends AbstractHibernateDAO<Rate> implements RateDAO {
-    
+public class CostCalculationDAOImpl extends AbstractHibernateDAO<CostCalculation> implements CostCalculationDAO {
     @Override
-    public Rate findRateByRateGrade(Context context, String rateGrade) throws SQLException{
-        Criteria criteria = createCriteria(context,Rate.class);
-        //criteria.add(Restrictions.and(Restrictions.eq("rate_grade",rateGrade)));
-        criteria.add(Restrictions.eq("rate_grade",rateGrade));
-        return uniqueResult(criteria);
-    }
-/*    @Override
-    public List<Object[]> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException {
+    public List<CostCalculation> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException {
         String strQuery = "select mv.text_value, count (mv.text_value) kol, r.rate_description, sum(r.price) pricet " +
 "from metadatavalue mv " +
 "inner join metadatafieldregistry mfr on mfr.metadata_field_id = mv.metadata_field_id " +
@@ -72,7 +63,7 @@ public class RateDAOImpl extends AbstractHibernateDAO<Rate> implements RateDAO {
             default:
                 break;
         }
-        return list<Object[]>(query,Rate.class);
-    }*/
-    
+        //return list<CostCalculation>(query,CostCalculation.class);
+        return list(query);
+    }
 }

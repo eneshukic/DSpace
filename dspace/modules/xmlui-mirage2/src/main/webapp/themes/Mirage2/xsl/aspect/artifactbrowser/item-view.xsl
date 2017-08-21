@@ -507,6 +507,18 @@
                 </td>
             <td class="word-break">
               <xsl:copy-of select="./node()"/>
+			  <!-- View Item Bounding Box on Map-->
+                    <xsl:if test="./@element='coverage' and ./@qualifier='spatial'">
+                        <div id="map" class="smallmap"
+                             style="width: 100%; height: 200px; border: 1px solid #ccc; display:block; clear: both;"></div>
+                        <script defer="defer" type="text/javascript">
+                            var mapID='map';
+                            addMap(mapID,'null');
+                            var itemBoundingBox='<xsl:copy-of select="./node()"/>';
+                            var itemCoords=itemBoundingBox.split(' ');
+                            addItemsBoxToMap(itemCoords[0],itemCoords[1],itemCoords[2],itemCoords[3]);
+                        </script>
+                    </xsl:if>
             </td>
                 <td><xsl:value-of select="./@language"/></td>
             </tr>

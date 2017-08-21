@@ -156,7 +156,7 @@ public class EditRateRegistry extends AbstractDSpaceTransformer   {
                 if (rateDescription == null) {
                     rateDescription = rate.getRateDescription();
                 }
-                if (price == null) {
+                if (price.compareTo(BigDecimal.ZERO)==0) {
                     price = rate.getPrice();
                 }
             }
@@ -182,7 +182,7 @@ public class EditRateRegistry extends AbstractDSpaceTransformer   {
             //name.setHelp(T_name_help);
             tRateGrade.setValue(rateGrade);
             tRateGrade.setSize(35);
-            if (errors.contains("grade"))
+            if (errors.contains("rate_grade"))
             {
                 tRateGrade.addError(T_error_rate_grade);
             }
@@ -204,7 +204,7 @@ public class EditRateRegistry extends AbstractDSpaceTransformer   {
             //mimeType.setHelp(T_mimetype_help);
             tCalculationUnit.setValue(calculationUnit);
             tCalculationUnit.setSize(35);
-            if (errors.contains("calculation"))
+            if (errors.contains("calculation_unit"))
             {
                 tCalculationUnit.addError(T_error_calculation_unit);
             }

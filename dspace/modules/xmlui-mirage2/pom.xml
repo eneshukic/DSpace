@@ -92,7 +92,7 @@
                                         <exclude>**/*.xsl</exclude>
                                         <exclude>**/*.js</exclude>
                                     </excludes>
-                                    <filtering>true</filtering>
+                                    <filtering>false</filtering>
                                 </resource>
                                 <resource>
                                     <directory>${basedir}/src/main/webapp/themes</directory>

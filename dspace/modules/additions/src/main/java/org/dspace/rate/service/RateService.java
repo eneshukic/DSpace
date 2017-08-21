@@ -6,12 +6,10 @@
 package org.dspace.rate.service;
 
 import org.dspace.rate.Rate;
-import org.dspace.eperson.EPerson;
 import org.dspace.core.Context;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
-import org.dspace.service.DSpaceCRUDService;
+import java.util.UUID;
 
 /**
  *
@@ -29,4 +27,6 @@ public interface RateService   {
     public List<Rate> findAll(Context context) throws SQLException;
  
     public Rate findByRateGrade(Context context, String rateGrade) throws SQLException;
+    
+    //\public List<Object[]> calculateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
 }

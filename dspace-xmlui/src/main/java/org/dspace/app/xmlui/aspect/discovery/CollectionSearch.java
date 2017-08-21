@@ -232,6 +232,7 @@ public class CollectionSearch extends AbstractDSpaceTransformer implements Cache
             para.addContent(" ");
             para.addText("query");
             para.addContent(" ");
+            para.addHidden("spatial-query","spatial-search");
             para.addButton("submit").setValue(T_go);
             //query.addPara().addXref(contextPath + "/handle/" + collection.getHandle()+ "/advanced-search", T_advanced_search_link);
 

@@ -58,6 +58,7 @@
     <bean class="org.dspace.xmlworkflow.storedcomponents.dao.impl.WorkflowItemRoleDAOImpl"/>
     <bean class="org.dspace.xmlworkflow.storedcomponents.dao.impl.XmlWorkflowItemDAOImpl"/>
     <bean class="org.dspace.rate.dao.impl.RateDAOImpl"/>
+    <bean class="org.dspace.rate.dao.impl.CostCalculationDAOImpl"/>
 
 
 

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package org.dspace.rate.dao;
-import org.dspace.rate.Rate;
+import org.dspace.rate.CostCalculation;
 import org.dspace.core.Context;
 import org.dspace.core.GenericDAO;
 import org.dspace.eperson.EPerson;
@@ -15,8 +15,6 @@ import java.util.UUID;
  *
  * @author Enes
  */
-public interface RateDAO extends GenericDAO<Rate> {
-    public Rate findRateByRateGrade(Context context, String rateGrade) throws SQLException;
-  //  public List<Object[]> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
-    
+public interface CostCalculationDAO extends GenericDAO<CostCalculation>{
+    public List<CostCalculation> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
 }

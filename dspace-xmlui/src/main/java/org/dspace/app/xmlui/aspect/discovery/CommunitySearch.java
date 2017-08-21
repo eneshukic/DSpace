@@ -195,6 +195,7 @@ public class CommunitySearch extends AbstractDSpaceTransformer implements Cachea
             para.addContent(" ");
             para.addText("query");
             para.addContent(" ");
+            para.addHidden("spatial-query","spatial-search");
             para.addButton("submit").setValue(T_go);
            //query.addPara().addXref(contextPath + "/handle/" + community.getHandle() + "/advanced-search", T_advanced_search_link);
 

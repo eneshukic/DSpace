@@ -66,6 +66,7 @@ public class SimpleSearch extends AbstractSearch implements CacheableProcessingC
     private static final Message T_go = message("xmlui.general.go");
     private static final Message T_filter_label = message("xmlui.Discovery.SimpleSearch.filter_head");
     private static final Message T_filter_help = message("xmlui.Discovery.SimpleSearch.filter_help");
+    private static final Message T_filter_spatial = message("xmlui.Discovery.AbstractSearch.filters.controls.spatial.head");
     private static final Message T_filter_current_filters = message("xmlui.Discovery.AbstractSearch.filters.controls.current-filters.head");
     private static final Message T_filter_new_filters = message("xmlui.Discovery.AbstractSearch.filters.controls.new-filters.head");
     private static final Message T_filter_controls_apply = message("xmlui.Discovery.AbstractSearch.filters.controls.apply-filters");
@@ -165,6 +166,9 @@ public class SimpleSearch extends AbstractSearch implements CacheableProcessingC
         java.util.List<String> filterTypes = DiscoveryUIUtils.getRepeatableParameters(request, "filtertype");
         java.util.List<String> filterOperators = DiscoveryUIUtils.getRepeatableParameters(request, "filter_relational_operator");
         java.util.List<String> filterValues = DiscoveryUIUtils.getRepeatableParameters(request,  "filter");
+        String spatialFilterField;
+        String spatialQuery= request.getParameter("spatial-query");
+        String spatialRelation= request.getParameter("spatial-relation");
 
         if(0 < filterFields.size() && filterTypes.size() == 0)
         {
@@ -184,7 +188,22 @@ public class SimpleSearch extends AbstractSearch implements CacheableProcessingC
             filtersWrapper.addPara(T_filter_help);
             Table filtersTable = filtersWrapper.addTable("discovery-filters", 1, 4, "discovery-filters");
 
-
+            
+            //Spatial Filter   
+            for (DiscoverySearchFilter searchFilter : filterFields)
+            {
+                if (StringUtils.equals(searchFilter.getType(), "location")){
+                    spatialFilterField= searchFilter.getIndexFieldName();
+                    filtersTable.addRow(Row.ROLE_HEADER).addCell("", Cell.ROLE_HEADER, 1, 4, "new-filter-header").addContent(T_filter_spatial);
+                    Row spatialRow = filtersTable.addRow("filter-spatial", Row.ROLE_DATA, "search-filter spatial-filter");
+                    if (StringUtils.isNotBlank(spatialQuery)){     
+                        addSpatialFilterRow( spatialRow, spatialFilterField ,  spatialQuery);       
+                    }else{
+                        addSpatialFilterRow( spatialRow, spatialFilterField,  null);     
+                    }
+                }   
+            }
+           
             //If we have any filters, show them
             if(filterTypes.size() > 0)
             {
@@ -244,9 +263,11 @@ public class SimpleSearch extends AbstractSearch implements CacheableProcessingC
         //For each field found (at least one) add options
         for (DiscoverySearchFilter searchFilter : filterFields)
         {
-            select.addOption(StringUtils.equals(searchFilter.getIndexFieldName(), selectedFilterType), searchFilter.getIndexFieldName(), message("xmlui.ArtifactBrowser.SimpleSearch.filter." + searchFilter.getIndexFieldName()));
+            if (!searchFilter.getType().equals("location")){//Add Filter if is not location 
+                select.addOption(StringUtils.equals(searchFilter.getIndexFieldName(), selectedFilterType), searchFilter.getIndexFieldName(), message("xmlui.ArtifactBrowser.SimpleSearch.filter." + searchFilter.getIndexFieldName()));
+            }
         }
-        Select typeSelect = row.addCell("", Cell.ROLE_DATA, "selection").addSelect("filter_relational_operator_" + index);
+        Select typeSelect = row.addCell("", Cell.ROLE_DATA, "selection").addSelect("filter_relational_operator_" + index);      
         typeSelect.addOption(StringUtils.equals(relationalOperator, "contains"), "contains", T_filter_contain);
         typeSelect.addOption(StringUtils.equals(relationalOperator, "equals"), "equals", T_filter_equals);
         typeSelect.addOption(StringUtils.equals(relationalOperator, "authority"), "authority", T_filter_authority);
@@ -265,6 +286,12 @@ public class SimpleSearch extends AbstractSearch implements CacheableProcessingC
         buttonsCell.addButton("add-filter_" + index, "filter-control filter-add").setValue(T_filter_controls_add);
         buttonsCell.addButton("remove-filter_" + index, "filter-control filter-remove").setValue(T_filter_controls_remove);
 
+    }
+
+    protected void addSpatialFilterRow(Row row, String FilterType, String value) throws WingException {
+        Cell spatialCell = row.addCell(1, 4);
+        spatialCell.addHidden("spatial-index").setValue(FilterType);
+        spatialCell.addHidden("spatial-query", "spatial-search").setValue(value);
     }
 
     @Override

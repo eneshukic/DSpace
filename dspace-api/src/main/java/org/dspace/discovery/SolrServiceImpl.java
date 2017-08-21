@@ -1150,6 +1150,13 @@ public class SolrServiceImpl implements SearchService, IndexingService {
                                 value = DateFormatUtils.formatUTC(date, "yyyy-MM-dd");
                             }
                         }
+                        if (searchFilter.getType().equals(DiscoveryConfigurationParameters.TYPE_LOCATION)) {
+                            //For our search filters that are spatial location we format them properly
+                            if (value != null) {
+                                DCBoundingBox dcbb = new DCBoundingBox(value);
+                                value = dcbb.getWest() + " " + dcbb.getSouth() + " " + dcbb.getEast() + " " + dcbb.getNorth();
+                            }
+                        }
                         doc.addField(searchFilter.getIndexFieldName(), value);
                         doc.addField(searchFilter.getIndexFieldName() + "_keyword", value);
 
@@ -2083,6 +2090,21 @@ public class SolrServiceImpl implements SearchService, IndexingService {
                 	}
                 	filterQuery.append(value);
                 }
+            }
+            // Spatial search
+            else if("intersects".equals(operator) || "iswithin".equals(operator))
+            {
+                String trueOperator = "";
+                if ("intersects".equals(operator)) {
+                    trueOperator = "Intersects";
+                } else {
+                    trueOperator = "IsWithin";
+                }
+
+                filterQuery.append('"').append(trueOperator).append("(");
+                DCBoundingBox dcbb=new DCBoundingBox(value);
+                value=dcbb.getWest() + " " + dcbb.getSouth() + " " + dcbb.getEast()+ " " + dcbb.getNorth();
+                filterQuery.append(value).append(")").append('"');
             }
             else{
                 //DO NOT ESCAPE RANGE QUERIES !

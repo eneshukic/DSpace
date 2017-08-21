@@ -43,6 +43,7 @@ to administer DSpace.
                         <map:transformer name="RateRegistryMain" src="org.dspace.app.xmlui.aspect.administrative.registries.RateRegistryMain"/>
                         <map:transformer name="EditRateRegistry" src="org.dspace.app.xmlui.aspect.administrative.registries.EditRateRegistry"/>
                         <map:transformer name="DeleteRateConfirm" src="org.dspace.app.xmlui.aspect.administrative.registries.DeleteRateConfirm"/>
+                        <map:transformer name="CalculateCost" src="org.dspace.app.xmlui.aspect.administrative.collection.CalculateCost"/>
 			
 			<map:transformer name="FindItemForm" src="org.dspace.app.xmlui.aspect.administrative.item.FindItemForm"/>
 			<map:transformer name="EditItemStatusForm" src="org.dspace.app.xmlui.aspect.administrative.item.EditItemStatusForm"/>
@@ -185,6 +186,16 @@ to administer DSpace.
 							<map:call continuation="{1}"/>
 						</map:match>
 						<map:call function="startManageRateRegistry"/>
+					</map:match>
+                                        
+                                         <!--
+						This is the general entry / resume point for the
+						cost calculation
+						-->
+					<map:match pattern="admin/cost-registry">
+						<map:match type="request" pattern="administrative-continue">
+							<map:call continuation="{1}"/>
+						</map:match>
 					</map:match>
 					
 					
@@ -556,11 +567,11 @@ to administer DSpace.
 		        		</map:match>
 		        		
 		        		<!--
-		        			Confirm the deletion of formats
+		        			Confirm the deletion of rates
 		        			-->
 		        		<map:match pattern="admin/rate-registry/delete">
 		        			<map:transform type="DeleteRateConfirm">
-		        				<map:parameter name="IDs" value="{flow-attribute:rateIDs}"/>
+		        				<map:parameter name="IDs" value="{flow-attribute:IDs}"/>
 		        			</map:transform>
 		        		</map:match>
 		        		

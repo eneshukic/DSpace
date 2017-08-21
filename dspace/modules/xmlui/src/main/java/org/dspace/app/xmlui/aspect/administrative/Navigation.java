@@ -91,6 +91,9 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
 
     private static final Message T_context_export_item 				= message("xmlui.administrative.Navigation.context_export_item");
     private static final Message T_context_export_collection 		= message("xmlui.administrative.Navigation.context_export_collection");
+    private static final Message T_context_cost_collection 		= message("xmlui.administrative.Navigation.context_cost_collection");
+    private static final Message T_context_cost_community 		= message("xmlui.administrative.Navigation.context_cost_community");
+    private static final Message T_context_cost_item 		= message("xmlui.administrative.Navigation.context_cost_item");
     private static final Message T_context_export_community 		= message("xmlui.administrative.Navigation.context_export_community");
     private static final Message T_account_export			 		= message("xmlui.administrative.Navigation.account_export");
 
@@ -240,6 +243,8 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
                     {
                         context.addItem().addXref(contextPath+"/admin/export?itemID="+item.getID(), T_context_export_item );
                         context.addItem().addXref(contextPath+ "/csv/handle/"+dso.getHandle(),T_context_export_metadata );
+                        //calculate item cost
+                        context.addItem().addXref(contextPath+"/admin/cost-registry?ID="+item.getID()+"&costTypeId=item", T_context_cost_item );
                     }
                 }
     	}
@@ -257,6 +262,8 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
                 {
                     context.addItem().addXref(contextPath+"/admin/export?collectionID="+collection.getID(), T_context_export_collection );
                     context.addItem().addXref(contextPath+ "/csv/handle/"+dso.getHandle(),T_context_export_metadata );
+                    //calculate collection cost
+                    context.addItem().addXref(contextPath+"/admin/cost-registry?ID="+collection.getID()+"&costTypeId=collection", T_context_cost_collection );
                 }
             }
     	}
@@ -272,6 +279,8 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
             	if (authorizeService.isAdmin(this.context, dso))
                 {
                     context.addItem().addXref(contextPath + "/admin/export?communityID=" + community.getID(), T_context_export_community);
+                    //calculate community cost
+                    context.addItem().addXref(contextPath+"/admin/cost-registry?ID="+community.getID()+"&costTypeId=community", T_context_cost_collection );
                 }
                 context.addItem().addXref(contextPath+ "/csv/handle/"+dso.getHandle(),T_context_export_metadata );
             }
