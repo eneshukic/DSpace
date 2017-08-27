@@ -8,6 +8,7 @@ package org.dspace.app.xmlui.aspect.administrative.registries;
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.UUID;
 
 import org.dspace.app.xmlui.cocoon.AbstractDSpaceTransformer;
 import org.dspace.app.xmlui.wing.Message;
@@ -158,6 +159,8 @@ public class RateRegistryMain extends AbstractDSpaceTransformer {
         main.addPara().addButton("submit_delete").setValue(T_submit_delete);
 
         main.addHidden("administrative-continue").setValue(knot.getId());
+        
+        
 
     }
     

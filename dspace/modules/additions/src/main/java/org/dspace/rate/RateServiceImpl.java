@@ -60,10 +60,10 @@ public class RateServiceImpl implements RateService {
         return rateDAO.findRateByRateGrade(context,rateGrade);
     }
     
-   /* @Override
+    @Override
     public List<Object[]> calculateCost(Context context, UUID Id, String  costTypeId) throws SQLException {
         return rateDAO.calculateRateCost(context, Id, costTypeId);
-    }*/
+    }
  
  
 }

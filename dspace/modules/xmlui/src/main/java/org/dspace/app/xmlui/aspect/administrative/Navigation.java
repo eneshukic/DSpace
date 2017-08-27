@@ -244,7 +244,7 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
                         context.addItem().addXref(contextPath+"/admin/export?itemID="+item.getID(), T_context_export_item );
                         context.addItem().addXref(contextPath+ "/csv/handle/"+dso.getHandle(),T_context_export_metadata );
                         //calculate item cost
-                        context.addItem().addXref(contextPath+"/admin/cost-registry?ID="+item.getID()+"&costTypeId=item", T_context_cost_item );
+                        context.addItem().addXref(contextPath+"/admin/cost-calculation?ID="+item.getID()+"&costTypeId=itemID", T_context_cost_item );
                     }
                 }
     	}
@@ -263,7 +263,7 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
                     context.addItem().addXref(contextPath+"/admin/export?collectionID="+collection.getID(), T_context_export_collection );
                     context.addItem().addXref(contextPath+ "/csv/handle/"+dso.getHandle(),T_context_export_metadata );
                     //calculate collection cost
-                    context.addItem().addXref(contextPath+"/admin/cost-registry?ID="+collection.getID()+"&costTypeId=collection", T_context_cost_collection );
+                    context.addItem().addXref(contextPath+"/admin/cost-calculation?ID="+collection.getID()+"&costTypeId=collectionID", T_context_cost_collection );
                 }
             }
     	}
@@ -280,7 +280,7 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
                 {
                     context.addItem().addXref(contextPath + "/admin/export?communityID=" + community.getID(), T_context_export_community);
                     //calculate community cost
-                    context.addItem().addXref(contextPath+"/admin/cost-registry?ID="+community.getID()+"&costTypeId=community", T_context_cost_collection );
+                    context.addItem().addXref(contextPath+"/admin/cost-calculation?ID="+community.getID()+"&costTypeId=communityID", T_context_cost_community );
                 }
                 context.addItem().addXref(contextPath+ "/csv/handle/"+dso.getHandle(),T_context_export_metadata );
             }
@@ -290,7 +290,7 @@ public class Navigation extends AbstractDSpaceTransformer implements CacheablePr
             {
             	context.setHead(T_context_head);
             	context.addItemXref(contextPath+"/admin/collection?createNew&communityID=" + community.getID(), T_context_create_collection);
-                context.addItemXref(contextPath+"/admin/community?createNew&communityID=" + community.getID(), T_context_create_subcommunity);      
+                context.addItemXref(contextPath+"/admin/community?createNew&communityID=" + community.getID(), T_context_create_subcommunity); 
             }
     	}
     	

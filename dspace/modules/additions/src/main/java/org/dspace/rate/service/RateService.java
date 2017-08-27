@@ -28,5 +28,5 @@ public interface RateService   {
  
     public Rate findByRateGrade(Context context, String rateGrade) throws SQLException;
     
-    //\public List<Object[]> calculateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
+    public List<Object[]> calculateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
 }

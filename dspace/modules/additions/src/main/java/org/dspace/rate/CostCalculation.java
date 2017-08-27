@@ -7,15 +7,24 @@ package org.dspace.rate;
 
 import java.math.BigDecimal;
 import javax.persistence.*;
+
 /**
  *
  * @author Enes
  */
+//@Entity
+//@Table("calc_report")
 public class CostCalculation {
+    //@Id
+    //@Column(name = "id", unique = true, nullable = false, length = 50)
     private String rateGrade;
+    //@Column(name="kol")
     private Integer kol;
+    //@Column(name="rate_description", length=1000)
     private String rateDescription;
+    //@Column(name="calculation_unit",  length=50)
     private String calculationUnit;
+    //@Column(name="price", precision=7, scale=2)
     private BigDecimal price;
     
     protected CostCalculation (){

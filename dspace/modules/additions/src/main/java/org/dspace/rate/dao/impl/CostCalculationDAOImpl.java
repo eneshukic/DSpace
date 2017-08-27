@@ -24,19 +24,18 @@ import java.util.UUID;
 public class CostCalculationDAOImpl extends AbstractHibernateDAO<CostCalculation> implements CostCalculationDAO {
     @Override
     public List<CostCalculation> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException {
-        String strQuery = "select mv.text_value, count (mv.text_value) kol, r.rate_description, sum(r.price) pricet " +
-"from metadatavalue mv " +
-"inner join metadatafieldregistry mfr on mfr.metadata_field_id = mv.metadata_field_id " +
-"inner join rate r on r.rate_grade = mv.text_value " +
-"where mfr.element = 'tarrif' " +
-"and dspace_object_id in (select i.uuid " +
-"                        from item i " +
-"                        inner join collection2item c2i on c2i.item_id = i.uuid " +
-"inner join collection c on c.uuid = c2i.collection_id " +
-                " inner join community2collection c2c on c2c.collection_id = c.uuid where ) ";
+        String strQuery = "select   mv.text_value, count (mv.text_value)as kol, r.rate_description, r.calculation_unit, sum(r.price) as price\n" +
+"from metadatavalue mv\n " +
+"inner join metadatafieldregistry mfr on mfr.metadata_field_id = mv.metadata_field_id\n" +
+"inner join rate r on r.rate_grade = mv.text_value\n" +
+"inner join item i on i.uuid = mv.dspace_object_id\n" +
+"inner join collection2item c2i on c2i.item_id = i.uuid\n" +
+"inner join collection c on c.uuid = c2i.collection_id\n" +
+"inner join community2collection c2c on c2c.collection_id = c.uuid\n" +
+"where mfr.element = 'tarrif' ) ";
         switch (costTypeId) {
             case ("communityID"):
-                strQuery.concat("c2c.commnity_id = :community_id ");
+                strQuery.concat("c2c.community_id = :community_id ");
                 break;
             case ("collectionID"):
                 strQuery.concat("c.uuid = :collection_id ");
@@ -63,7 +62,7 @@ public class CostCalculationDAOImpl extends AbstractHibernateDAO<CostCalculation
             default:
                 break;
         }
-        //return list<CostCalculation>(query,CostCalculation.class);
+        //return List<CalculationCost>(query,CostCalculation.class);
         return list(query);
     }
 }

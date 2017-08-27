@@ -56,6 +56,9 @@ public class CommunitySearch extends AbstractDSpaceTransformer implements Cachea
 
     private static final Message T_head_sub_collections =
         message("xmlui.ArtifactBrowser.CommunityViewer.head_sub_collections");
+    
+    private static final Message T_spatial_search =
+        message("xmlui.ArtifactBrowser.CommunityViewer.spatial_search");
 
     /** Cached validity object */
     private SourceValidity validity;
@@ -195,7 +198,9 @@ public class CommunitySearch extends AbstractDSpaceTransformer implements Cachea
             para.addContent(" ");
             para.addText("query");
             para.addContent(" ");
-            para.addHidden("spatial-query","spatial-search");
+            para.addContent(T_spatial_search);
+            //para.addHidden("spatial-query","spatial-search");
+            para.addText("spatial-query","spatial-search");
             para.addButton("submit").setValue(T_go);
            //query.addPara().addXref(contextPath + "/handle/" + community.getHandle() + "/advanced-search", T_advanced_search_link);
 

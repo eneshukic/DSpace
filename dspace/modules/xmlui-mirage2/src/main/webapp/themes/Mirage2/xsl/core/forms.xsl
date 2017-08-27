@@ -710,7 +710,7 @@
                 <!-- For spatial query form element!! -->
                 <xsl:if test="@rend='spatial-search'">
                     <div class="spatial-search-div">
-                        <p style="width:100%; "><b><i18n:text>xmlui.Spatial.Map.Search</i18n:text></b></p>
+                        <!--<p style="width:100%; "><b><i18n:text>xmlui.Spatial.Map.Search</i18n:text></b></p>-->
                         <div class="smallmap" style="width: 100%; height: 225px; border: 1px solid #ccc; display:inline-block; clear: both; ">
                             <xsl:attribute name="id">
                                 <xsl:value-of select="@id"/>

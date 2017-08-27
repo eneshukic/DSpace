@@ -479,6 +479,39 @@ function startManageFormatRegistry()
 	cocoon.exit();
 }
 
+
+/**
+ * Start managing cost calculation
+ */
+
+function startCostCalculation()
+{
+	assertAdministrator();
+
+	doManageCostCalculation();
+
+	// This should never return, but just in case it does then point
+	// the user to the home page.
+	cocoon.redirectTo(cocoon.request.getContextPath());
+	getDSContext().complete();
+        cocoon.exit();
+}
+function doManageCostCalculation()
+{
+    assertAdministrator();
+
+    var ID = UUID.fromString(cocoon.request.get("ID"));; 
+    var costTypeId = cocoon.request.get("costTypeId"); 
+    var result = null;
+    do {
+        sendPageAndWait("admin/cost-calculation/main",{"ID":ID,"costTypeId":costTypeId},result);
+        assertAdministrator();
+		result = null;
+
+        
+    } while (true)
+}
+
 /**
  * Start managing the rate registry
  */

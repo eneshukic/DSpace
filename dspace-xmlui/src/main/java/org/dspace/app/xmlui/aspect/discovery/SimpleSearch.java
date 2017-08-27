@@ -291,7 +291,7 @@ public class SimpleSearch extends AbstractSearch implements CacheableProcessingC
     protected void addSpatialFilterRow(Row row, String FilterType, String value) throws WingException {
         Cell spatialCell = row.addCell(1, 4);
         spatialCell.addHidden("spatial-index").setValue(FilterType);
-        spatialCell.addHidden("spatial-query", "spatial-search").setValue(value);
+        spatialCell.addHidden("spatial-query","spatial-search").setValue(value);
     }
 
     @Override

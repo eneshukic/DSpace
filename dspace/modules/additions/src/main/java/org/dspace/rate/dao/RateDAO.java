@@ -17,6 +17,6 @@ import java.util.UUID;
  */
 public interface RateDAO extends GenericDAO<Rate> {
     public Rate findRateByRateGrade(Context context, String rateGrade) throws SQLException;
-  //  public List<Object[]> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
+    public List<Object[]> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException;
     
 }
