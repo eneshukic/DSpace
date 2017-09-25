@@ -72,7 +72,7 @@ public  class ImageMagickPreviewFilter  extends MediaFilter //implements SelfReg
     @Override
     public String getFilteredName(String oldFilename)
     {
-        return oldFilename + ".jpg";
+        return oldFilename + "_preview.jpg";
     }
 
     /**

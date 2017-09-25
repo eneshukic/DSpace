@@ -9,6 +9,9 @@ package org.dspace.app.xmlui.aspect.discovery;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -30,6 +33,7 @@ import org.dspace.authorize.AuthorizeException;
 import org.dspace.content.Collection;
 import org.dspace.content.Community;
 import org.dspace.content.DSpaceObject;
+import org.dspace.core.Constants;
 import org.dspace.core.LogManager;
 import org.xml.sax.SAXException;
 
@@ -59,6 +63,8 @@ public class CommunitySearch extends AbstractDSpaceTransformer implements Cachea
     
     private static final Message T_spatial_search =
         message("xmlui.ArtifactBrowser.CommunityViewer.spatial_search");
+    private static final Message T_spatial_upload_search =
+        message("xmlui.ArtifactBrowser.CommunityViewer.spatial_upload_search");
 
     /** Cached validity object */
     private SourceValidity validity;
@@ -161,7 +167,7 @@ public class CommunitySearch extends AbstractDSpaceTransformer implements Cachea
     {
 
         DSpaceObject dso = HandleUtil.obtainHandle(objectModel);
-
+        
         if (!(dso instanceof Community))
         {
             return;
@@ -201,6 +207,15 @@ public class CommunitySearch extends AbstractDSpaceTransformer implements Cachea
             para.addContent(T_spatial_search);
             //para.addHidden("spatial-query","spatial-search");
             para.addText("spatial-query","spatial-search");
+            para.addXref(contextPath + "/admin/import-search?hid=" + community.getHandle(),T_spatial_upload_search);
+            // Only add the submit link if the user has the ability to add items.
+        //if (authorizeService.authorizeActionBoolean(context, community, Constants.READ))
+        //{
+	        //Division home = body.addDivision("collection-home","primary repository collection");
+	 //       Division viewer = home.addDivision("collection-view","secondary");
+	 //       String submitURL = contextPath + "/handle/" + community.getHandle() + "/submit";
+	 //       viewer.addPara().addXref(submitURL,T_submit); 
+        //}
             para.addButton("submit").setValue(T_go);
            //query.addPara().addXref(contextPath + "/handle/" + community.getHandle() + "/advanced-search", T_advanced_search_link);
 

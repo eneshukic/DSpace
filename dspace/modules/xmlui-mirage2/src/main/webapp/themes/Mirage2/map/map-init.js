@@ -28,6 +28,24 @@ var vector = new ol.layer.Vector({
 
 var draw;
 
+
+//get query strings
+function getQueryStrings() { 
+  var assoc  = {};
+  var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+  var queryString = location.search.substring(1); 
+  var keyValues = queryString.split('&'); 
+
+  for(var i in keyValues) { 
+    var key = keyValues[i].split('=');
+    if (key.length > 1) {
+      assoc[decode(key[0])] = decode(key[1]);
+    }
+  } 
+
+  return assoc; 
+} 
+
 function handleSearch(extent) {
     var reprojectedExtent = ol.proj.transformExtent(extent, 'EPSG:3857', 'EPSG:31276');
     //document.getElementById(fieldID).value = reprojectedExtent[0] + "," + reprojectedExtent[2] + "," + reprojectedExtent[1] + "," + reprojectedExtent[3];

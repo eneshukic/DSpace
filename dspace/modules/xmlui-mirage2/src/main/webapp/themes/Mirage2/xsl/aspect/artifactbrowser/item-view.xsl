@@ -504,6 +504,12 @@
                         <xsl:text>.</xsl:text>
                         <xsl:value-of select="./@qualifier"/>
                     </xsl:if>
+                    <!--append scope note label -->
+                    <xsl:if test="./@scopeNote">
+                        <xsl:text> (</xsl:text>
+                        <xsl:value-of select="./@scopeNote"/>
+                        <xsl:text> )</xsl:text>
+                    </xsl:if>
                 </td>
             <td class="word-break">
               <xsl:copy-of select="./node()"/>

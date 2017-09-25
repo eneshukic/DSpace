@@ -64,6 +64,9 @@ to administer DSpace.
                         <map:transformer name="MetadataImportMain" src="org.dspace.app.xmlui.aspect.administrative.metadataimport.MetadataImportMain"/>
                         <map:transformer name="MetadataImportUpload" src="org.dspace.app.xmlui.aspect.administrative.metadataimport.MetadataImportUpload"/>
                         <map:transformer name="MetadataImportConfirm" src="org.dspace.app.xmlui.aspect.administrative.metadataimport.MetadataImportConfirm"/>
+                        <!--handle search import parameters -->
+                        <map:transformer name="ImportSearchMain" src="org.dspace.app.xmlui.aspect.administrative.importsearch.ImportSearchMain"/>
+                        <map:transformer name="ImportSearchUpload" src="org.dspace.app.xmlui.aspect.administrative.importsearch.ImportSearchUpload"/>
 
             <map:transformer name="BatchImportMain" src="org.dspace.app.xmlui.aspect.administrative.batchimport.BatchImportMain"/>
             <map:transformer name="BatchImportUpload" src="org.dspace.app.xmlui.aspect.administrative.batchimport.BatchImportUpload"/>
@@ -165,7 +168,8 @@ to administer DSpace.
 						</map:match>
 						<map:call function="startManageMetadataRegistry"/>
 					</map:match>
-				
+                                        
+                                        				
 					<!--
 						This is the general entry / resume point for the
 						management of all bitstream formats
@@ -243,6 +247,17 @@ to administer DSpace.
                                                 
 						<map:call function="startMetadataImport"/>
 						
+					</map:match>
+                                        
+                                        <!--
+						This is the general entry / resume point for the 
+						import search data. 
+						-->
+					<map:match pattern="admin/import-search">
+						<map:match type="request" pattern="administrative-continue">
+							<map:call continuation="{1}"/>
+						</map:match>
+						<map:call function="startSearchImport"/>
 					</map:match>
 
                     <!--
@@ -764,6 +779,20 @@ to administer DSpace.
 		        			<map:transform type="MetadataImportConfirm">
 		        			</map:transform>
 		        		</map:match>
+                                        
+                                <!-- Metadata import search -->
+                                
+                                <map:match pattern="admin/import-search/main">
+		        			<map:transform type="ImportSearchMain">
+                                                    <map:parameter name="hid" value="{flow-attribute:hid}"/>
+                                                </map:transform>
+		        		</map:match>
+                                        
+                                        <map:match pattern="admin/import-search/upload">
+		        			<map:transform type="ImportSearchUpload">
+                                                    <map:parameter name="hid" value="{flow-attribute:hid}"/>
+                                                </map:transform>
+		        		</map:match>
 
                         <!-- Batch Metadata Editor -->
 
@@ -1036,6 +1065,9 @@ to administer DSpace.
 		    			<map:act type="StartAuthentication"/>
 		    		</map:match>
                     <map:match pattern="admin/metadataimport">
+		    			<map:act type="StartAuthentication"/>
+		    		</map:match>
+                                <map:match pattern="admin/import-search">
 		    			<map:act type="StartAuthentication"/>
 		    		</map:match>
                     <map:match pattern="admin/batchimport">

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package org.dspace.app.xmlui.aspect.administrative.registries;
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
@@ -51,6 +52,10 @@ public class CalculateCostMain extends AbstractDSpaceTransformer{
             message("xmlui.administrative.registries.CalculateCostMain.column4");
     private static final Message T_column5 =
             message("xmlui.administrative.registries.CalculateCostMain.column5");
+    private static final Message T_column6 =
+            message("xmlui.administrative.registries.CalculateCostMain.column6");
+    private static final Message T_totalprice =
+            message("xmlui.administrative.registries.CalculateCostMain.totalprice");
     
    // protected CostCalculation costCalculationService = CostCalculationServiceFactory.getInstance().getCostCalculationService();
     protected RateService rateService = RateServiceFactory.getInstance().getRateService();
@@ -68,10 +73,7 @@ public class CalculateCostMain extends AbstractDSpaceTransformer{
         // Get our parameters & state
         UUID Id = UUID.fromString(parameters.getParameter("ID", null));
         String costTypeId = parameters.getParameter("costTypeId",null);
-        //UUID Id = UUID.fromString("146d1bfa-72b4-4fbb-a8c9-2899d3627a2e");
-        //String costTypeId = "communityID";
-         
-       //List<CostCalculation> costs = costCalculationService.calculateCost(context, Id, costTypeId);
+        
         List<Object[]> costs = rateService.calculateCost(context, Id, costTypeId);
         // DIVISION: bitstream-format-registry
         Division main = body.addInteractiveDivision("cost-calculation",
@@ -88,9 +90,12 @@ public class CalculateCostMain extends AbstractDSpaceTransformer{
         header.addCellContent(T_column1);
         header.addCellContent(T_column2);
         header.addCellContent(T_column3);
-        header.addCellContent(T_column4);
         header.addCellContent(T_column5);
+        header.addCellContent(T_column4);
         
+        header.addCellContent(T_column6);
+        
+        BigDecimal totalPrice = BigDecimal.ZERO;
 
         for (Object[] cc : costs)
         {
@@ -98,10 +103,11 @@ public class CalculateCostMain extends AbstractDSpaceTransformer{
             String kol = (String) String.valueOf(cc[1]);
             String rateDescription = (String) cc[2];
             String calculationUnit = (String) cc[3];
-            String price = (String) String.valueOf(cc[4]);
-            //BigDecimal price = rate.getPrice();
+            String unitPrice = (String) String.valueOf(cc[4]);
+            String price = (String) String.valueOf(cc[5]);
+            BigDecimal bdprice = (BigDecimal) cc[5];
             //String price = String.valueOf(cc.getPrice());
-
+            totalPrice = totalPrice.add(bdprice);
             
             
             Row row;
@@ -127,6 +133,9 @@ public class CalculateCostMain extends AbstractDSpaceTransformer{
             // Calculation unit
             row.addCell().addContent(calculationUnit);
             
+             // unit Price
+            row.addCell().addContent(unitPrice); 
+            
             // kol
             row.addCell().addContent(kol);
             
@@ -134,7 +143,13 @@ public class CalculateCostMain extends AbstractDSpaceTransformer{
             row.addCell().addContent(price);       
             
         }
-
+        Row footer = table.addRow(Row.ROLE_HEADER);
+        footer.addCellContent(T_totalprice);
+        footer.addCellContent("");
+        footer.addCellContent("");
+        footer.addCellContent("");
+        footer.addCellContent("");
+        footer.addCellContent(String.valueOf(totalPrice));
 
     }
     

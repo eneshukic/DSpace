@@ -48,6 +48,7 @@ importClass(Packages.org.dspace.app.xmlui.aspect.administrative.FlowContainerUti
 importClass(Packages.org.dspace.app.xmlui.aspect.administrative.FlowCurationUtils);
 importClass(Packages.org.dspace.app.xmlui.aspect.administrative.FlowMetadataImportUtils);
 importClass(Packages.org.dspace.app.xmlui.aspect.administrative.FlowBatchImportUtils);
+importClass(Packages.org.dspace.app.xmlui.aspect.administrative.FlowImportSearchUtils);
 importClass(Packages.java.lang.System);
 
 /**
@@ -604,6 +605,19 @@ function startMetadataImport()
         assertAdministrator();
 
 	doMetadataImport();
+
+	cocoon.redirectTo(cocoon.request.getContextPath());
+        getDSContext().complete();
+	cocoon.exit();
+}
+
+//search parameters import
+function startSearchImport()
+{
+
+        assertAdministrator();
+
+	doSearchImport();
 
 	cocoon.redirectTo(cocoon.request.getContextPath());
         getDSContext().complete();
@@ -2069,6 +2083,41 @@ function doMapItems(collectionID)
             result = doMapItemBrowse(collectionID);
         }
     } while (true);
+}
+
+/**
+ * Manage search import
+ *
+ */
+
+function doSearchImport()
+{
+    var result;
+    var hid = cocoon.request.get("hid");
+
+    assertAdministrator();
+    do
+    {
+        sendPageAndWait("admin/import-search/main",{"hid":hid},result);
+        result = null;
+
+        if (cocoon.request.get("submit_upload"))
+        {
+            result = doSearchImportUpload(hid);
+
+        }
+
+    } while (true);
+}
+
+function doSearchImportUpload(hid)
+{
+    var result = FlowImportSearchUtils.processUpload(cocoon.request);
+
+    assertAdministrator();
+    
+        sendPageAndWait("admin/import-search/upload",{"hid":hid},result);
+        return null; //???
 }
 
 /**

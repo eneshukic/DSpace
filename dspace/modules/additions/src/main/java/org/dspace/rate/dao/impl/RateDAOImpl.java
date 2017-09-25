@@ -35,26 +35,8 @@ public class RateDAOImpl extends AbstractHibernateDAO<Rate> implements RateDAO {
     }
     @Override
     public List<Object[]> calculateRateCost(Context context, UUID Id, String  costTypeId) throws SQLException {
-       /* String strQuery = "select   mv.value, count (mv.value)as kol, r.rate_description, r.calculation_unit, r.price as unitprice\n" +
-"from MetadataValue mv\n " +
-"inner join MetadataField mfr \n" +
-"inner join Rate r  \n" +
-"inner join Item i \n" +
-"inner join Collection c \n" +
-"inner join Community com\n" + 
-"where mfr.element = 'tarrif' and  r.rate_grade = mv.value  group by  mv.value, r.rate_description, r.calculation_unit order by mv.value ";
-        String strQuery = "select   mv.text_value, count (mv.text_value)as kol, r.rate_description, r.calculation_unit, sum(r.price) as price\n" +
-"from MetadataValue mv, MetadataField mfr, Rate r, Item i, \n " +
-        "collection2item c2i,  Collection c, community2collection c2c, Community com " +
-"where mfr.metadata_field_id = mv.metadata_field_id\n" +
-"and r.rate_grade = mv.text_value\n" +
-"and i.uuid = mv.dspace_object_id\n" +
-"and c2i.item_id = i.uuid\n" +
-"and c.uuid = c2i.collection_id\n" +
-"and c2c.collection_id = c.uuid\n" +
-                "and  c2c.community_id = com.uuid " +
-"and mfr.element = 'tarrif' group by  mv.text_value,r.rate_description, r.calculation_unit order by mv.text_value ";*/
-       String strQuery = "select   mv.text_value, count (mv.text_value)as kol, r.rate_description, r.calculation_unit, sum(r.price) as price\n" +
+       
+       String strQuery = "select   mv.text_value, count (mv.text_value)as kol, r.rate_description, r.calculation_unit, r.price unit_price, sum(r.price) as price\n" +
 "from metadatavalue mv\n " +
 "inner join metadatafieldregistry mfr on mfr.metadata_field_id = mv.metadata_field_id\n" +
 "inner join rate r on r.rate_grade = mv.text_value\n" +
@@ -78,7 +60,7 @@ public class RateDAOImpl extends AbstractHibernateDAO<Rate> implements RateDAO {
                 strQuery+="and 1=2 ";
                 break;
         }
-        strQuery +="group by  mv.text_value,r.rate_description, r.calculation_unit order by mv.text_value";
+        strQuery +="group by  mv.text_value,r.rate_description, r.calculation_unit, r.price order by mv.text_value";
 
        Query query = getHibernateSession(context).createSQLQuery(strQuery);
         //Query query = createQuery(context, strQuery);

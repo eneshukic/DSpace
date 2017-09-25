@@ -51,6 +51,9 @@ public class CollectionSearch extends AbstractDSpaceTransformer implements Cache
     
     private static final Message T_spatial_search =
         message("xmlui.ArtifactBrowser.CollectionViewer.spatial_search");
+    
+    private static final Message T_spatial_upload_search =
+        message("xmlui.ArtifactBrowser.CollectionViewer.spatial_upload_search");
 
     /**
      Might implement browse links to activate views into search instead...
@@ -238,6 +241,7 @@ public class CollectionSearch extends AbstractDSpaceTransformer implements Cache
             para.addContent(T_spatial_search);
             //para.addHidden("spatial-query","spatial-search");
             para.addText("spatial-query","spatial-search");
+            para.addXref(contextPath + "/admin/import-search?hid=" + collection.getHandle(),T_spatial_upload_search);
             //para.addText("spatial-search");
             para.addButton("submit").setValue(T_go);
             //query.addPara().addXref(contextPath + "/handle/" + collection.getHandle()+ "/advanced-search", T_advanced_search_link);

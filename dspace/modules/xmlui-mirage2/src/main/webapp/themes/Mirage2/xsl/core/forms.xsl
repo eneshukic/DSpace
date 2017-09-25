@@ -721,6 +721,14 @@
                             // spatial query form field id
                             var fieldID=mapID.replace(/\./g,'_');
                             addMap(mapID,'search');
+                            //set fieldID value from query string
+                            if (window.location.href.indexOf('?') != -1){
+                            var qs = getQueryStrings();
+                            var sq = qs["sq"];
+                            if (sq != ""){
+                                document.getElementById(fieldID).value = sq;
+                            }
+                            }
 
                             // Keep Spatial query Bounding Box from response and add it to map
                             var val=document.getElementById (fieldID).value;

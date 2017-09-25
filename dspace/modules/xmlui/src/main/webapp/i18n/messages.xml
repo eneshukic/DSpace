@@ -187,6 +187,8 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Dates</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Advanced Search</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Recent Submissions</message>
+        <message key="xmlui.ArtifactBrowser.CollectionViewer.spatial_search">Enter spatial cooridnates separated by space or draw rectangle on the map using shift and left mouse button:</message>
+        <message key="xmlui.ArtifactBrowser.CollectionViewer.spatial_upload_search">Read spatial coordinates from GML or csv file (Xmin Ymin Xmax Ymax)</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Community List</message>
@@ -199,6 +201,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
         <message key="xmlui.ArtifactBrowser.CommunityViewer.spatial_search">Enter spatial cooridnates separated by space or draw rectangle on the map using shift and left mouse button:</message>
+        <message key="xmlui.ArtifactBrowser.CommunityViewer.spatial_upload_search">Read spatial coordinates from GML or csv file (Xmin Ymin Xmax Ymax)</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titles</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Authors</message>
@@ -2575,7 +2578,9 @@
 	<message key="xmlui.administrative.registries.CalculateCostMain.column2">Rate Description</message>
 	<message key="xmlui.administrative.registries.CalculateCostMain.column3">Calculation Unit</message>
 	<message key="xmlui.administrative.registries.CalculateCostMain.column4">Number of Units</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column5">Amount</message>
+        <message key="xmlui.administrative.registries.CalculateCostMain.column5">Unit Price</message>
+	<message key="xmlui.administrative.registries.CalculateCostMain.column6">Amount</message>
+        <message key="xmlui.administrative.registries.CalculateCostMain.totalprice">Total</message>
         
         <message key="xmlui.administrative.Navigation.context_cost_collection">Cost Calculation</message>
         <message key="xmlui.administrative.Navigation.context_cost_community">Cost Calculation</message>
@@ -2589,6 +2594,13 @@
     <message key="xmlui.Spatial.Map.isWithin">Is Within</message>
     <message key="xmlui.Spatial.Map.Intersect">Intersects</message>
     <message key="xmlui.Discovery.AbstractSearch.filters.controls.spatial.head">Spatial</message>
+    <!-- Spatial import search -->
+    <message key="xmlui.administrative.importsearch.general.title">Upload Search File Results</message>
+    <message key="xmlui.administrative.importsearch.general.head1">Upload Search File</message>
+    <message key="xmlui.administrative.importsearch.general.trail">Upload Search File</message>
+    <message key="xmlui.administrative.importsearch.flow.import_failed">Upload failed</message>
+    <message key="xmlui.administrative.importsearch.ImportSearchMain.submit_upload">Upload Search File</message>
+    <message key="xmlui.administrative.importsearch.ImportSearchUpload.submit_confirm">Uploded file did not return anz results. Go to the spatial search page.</message>
 
 
 </catalogue>
