@@ -2,30 +2,9 @@
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
-<head>Digital Archive FGU</head>
-<p>Digital Archives stores the following data/content:</p>
-<ul>
-	<li>
-Austrian land register and land cadaster, 
-	</li><li>
-Land cadaster, 
-	</li><li>
-Real Estate Cadaster 1984,
-	</li><li>
-Topographic,
-	maps
-	</li><li>
-Ortophoto,
-	</li><li>
-Content of BH
-	Archive,
-	</li><li>
-JICA project,
-	</li><li>
-Vectorized geodetic maps,
-	</li><li>
-RINEX</li>
-</ul>
+<head>Digitalna Archiva FGU</head>
+<p>Dobro došli na stranicu digitalne arhive Federalne uprave za geodetske i imovinske pravne poslove.</p>
+
 </div>
 </body>
 <options/>

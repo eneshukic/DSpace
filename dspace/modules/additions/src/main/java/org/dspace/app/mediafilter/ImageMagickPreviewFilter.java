@@ -44,6 +44,14 @@ public  class ImageMagickPreviewFilter  extends MediaFilter //implements SelfReg
 	static String bitstreamDescription = "IM Preview";
 	static final String defaultPattern = "Generated Preview";
 	static Pattern replaceRegex = Pattern.compile(defaultPattern);
+        //watermark properties
+        protected static int pointSize = 20;
+        private static boolean tile =true;
+        static String fillColor = "gray";
+        static String gravity1 = "Center";
+        static String gravity2 = "SouthEast";
+        static String draw1 = "text 10,10 'SAMO ZA INTERNU UPOTREBU'";
+        static String draw2 = "text 5,15 'SAMO ZA INTERNU UPOTREBU'";
     protected final ItemService itemService = ContentServiceFactory.getInstance().getItemService();
 	
 	static {
@@ -54,9 +62,33 @@ public  class ImageMagickPreviewFilter  extends MediaFilter //implements SelfReg
 		height = ConfigurationManager.getIntProperty("preview.maxheight", height);*/
                 flatten = ConfigurationManager.getBooleanProperty(pre + ".flatten", flatten);
 		String description = ConfigurationManager.getProperty(pre + ".bitstreamDescription");
+                //watermark properties
+                pointSize = ConfigurationManager.getIntProperty(pre + ".pointsize", pointSize);
+                tile = ConfigurationManager.getBooleanProperty(pre+".tile", tile);
+                String fc = ConfigurationManager.getProperty(pre+ ".fillcolor");
+                String pdraw1 = ConfigurationManager.getProperty(pre+ ".draw1");
+                String pdraw2 = ConfigurationManager.getProperty(pre+ ".draw2");
+                String pgravity1 = ConfigurationManager.getProperty(pre+ ".gravity1");
+                String pgravity2 = ConfigurationManager.getProperty(pre+ ".gravity2");
 		if (description != null) {
 			bitstreamDescription = description;
 		}
+                if (fc != null){
+                    fillColor = fc;
+                }
+                if (pdraw1 != null){
+                    //draw1 = pdraw1;
+                    draw1 = "rotate 45 text 10,10 '" + pdraw1 +"'";
+                }
+                if (pdraw2 != null){
+                    draw2 = "text 5,15 '" + pdraw2 + "'";
+                }
+                if (pgravity1 != null){
+                    gravity1 = pgravity1;
+                }
+                if (pgravity2 != null){
+                    gravity2 = pgravity2;
+                }
 		try {
 			String patt = ConfigurationManager.getProperty(pre + ".replaceRegex");
 		    replaceRegex = Pattern.compile(patt == null ? defaultPattern : patt);
@@ -125,14 +157,25 @@ public  class ImageMagickPreviewFilter  extends MediaFilter //implements SelfReg
 		IMOperation op = new IMOperation();
 		op.addImage(f.getAbsolutePath());
                 op.quality(10.0);
-                op.gravity("SouthEast");
-                op.pointsize(60).draw("text 10,10 FGU");
+                op.gravity(gravity1);
+                op.pointsize(pointSize);
+                op.fill(fillColor);
+                op.draw(draw1);
+                
+               
                 //op.watermark(10.0);
                 //op.draw("image Over     50,50 300,300 '"+watermarks.get(site.getPrefix())+"'");
 		op.addImage(f2.getAbsolutePath());
+                /*if (tile) {
+                    op.tile();
+                    op.gravity(gravity2);
+                    op.draw(draw2);
+                }*/
         if (verbose) {
 		    System.out.println("IM Preview Param: "+op);
         }
+       
+        
 		cmd.run(op);
 		return f2;
     }

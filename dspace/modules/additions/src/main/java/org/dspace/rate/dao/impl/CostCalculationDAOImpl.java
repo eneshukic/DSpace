@@ -32,7 +32,7 @@ public class CostCalculationDAOImpl extends AbstractHibernateDAO<CostCalculation
 "inner join collection2item c2i on c2i.item_id = i.uuid\n" +
 "inner join collection c on c.uuid = c2i.collection_id\n" +
 "inner join community2collection c2c on c2c.collection_id = c.uuid\n" +
-"where mfr.element = 'tarrif' ) ";
+"where mfr.element = 'tarrif'  and mfr.qualifier is null ) ";
         switch (costTypeId) {
             case ("communityID"):
                 strQuery.concat("c2c.community_id = :community_id ");

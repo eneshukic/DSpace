@@ -807,7 +807,7 @@
     <!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Dodavanje fajlova</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Fajl</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Unesite punu putanju do na vašem računaru koji odgovara ovoj stavci. Ako kliknete "Pretraži...", novi prozor će vam dozvoliti da selektujete fajl sa vašeg računara.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Unesite punu putanju do fajla na vašem računaru koji odgovara ovoj stavci. Ako kliknete "Pretraži...", novi prozor će vam dozvoliti da selektujete fajl sa vašeg računara.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">Ova stavka mora sadržati barem jedan fajl.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Pojavio se problem pri dodavanju vašeg fajla.  Može biti da naziv fajla koji ste unijeli nije korektan ili postoji problem u mreži koji sprečava da fajl dođe do sistema, ili ste pokušali da dodate fajl formata obilježenog samo za internu upotrebu.  Pokušajte ponovo.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Fajl nije dodan jer izgleda da sadrži virus. Kontaktirajte administratora sistema.</message>
