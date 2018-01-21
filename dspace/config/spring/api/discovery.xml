@@ -109,7 +109,10 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+                <ref bean="searchFilterMun" />
+                <ref bean="searchFilterCatMun" />
+                <ref bean="searchFilterTarrif" />
+                <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterSpatial"/>
             </list>
         </property>
@@ -217,6 +220,9 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
+                <ref bean="searchFilterMun" />
+                <ref bean="searchFilterCatMun" />
+                <ref bean="searchFilterTarrif" />
 		        <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterSpatial"/>
             </list>
@@ -421,6 +427,43 @@
             </list>
         </property>
         <property name="type" value="date"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+    
+    <!-- municipality, cadstral municipality, tarrif -->
+    <bean id="searchFilterMun" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="municipality"/>
+        <property name="metadataFields">
+            <list>
+                <value>da.Municipality.Name</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+    
+    <bean id="searchFilterCatMun" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="catmunicipality"/>
+        <property name="metadataFields">
+            <list>
+                <value>da.CadastralMunicipality.Name</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+    </bean>
+    
+    <bean id="searchFilterTarrif" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="tarrif"/>
+        <property name="metadataFields">
+            <list>
+                <value>da.tarrif.code</value>
+            </list>
+        </property>
+        <property name="facetLimit" value="10"/>
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
     </bean>

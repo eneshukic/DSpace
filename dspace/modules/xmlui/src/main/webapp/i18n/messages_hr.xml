@@ -140,12 +140,16 @@
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Ime autora</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subjekat</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.municipality.column_heading">Općina</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Prikazuje {0} po autoru {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Prikazuje {0} po autoru</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Prikazuje {0} po subjektu {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Prikazuje {0} po subjektu</message>
+        
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.municipality">Prikazuje {0} po  općini {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.municipality">Prikazuje {0} po  općini</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.title">Prikazuje {0} po nazivu {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.title">Prikazuje {0} po nazivu</message>
@@ -259,6 +263,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Nazivi</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autori</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjekti</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_municipality">Općine</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Po datumu izdavanja</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Po datumu unosa</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">Ova kolekcija</message>
@@ -807,7 +812,7 @@
     <!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Dodavanje fajlova</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Fajl</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Unesite punu putanju do fajla na vašem računaru koji odgovara ovoj stavci. Ako kliknete "Pretraži...", novi prozor će vam dozvoliti da selektujete fajl sa vašeg računara.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Unesite punu putanju do fajla na vašem računaru koji odgovara ovoj stavci. Ako kliknete "Pretraži...", novi prozor će vam dozvoliti da selektujete fajl sa vašeg računara. Maksimalna dozvoljena veličina je 1GB.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">Ova stavka mora sadržati barem jedan fajl.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Pojavio se problem pri dodavanju vašeg fajla.  Može biti da naziv fajla koji ste unijeli nije korektan ili postoji problem u mreži koji sprečava da fajl dođe do sistema, ili ste pokušali da dodate fajl formata obilježenog samo za internu upotrebu.  Pokušajte ponovo.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Fajl nije dodan jer izgleda da sadrži virus. Kontaktirajte administratora sistema.</message>
@@ -994,7 +999,7 @@
 	<message key="xmlui.administrative.FlowMapperUtils.unmaped_items">Stavke više nisu mapirane.</message>
 
 	<!-- general items for all of the eperson classes -->
-	<message key="xmlui.administrative.eperson.general.epeople_trail">Upravljanje sa E-people</message>
+	<message key="xmlui.administrative.eperson.general.epeople_trail">Upravljanje korisnicima</message>
 
 	<!-- org.dspace.app.xmlui.administrative.Navigation -->
 	<!-- contextual menu items -->
@@ -1032,6 +1037,7 @@
     <message key="xmlui.administrative.Navigation.administrative_batch_import">Serijski import (ZIP)</message>
     <message key="xmlui.administrative.Navigation.administrative_import_metadata">Import metapodataka</message>
     <message key="xmlui.administrative.Navigation.administrative_curation">Kustoski zadaci</message>
+    <message key="xmlui.administrative.Navigation.administrative_audit">Audit</message>
 
     <!-- my account items -->
 	<message key="xmlui.administrative.Navigation.account_export">Moji eksporti</message>
@@ -1053,44 +1059,44 @@
 
 
     <!-- org.dspace.app.xmlui.administrative.eperson.ManageEPeopleMain -->
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">Upravljanje E-people</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.main_head">E-person upravljanje</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">Upravljanje korisnicima</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.main_head">Upravljanje korisnicima</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_head">Akcije</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create">Kreiraj novu E-Person</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create_link">Kliknite ovdje da dodate novu E-Person.</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse">Prtraži E-People</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse_link">Kliknite ovdje da pretražite sve E-People.</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_search">Traži E-People</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_help">E-People su tražene po bilo kojem dijelu email ili imena</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_para1">Dole je lista E-People koji odgovaraju vašem traženju. Izaberite E-People koji želite izbrisati kliknite dugme briši; ili kliknite na email E-Person da bi editovali.</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_head">Search results</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create">Kreiraj novof korisnika</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create_link">Kliknite ovdje da dodate novog korisnika.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse">Pretraži korisnike</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse_link">Kliknite ovdje da pretražite sve korisnike.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_search">Traži korisnika</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_help">Korisnici se tražee po bilo kojem dijelu emaila ili imena</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_para1">Dole je lista korisnika koji odgovaraju vašem traženju. Izaberite korisnika koji želite izbrisati kliknite dugme briši; ili kliknite na email korisnika da bi ažurirali.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_head">Razultati pretrage</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column1"></message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column2">ID</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column3">Naziv</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column4">Email</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">Briši E-People</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">Izbriši korisnika</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.no_results">Vaša pretraga nema rezultata...</message>
 
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.AddEPersonForm -->
-	<message key="xmlui.administrative.eperson.AddEPersonForm.title">Dodaj E-Person</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.trail">Dodaj E-Person</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.title">Dodaj korisnika</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.trail">Dodaj korisnika</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.head1">Kreiraj novog korisnika</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.email_taken">Ovu email adresu koristi drugi E-Person. Emailovi moraju biti jedinstveni.</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.head2">Informacije o novom E-Person:</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.email_taken">Ovu email adresu koristi drugi korisnik. Emailovi moraju biti jedinstveni.</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.head2">Informacije o novom korisniku:</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_email_unique">Emailovi moraju biti jedinstveni</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_email">Email adresa je obavezna</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_fname">Ime je obavezno</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_lname">Prezime je obavezno</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.req_certs">Zahtijevaj certifikat</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.can_log_in">Može se prijaviti</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">Kreiraj E-Person</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">Kreiraj korisnika</message>
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.EditEPersonForm -->
-	<message key="xmlui.administrative.eperson.EditEPersonForm.title">Edituj E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">Edituj E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.head1">Edituj E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.email_taken">Ovu email adresu koristi drugi E-Person. Emailovi moraju biti jedinstveni.</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.title">Edituj korisnika</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">Edituj korisnika</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.head1">Edituj korisnika</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.email_taken">Ovu email adresu koristi drugi korisnik. Emailovi moraju biti jedinstveni.</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.head2">Informacije o {0}:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email_unique">Emailovi moraju biti jedinstveni</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email">Email adresa je obavezna</message>
@@ -1099,27 +1105,27 @@
 	<message key="xmlui.administrative.eperson.EditEPersonForm.req_certs">Zahtijevaj certifikat</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.can_log_in">Može se prijaviti</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">Resetuj lozinku</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">Takođe, možete trajno ukloniti ovu E-Person iz sistema ili resetovati njegovu/njenu lozinku. Prilikom restovanja, korisnik će dobiti email koji sadrži specijalni link koji mogu pratiti da odaberu novu lozinku.</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Briši E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Prijavi se kao E-Person</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">Takođe, možete trajno ukloniti ovog korisnika iz sistema ili resetovati njegovu/njenu lozinku. Prilikom restovanja, korisnik će dobiti email koji sadrži specijalni link koji mogu pratiti da odaberu novu lozinku.</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Izbriši korisnika</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Prijavi se kao korisnik</message>
 
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">Ovaj eperson nije moguće obrisati zbog slijedećih ograničenja:</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">Ovog korisnika nije moguće obrisati zbog slijedećih ograničenja:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">i</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">eperson je dodala jednu ili više stavki</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">eperson ima aktivan radni tok dodavanja</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">eperson ima zadatak u radnom toku koji treba završiti</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.unknown">eperson ima neidentificirano ograničenje unutar sistema</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">Korisnik je dodao(la) jednu ili više stavki</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">Korisnik ima aktivan radni tok dodavanja</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">Korisnik ima zadatak u radnom toku koji treba završiti</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.unknown">Korisnik ima neidentificirano ograničenje unutar sistema</message>
 
-	<message key="xmlui.administrative.eperson.EditEPersonForm.member_head">Ovaj E-Person je član grupa:</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.member_head">Ovaj korisnik je član grupa:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.indirect_member">(preko grupe: {0})</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.member_none">nema</message>
 
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.DeleteEPeopleConfirm -->
-	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.title">Potvrdi brisanje E-Person</message>
+	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.title">Potvrdi brisanje korisnika</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.trail">Potvrdi brisanje</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.confirm_head">Potvrdi brisanje</message>
-	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.confirm_para">Slijedeći E-People će biti obrisan: </message>
+	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.confirm_para">Slijedeći korisnik će biti obrisan: </message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.submit_confirm">Potvrdi brisanje</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.head_id">ID</message>
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.head_name">Naziv</message>
@@ -1165,7 +1171,7 @@
 	<message key="xmlui.administrative.group.EditGroupForm.label_name">Promijeni naziv grupe: </message>
 	<message key="xmlui.administrative.group.EditGroupForm.label_instructions">Ova grupa je asocirana sa specifičnom kolekcijom ili skupom podataka te naziv ne može biti mijenjan.</message>
 	<message key="xmlui.administrative.group.EditGroupForm.label_search">Traži članove za dodavanje: </message>
-	<message key="xmlui.administrative.group.EditGroupForm.submit_search_people">E-People...</message>
+	<message key="xmlui.administrative.group.EditGroupForm.submit_search_people">Korisnici...</message>
 	<message key="xmlui.administrative.group.EditGroupForm.submit_search_groups">Grupe...</message>
 	<message key="xmlui.administrative.group.EditGroupForm.no_results">Vaša pretraga nije dala rezultate...</message>
 	<message key="xmlui.administrative.group.EditGroupForm.epeople_column1">ID</message>
@@ -1196,7 +1202,7 @@
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.para">Slijedeće grupe će biti izbrisane:</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column1">ID</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column2">Naziv</message>
-	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column3">E-People</message>
+	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column3">Korisnici</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column4">Grupe</message>
 
 	<!-- general items for all of the registries classes -->
@@ -1735,7 +1741,7 @@
 	<message key="xmlui.administrative.collection.general.collection_trail">Kolekcije</message>
 	<message key="xmlui.administrative.collection.general.options_metadata">Edituj metapodatke</message>
 	<message key="xmlui.administrative.collection.general.options_roles">Dodijeli uloge</message>
-        <message key="xmlui.administrative.collection.general.options_curate">Uredi</message>
+        <message key="xmlui.administrative.collection.general.options_curate">Zadaci</message>
         <message key="xmlui.administrative.collection.general.options_queue">Dodaj u red</message>
 
 	<!-- org.dspace.app.xmlui.administrative.collection.AssignCollectionRoles.java -->
@@ -1749,8 +1755,8 @@
 	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_wf_step1">Osobe odgovorne za ovaj korak mogu prihvatiti ili odbiti nova dodavanja. Međutim, ali oni ne mogu editovati metapodatke.</message>
 	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_wf_step2">Osobe odgovorne za ovaj korak mogu editovati metapodatke za nova dodavanja, i onda prihvatiti ili odbiti ih.</message>
 	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_wf_step3">Osobe odgovorne za ovaj korak mogu editovati metapodatke za nova dodavanja, ali oni ne mogu prihvatiti ili odbiti ih.</message>
-	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_submitters">E-People i grupe koji imaju dozvolu da dodaju nove stavke u ovu kolekciju.</message>
-	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_default_read">E-People i grupe koji mogu čitati nove stavke u ovoj kolekciji. Promjene za ovu ulogu nisu retroaktivne.  Postojeće stavke u sistemu će i dalje biti vidljive onima koji su imali pravo čitanja u vrijeme njihovog dodavanja.</message>
+	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_submitters">Korisnici i grupe koji imaju dozvolu da dodaju nove stavke u ovu kolekciju.</message>
+	<message key="xmlui.administrative.collection.AssignCollectionRoles.help_default_read">Korisnici i grupe koji mogu čitati nove stavke u ovoj kolekciji. Promjene za ovu ulogu nisu retroaktivne.  Postojeće stavke u sistemu će i dalje biti vidljive onima koji su imali pravo čitanja u vrijeme njihovog dodavanja.</message>
 	<message key="xmlui.administrative.collection.AssignCollectionRoles.default_read_custom">Ova kolekcija koristi prilagođene postavke pristupa. </message>
 	<message key="xmlui.administrative.collection.AssignCollectionRoles.default_read_anonymous">Primarno čitanje za nove stavke i bitstream je trenutno postavljeno na Anonymous.</message>
 	<message key="xmlui.administrative.collection.AssignCollectionRoles.edit_authorization">Direktno editovanje polica autorizacije.</message>
@@ -2155,252 +2161,255 @@
 
 		                  dri2xhtml
 
-		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
 
 
 
 
-	<!-- structural.xsl -->
-	<message key="xmlui.dri2xhtml.structural.footer-promotional">
-		<a href="http://di.tamu.edu" id="ds-logo-link">
-			<span id="ds-footer-logo">&#160;</span>
-		</a>
-		<p>
-			This website is using Manakin, a new front end for DSpace created by Texas A&amp;M University
-			Libraries. The interface can be extensively modified through Manakin Aspects and XSL based Themes.
-			For more information visit
-			<a href="http://di.tamu.edu">http://di.tamu.edu</a> and
-			<a href="http://dspace.org">http://dspace.org</a>
-		</p>
-	</message>
-	<message key="xmlui.dri2xhtml.structural.contact-link">Kontaktirajte nas</message>
-	<message key="xmlui.dri2xhtml.structural.feedback-link">Šaljite komentar</message>
+    <!-- structural.xsl -->
+    <message key="xmlui.dri2xhtml.structural.footer-promotional">
+        <a href="http://di.tamu.edu" id="ds-logo-link">
+            <span id="ds-footer-logo">&#160;</span>
+        </a>
+        <p>
+            This website is using Manakin, a new front end for DSpace created by Texas A&amp;M University
+            Libraries. The interface can be extensively modified through Manakin Aspects and XSL based Themes.
+            For more information visit
+            <a href="http://di.tamu.edu">http://di.tamu.edu</a> and
+            <a href="http://dspace.org">http://dspace.org</a>
+        </p>
+    </message>
+    <message key="xmlui.dri2xhtml.structural.contact-link">Kontaktirajte nas</message>
+    <message key="xmlui.dri2xhtml.structural.feedback-link">Šaljite komentar</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">Repozitorij</message>
+    <message key="xmlui.dri2xhtml.structural.head-subtitle">Repozitorij</message>
 
-	<message key="xmlui.dri2xhtml.structural.profile">Profil: </message>
-	<message key="xmlui.dri2xhtml.structural.logout">Odjavi se</message>
-	<message key="xmlui.dri2xhtml.structural.login">Prijavi se</message>
+    <message key="xmlui.dri2xhtml.structural.profile">Profil: </message>
+    <message key="xmlui.dri2xhtml.structural.logout">Odjavi se</message>
+    <message key="xmlui.dri2xhtml.structural.login">Prijavi se</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Traži</message>
-	<message key="xmlui.dri2xhtml.structural.search-advanced">Napredna pretraga</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-community">Ovaj skup podataka</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-collection">Ova kolekcija</message>
+    <message key="xmlui.dri2xhtml.structural.search">Traži</message>
+    <message key="xmlui.dri2xhtml.structural.search-advanced">Napredna pretraga</message>
+    <message key="xmlui.dri2xhtml.structural.search-in-community">Ovaj skup podataka</message>
+    <message key="xmlui.dri2xhtml.structural.search-in-collection">Ova kolekcija</message>
 
-	<message key="xmlui.dri2xhtml.structural.pagination-previous">Prethodna stranica</message>
-	<message key="xmlui.dri2xhtml.structural.pagination-info">Sada se prikazuju stavke {0}-{1} od {2}</message>
-	<message key="xmlui.dri2xhtml.structural.pagination-next">Slijedeća stranica</message>
+    <message key="xmlui.dri2xhtml.structural.pagination-previous">Prethodna stranica</message>
+    <message key="xmlui.dri2xhtml.structural.pagination-info">Sada se prikazuju stavke {0}-{1} od {2}</message>
+    <message key="xmlui.dri2xhtml.structural.pagination-next">Slijedeća stranica</message>
 
-	<message key="xmlui.dri2xhtml.structural.link_cc">Creative Commons</message>
-	<message key="xmlui.dri2xhtml.structural.link_original_license">Originalna licenca</message>
+    <message key="xmlui.dri2xhtml.structural.link_cc">Creative Commons</message>
+    <message key="xmlui.dri2xhtml.structural.link_original_license">Originalna licenca</message>
 
 
-	<!-- DS-METS-1.0-MODS.xsl -->
-	<!-- DS-METS-1.0-DIM.xsl -->
-	<!-- DS-METS-1.0-QDC.xsl -->
-	<message key="xmlui.dri2xhtml.METS-1.0.no-preview">Pregled nije dostupan</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.no-title">Neimenovano</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.no-author">Nepoznat autor</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
-		This is not a DSpace object conformant to the METS 1.0 profile and as such cannot be
+    <!-- DS-METS-1.0-MODS.xsl -->
+    <!-- DS-METS-1.0-DIM.xsl -->
+    <!-- DS-METS-1.0-QDC.xsl -->
+    <message key="xmlui.dri2xhtml.METS-1.0.no-preview">Pregled nije dostupan</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.no-title">Neimenovano</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.no-author">Nepoznat autor</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
+        This is not a DSpace object conformant to the METS 1.0 profile and as such cannot be
         rendered effectively. You can override either the template that handles the general
         case in dri2xhtml to perform the needed function, or create your template to match
         whatever profile you use.
     </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Pregled</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Naziv</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Autor</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Sažetak</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Opis</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Datum</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Izdavač</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subjekat</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-preview">Pregled</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-title">Naziv</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-author">Autor</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Sažetak</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-description">Opis</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-date">Datum</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Izdavač</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subjekat</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Fajlovi u ovoj stavci item</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Fajlovi</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-name">Naziv</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-size">Veličina</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-format">Format</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-view">Pregled</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-description">Opis</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">Vidi/<wbr/>Otvori</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">Nema fajlova asociranih sa ovom stavkom.</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Fajlovi u ovoj stavci</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Fajlovi</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-name">Naziv</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-size">Veličina</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-format">Format</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-view">Pregled</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-description">Opis</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">Vidi/<wbr/>Otvori</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-no-files">Nema fajlova asociranih sa ovom stavkom.</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bajti</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bajti</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.license-text">Slijedeći licencni fajlovi su asocirani sa obom stavkom:</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.license-text">Slijedeći licencni fajlovi su asocirani sa obom stavkom:</message>
     <message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">Osim ako nije drugačije navedeno, ove licence su opisane kao </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.collection-not-implemented">
-		The summaryView of a collection is not currently used or implemented. This can be fixed
-		by overriding the dri2xhtml's template named collectionSummaryView.
-	</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.community-not-implemented">
-		The summaryView of a community is not currently used or implemented. This can be fixed
-		by overriding the dri2xhtml's template named communitySummaryView.
-	</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.collection-not-implemented">
+        The summaryView of a collection is not currently used or implemented. This can be fixed
+        by overriding the dri2xhtml's template named collectionSummaryView.
+    </message>
+    <message key="xmlui.dri2xhtml.METS-1.0.community-not-implemented">
+        The summaryView of a community is not currently used or implemented. This can be fixed
+        by overriding the dri2xhtml's template named communitySummaryView.
+    </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.collection-logo-alt">Logo kolekcije</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.community-logo-alt">Logo skupa podataka</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.no-logo-alt">Nema logo</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.news">Novosti</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.collection-logo-alt">Logo kolekcije</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.community-logo-alt">Logo skupa podataka</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.no-logo-alt">Nema logo</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.news">Novosti</message>
 
-	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
-		DS-METS-1.0-QDC.xsl -->
-	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
-		Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
-		this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
-		DIM or MODS for processing of communities and collections.
-	</message>
+    <!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
+    DS-METS-1.0-QDC.xsl -->
+    <message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
+        Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
+        this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
+        DIM or MODS for processing of communities and collections.
+    </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.header-qdc-elements">Dublin Core elementi</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.header-qdc-terms">Dublin Core termini</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.header-qdc-elements">Dublin Core elementi</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.header-qdc-terms">Dublin Core termini</message>
 
-        <message key="xmlui.dri2xhtml.METS-1.0.blocked">Blokirano</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.blocked">Blokirano</message>
 
 
-	<!-- Special pioneer model related text, wherever it might end up -->
-	<message key="xmlui.dri2xhtml.pioneer.preview">Pregled</message>
-	<message key="xmlui.dri2xhtml.pioneer.date">Datum</message>
-	<message key="xmlui.dri2xhtml.pioneer.title">Naziv</message>
-	<message key="xmlui.dri2xhtml.pioneer.author">Autor</message>
+    <!-- Special pioneer model related text, wherever it might end up -->
+    <message key="xmlui.dri2xhtml.pioneer.preview">Pregled</message>
+    <message key="xmlui.dri2xhtml.pioneer.date">Datum</message>
+    <message key="xmlui.dri2xhtml.pioneer.title">Naziv</message>
+    <message key="xmlui.dri2xhtml.pioneer.author">Autor</message>
 
-	<!-- tag used to handle the empty textarea tag added 09/28/2006 -->
-	<message key="xmlui.dri2xhtml.default.textarea.value"> </message>
+    <!-- tag used to handle the empty textarea tag added 09/28/2006 -->
+    <message key="xmlui.dri2xhtml.default.textarea.value"> </message>
 
-  <!--###### File Format MIME Type Mappings ######-->
+    <!--###### File Format MIME Type Mappings ######-->
 
-  <!-- Application-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.application/marc">MARC record</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/mathematica">Mathematica</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/msword">Microsoft Word</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/octet-stream">Nepoznato</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/pdf">PDF</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/postscript">Postscript</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/sgml">SGML</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-excel">Microsoft Excel</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-powerpoint">Microsoft PowerPoint</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-project">Microsoft Project</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.database">OpenOffice Base</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.formula">OpenOffice Math</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.graphics">OpenOffice Draw</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.presentation">OpenOffice Impress</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.spreadsheet">OpenOffice Calc</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.text">OpenOffice Writer</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation">Microsoft PowerPoint 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Microsoft Excel 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document">Microsoft Word 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.calc">OpenOffice Calc (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.draw">OpenOffice Draw (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.impress">OpenOffice Impress (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.writer.global">OpenOffice Writer (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.visio">Microsoft Visio</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/wordperfect5.1">WordPerfect</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-dvi">TeX DVI</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-filemaker">FileMaker Pro</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-java-applet">Java applet</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-latex">LaTeX</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-photoshop">Photoshop</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-tex">TeX</message>
+    <!-- Application-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.application/marc">MARC record</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/mathematica">Mathematica</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/msword">Microsoft Word</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/octet-stream">Nepoznato</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/pdf">PDF</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/postscript">Postscript</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/sgml">SGML</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-excel">Microsoft Excel</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-powerpoint">Microsoft PowerPoint</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-project">Microsoft Project</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.database">OpenOffice Base</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.formula">OpenOffice Math</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.graphics">OpenOffice Draw</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.presentation">OpenOffice Impress</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.spreadsheet">OpenOffice Calc</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.text">OpenOffice Writer</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation">Microsoft PowerPoint 2007</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Microsoft Excel 2007</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document">Microsoft Word 2007</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.calc">OpenOffice Calc (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.draw">OpenOffice Draw (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.impress">OpenOffice Impress (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.writer.global">OpenOffice Writer (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.visio">Microsoft Visio</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/wordperfect5.1">WordPerfect</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-dvi">TeX DVI</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-filemaker">FileMaker Pro</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-java-applet">Java applet</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-latex">LaTeX</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-photoshop">Photoshop</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-tex">TeX</message>
 
-  <!-- Audio-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.audio/basic">Basic Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/flac">FLAC Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/m4a">AAC audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/m4a-latm">AAC audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/mpeg">mp3 audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-aiff">AIFF audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-mpeg">MPEG Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wma">WMA Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wmv">WMV Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ogg">Ogg Vorbis</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-pn-realaudio">RealAudio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-wav">WAV audio</message>
+    <!-- Audio-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.audio/basic">Basic Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/flac">FLAC Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/m4a">AAC audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/m4a-latm">AAC audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/mpeg">mp3 audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-aiff">AIFF audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-mpeg">MPEG Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wma">WMA Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wmv">WMV Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-ogg">Ogg Vorbis</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-pn-realaudio">RealAudio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-wav">WAV audio</message>
 
-  <!-- Image-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.image/gif">GIF image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/jp2">JPEG 2000 image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/jpeg">JPEG image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/png">PNG image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/tiff">TIFF image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/x-ms-bmp">BMP image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/x-photo-cd">Photo CD</message>
+    <!-- Image-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.image/gif">GIF image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/jp2">JPEG 2000 image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/jpeg">JPEG image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/png">PNG image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/tiff">TIFF image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/x-ms-bmp">BMP image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/x-photo-cd">Photo CD</message>
 
-  <!-- Text-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.text/css">CSS file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/csv">CSV file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/html">HTML</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/javascript">Javascript</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/plain">Text file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/richtext">RTF file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/xml">XML</message>
+    <!-- Text-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.text/css">CSS file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/csv">CSV file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/html">HTML</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/javascript">Javascript</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/plain">Text file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/richtext">RTF file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/xml">XML</message>
 
-  <!-- Video-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.video/avi">AVI video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mjp2">Motion JPEG 2000</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mpeg">MPEG video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mpeg2">MPEG-2 video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mp4">MPEG-4 video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/quicktime">QuickTime video</message>
+    <!-- Video-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.video/avi">AVI video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mjp2">Motion JPEG 2000</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mpeg">MPEG video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mpeg2">MPEG-2 video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mp4">MPEG-4 video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/quicktime">QuickTime video</message>
 
-  <!-- explanatory messages for choice authority confidence values -->
-  <message key="xmlui.authority.confidence.description.cf_unset">Confidence was never recorded for this value</message>
-  <message key="xmlui.authority.confidence.description.cf_novalue">No reasonable confidence value was returned from the authority</message>
-  <message key="xmlui.authority.confidence.description.cf_rejected">The authority recommends this submission be rejected</message>
-  <message key="xmlui.authority.confidence.description.cf_failed">The authority encountered an internal failure</message>
-  <message key="xmlui.authority.confidence.description.cf_notfound">There are no matching answers in the authority</message>
-  <message key="xmlui.authority.confidence.description.cf_ambiguous">There are multiple matching authority values of equal validity</message>
-  <message key="xmlui.authority.confidence.description.cf_uncertain">Value is singular and valid but has not been seen and accepted by a human so it is still uncertain</message>
-  <message key="xmlui.authority.confidence.description.cf_accepted">This authority value has been confirmed as accurate by an interactive user</message>
-  <!-- help message on "unlock" button in EditItemMetadata display -->
-  <message key="xmlui.authority.confidence.unlock.help">Unlock the authority key value for manual editing, or toggle it locked again</message>
+    <!-- explanatory messages for choice authority confidence values -->
+    <message key="xmlui.authority.confidence.description.cf_unset">Confidence was never recorded for this value</message>
+    <message key="xmlui.authority.confidence.description.cf_novalue">No reasonable confidence value was returned from the authority</message>
+    <message key="xmlui.authority.confidence.description.cf_rejected">The authority recommends this submission be rejected</message>
+    <message key="xmlui.authority.confidence.description.cf_failed">The authority encountered an internal failure</message>
+    <message key="xmlui.authority.confidence.description.cf_notfound">There are no matching answers in the authority</message>
+    <message key="xmlui.authority.confidence.description.cf_ambiguous">There are multiple matching authority values of equal validity</message>
+    <message key="xmlui.authority.confidence.description.cf_uncertain">Value is singular and valid but has not been seen and accepted by a human so it is still uncertain</message>
+    <message key="xmlui.authority.confidence.description.cf_accepted">This authority value has been confirmed as accurate by an interactive user</message>
+    <!-- help message on "unlock" button in EditItemMetadata display -->
+    <message key="xmlui.authority.confidence.unlock.help">Unlock the authority key value for manual editing, or toggle it locked again</message>
 
-  <!-- Choice Lookup popup window -->
-  <!-- NOTE: These messages necessarily use a *different* format for
+    <!-- Choice Lookup popup window -->
+    <!-- NOTE: These messages necessarily use a *different* format for
      - parameters, unfortunately, since substitution happens in the
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">Traženje vrijednosti u Arhivi</message>
-  <message key="xmlui.ChoiceLookupTransformer.accept">Prihvati</message>
-  <message key="xmlui.ChoiceLookupTransformer.add">Dodaj</message>
-  <message key="xmlui.ChoiceLookupTransformer.cancel">Otkaži</message>
-  <message key="xmlui.ChoiceLookupTransformer.more">Vidi više rezultata</message>
-  <!-- params are: start, end, total-count, search-value -->
-  <message key="xmlui.ChoiceLookupTransformer.results">Rezultati @1@ to @2@ of @3@ for "@4@"</message>
-  <message key="xmlui.ChoiceLookupTransformer.fail">Nije uspjelo učitavanje podataka: </message>
-  <message key="xmlui.ChoiceLookupTransformer.lookup">Traži</message>
+    <message key="xmlui.ChoiceLookupTransformer.title">Traženje vrijednosti u Arhivi</message>
+    <message key="xmlui.ChoiceLookupTransformer.accept">Prihvati</message>
+    <message key="xmlui.ChoiceLookupTransformer.add">Dodaj</message>
+    <message key="xmlui.ChoiceLookupTransformer.cancel">Otkaži</message>
+    <message key="xmlui.ChoiceLookupTransformer.more">Vidi više rezultata</message>
+    <!-- params are: start, end, total-count, search-value -->
+    <message key="xmlui.ChoiceLookupTransformer.results">Rezultati @1@ to @2@ of @3@ for "@4@"</message>
+    <message key="xmlui.ChoiceLookupTransformer.fail">Nije uspjelo učitavanje podataka: </message>
+    <message key="xmlui.ChoiceLookupTransformer.lookup">Traži</message>
 
-  <!-- Choice Lookup - sample config for dc.publisher field -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Naziv izdavača</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Traži izdavača</message>
-  <!-- Params are: search-value -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Non-authority value: @1@</message>
+    <!-- Choice Lookup - sample config for dc.publisher field -->
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Naziv izdavača</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Traži izdavača</message>
+  
+    <message key="xmlui.ChoiceLookupTransformer.field.da_CadastralMunicipality_Name.help">Katastarska opština</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.da_CadastralMunicipality_Name.title">Nađi Katastarsku Općinu</message>
+    <!-- Params are: search-value -->
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Non-authority value: @1@</message>
 
-  <!-- Choice Lookup - sample config for dc.contributor.author field -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Ime u formatu "Prezime, Ime"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Prezime, npr. "Kovačević"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">Lično ime, npr. "Damir"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Name Authority author lookup</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
+    <!-- Choice Lookup - sample config for dc.contributor.author field -->
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Ime u formatu "Prezime, Ime"</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Prezime, npr. "Kovačević"</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">Lično ime, npr. "Damir"</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Name Authority author lookup</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
 
-  <!-- mobile theme -->
-  <message key="xmlui.mobile.home_mobile">Mobilna arhiva</message>
-  <message key="xmlui.mobile.search_all">Traži SVE</message>
-  <message key="xmlui.mobile.browse_all">Prikaži SVE po</message>
-  <message key="xmlui.mobile.browse_date">Datumu</message>
-  <message key="xmlui.mobile.browse_author">Autoru</message>
-  <message key="xmlui.mobile.browse_title">Nazivu</message>
-  <message key="xmlui.mobile.browse_subject">Subjektu</message>
-  <message key="xmlui.mobile.related_google_scholar">Povezano</message>
-  <message key="xmlui.mobile.items_in_google_scholar">Stavke u Google Scholar</message>
-  <message key="xmlui.mobile.download">Skini</message>
+    <!-- mobile theme -->
+    <message key="xmlui.mobile.home_mobile">Mobilna arhiva</message>
+    <message key="xmlui.mobile.search_all">Traži SVE</message>
+    <message key="xmlui.mobile.browse_all">Prikaži SVE po</message>
+    <message key="xmlui.mobile.browse_date">Datumu</message>
+    <message key="xmlui.mobile.browse_author">Autoru</message>
+    <message key="xmlui.mobile.browse_title">Nazivu</message>
+    <message key="xmlui.mobile.browse_subject">Subjektu</message>
+    <message key="xmlui.mobile.related_google_scholar">Povezano</message>
+    <message key="xmlui.mobile.items_in_google_scholar">Stavke u Google Scholar</message>
+    <message key="xmlui.mobile.download">Skini</message>
 
 
     <!-- Versioning -->
@@ -2518,84 +2527,84 @@
     <!--Rate feature messages -->
     <message key="xmlui.administrative.registries.general.rate_registry_trail">Registar tarifa</message>
     <!-- org.dspace.app.xmlui.administrative.registries.FormatRegistryMain.java -->
-	<message key="xmlui.administrative.registries.RateRegistryMain.title">Registar tarifa</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.head">Registar tarifa</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.para1">Lista aktivnih tarifa i cijena. Možete editovati i dodavati nove tarife.</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.new_link">Dodaj novu cijenu</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column1"></message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column2">ID</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column3">Tarifni broj</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column4">Jedinica mjere</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column5">Cijena</message>
-        <message key="xmlui.administrative.registries.RateRegistryMain.column6">Opis tarife</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.title">Registar tarifa</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.head">Registar tarifa</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.para1">Lista aktivnih tarifa i cijena. Možete editovati i dodavati nove tarife.</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.new_link">Dodaj novu cijenu</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column1"></message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column2">ID</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column3">Tarifni broj</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column4">Jedinica mjere</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column5">Cijena</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column6">Opis tarife</message>
 	
-	<message key="xmlui.administrative.registries.RateRegistryMain.submit_delete">Izbriši tarife</message>
-        <!-- org.dspace.app.xmlui.administrative.registries.EditRateRegistry.java -->
-	<message key="xmlui.administrative.registries.EditRateRegistry.title">Registar tarifa</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.trail">Registar tarifa</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head1">Registar tarifa: "{0}"</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.para1">Ovo je registar tarifa. Možete dodati nove ili promijeniti postojeće tarife. Takođe, možete selektovati tarife za brisanje. </message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head2">Polja tarifa</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column1"></message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column2">ID</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column3">Tarifni broj</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column4">Jedinica mjere</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.empty">Nema tarife</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.submit_delete">Briši tarife</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head3">Dodaj novu tarifu</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.rateGrade">Tarifni broj</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.calculationUnit">Jedinica mjere</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.rateDescription">Opis tarife</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.price">Cijena</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.submit_add">Dodaj novu tarifu</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head4">Osvježi tarifu: {0}</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.submit_update">Osvježi tarifu</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error">Greška</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.error_rate_grade">Unos tarife</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.error_price">Unos cijene</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.error_calculation_unit">Unos jedinice mjere</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_duplicate_field">Tarifni broj se već koristi, svi tarifni brojevi mortaju biti jedinstveni.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_empty">Polje tarife je obavezno.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">Tarifa sadrži neodgovarajući karakter. Element NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_tolong">Element tarife je predugačak, ne smije biti duži od 50 karaktera.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_tolong">Kvalifikator tarife je predugačak, mora biti manji od 32 karaktera.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">Kvalifikator tarife sadrži neodgovarajući karakter. Kvalifikator NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.submit_delete">Izbriši tarife</message>
+    <!-- org.dspace.app.xmlui.administrative.registries.EditRateRegistry.java -->
+    <message key="xmlui.administrative.registries.EditRateRegistry.title">Registar tarifa</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.trail">Registar tarifa</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head1">Registar tarifa: "{0}"</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.para1">Ovo je registar tarifa. Možete dodati nove ili promijeniti postojeće tarife. Takođe, možete selektovati tarife za brisanje. </message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head2">Polja tarifa</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column1"></message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column2">ID</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column3">Tarifni broj</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column4">Jedinica mjere</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.empty">Nema tarife</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.submit_delete">Briši tarife</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head3">Dodaj novu tarifu</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.rateGrade">Tarifni broj</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.calculationUnit">Jedinica mjere</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.rateDescription">Opis tarife</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.price">Cijena</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.submit_add">Dodaj novu tarifu</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head4">Osvježi tarifu: {0}</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.submit_update">Osvježi tarifu</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error">Greška</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_rate_grade">Unos tarife</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_price">Unos cijene</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_calculation_unit">Unos jedinice mjere</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_duplicate_field">Tarifni broj se već koristi, svi tarifni brojevi mortaju biti jedinstveni.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_empty">Polje tarife je obavezno.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">Tarifa sadrži neodgovarajući karakter. Element NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_tolong">Element tarife je predugačak, ne smije biti duži od 50 karaktera.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_tolong">Kvalifikator tarife je predugačak, mora biti manji od 32 karaktera.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">Kvalifikator tarife sadrži neodgovarajući karakter. Kvalifikator NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
         
-        <message key="xmlui.administrative.registries.DeleteRateConfirm.title">Brisanje tarife</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.trail">Brisanje tarife</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.head">Potvrdi brisanje</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.para1">Jeste li sigurni da tarifa treba biti izbrisana?</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.column1">ID</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.column2">Tarifni broj</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.title">Brisanje tarife</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.trail">Brisanje tarife</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.head">Potvrdi brisanje</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.para1">Jeste li sigurni da tarifa treba biti izbrisana?</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.column1">ID</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.column2">Tarifni broj</message>
         
-        <message key="xmlui.administrative.FlowRateRegistryUtils.edit_rate_success_notice">Tarifnik je uspješno snimljen.</message>
-	<message key="xmlui.administrative.FlowRateRegistryUtils.delete_rate_success_notice">Tarifnik je uspješno snimljen.</message>
+    <message key="xmlui.administrative.FlowRateRegistryUtils.edit_rate_success_notice">Tarifnik je uspješno snimljen.</message>
+    <message key="xmlui.administrative.FlowRateRegistryUtils.delete_rate_success_notice">Tarifnik je uspješno snimljen.</message>
         
-        <message key="xmlui.administrative.registries.general.calculate_cost_trail">Specifikacija troškova</message>
-        <message key="xmlui.administrative.registries.CalculateCostMain.title">Specifikacija troškova</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.head">Specifikacija troškova</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.para1">Ovo je specifikacija o izvršenoj usluzi za izabrane podatke.</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column1">Tarifni broj</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column2">Naziv podatka</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column3">Jedinica mjere</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column4">Količina</message>
-        <message key="xmlui.administrative.registries.CalculateCostMain.column5">Cijena</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column6">Ukupno</message>
-        <message key="xmlui.administrative.registries.CalculateCostMain.totalprice">UKUPNO</message>
+    <message key="xmlui.administrative.registries.general.calculate_cost_trail">Specifikacija troškova</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.title">Specifikacija troškova</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.head">Specifikacija troškova</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.para1">Ovo je specifikacija o izvršenoj usluzi za izabrane podatke.</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column1">Tarifni broj</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column2">Naziv podatka</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column3">Jedinica mjere</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column4">Količina</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column5">Cijena</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column6">Ukupno</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.totalprice">UKUPNO</message>
         
-        <message key="xmlui.administrative.Navigation.context_cost_collection">Specifikacija troškova</message>
-        <message key="xmlui.administrative.Navigation.context_cost_community">Specifikacija troškova</message>
-        <message key="xmlui.administrative.Navigation.context_cost_item">Specifikacija troškova</message>
+    <message key="xmlui.administrative.Navigation.context_cost_collection">Specifikacija troškova</message>
+    <message key="xmlui.administrative.Navigation.context_cost_community">Specifikacija troškova</message>
+    <message key="xmlui.administrative.Navigation.context_cost_item">Specifikacija troškova</message>
 	
-        <!--end rate feature messages-->
-        <!-- Spatial Functionality -->
+    <!--end rate feature messages-->
+    <!-- Spatial Functionality -->
     <message key="xmlui.Spatial.Map.Search">Prostorna pretraga</message>
     <message key="xmlui.Spatial.Map.Clear">Očisti kartu</message>
     <message key="xmlui.Spatial.Map.Relation">Prostorna relacija </message>
     <message key="xmlui.Spatial.Map.isWithin">Je unutar</message>
     <message key="xmlui.Spatial.Map.Intersect">Presijeca</message>
     <message key="xmlui.Discovery.AbstractSearch.filters.controls.spatial.head">Prostorno</message>
-<!-- Spatial import search -->
+    <!-- Spatial import search -->
     <message key="xmlui.administrative.importsearch.general.title">Razultati učitavanja fajla za pretragu</message>
     <message key="xmlui.administrative.importsearch.general.head1">Učitaj fajl za pretragu</message>
     <message key="xmlui.administrative.importsearch.general.trail">Učitaj fajl za pretragu</message>
@@ -2603,4 +2612,36 @@
     <message key="xmlui.administrative.importsearch.ImportSearchMain.submit_upload">Učitaj fajl za pretragu</message>
     <message key="xmlui.administrative.importsearch.ImportSearchUpload.submit_confirm">Go to the spatial search page with select region</message>
 
+    <!-- org.dspace.app.xmlui.administrative.eperson.AuditSearch -->
+    <message key="xmlui.administrative.eperson.AuditSearch.title">Evidencija pristupa stavkama/fajlovima</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.main_head">Evidencija pristupa stavkama/fajlovima</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_head">Unesite parametre za filtriranje ili ostavite prazno polje za sve rezulate</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_search">Unesite period u formatu gggg-mm</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_startdate">Datum od (gggg-mm)</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_enddate">Datum do (gggg-mm)</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_email">Email</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_handle">Identifikator objekta u Arhivi:</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_help">Korisnici se pretrazuju po dijelu imena ili email-a</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_para1">Ispod je lista korisnika iz vašeg upita. </message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_head">Razultati pretrage</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column1">Korisnik</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column11">Email</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column2">Fajl</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column3">Vrijeme pretrage</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column4">Dosao sa</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.no_results">Nema razultata za vašu pretragu...</message>
+    
+    <!-- custum validation metadata output screen -->
+    <message key="xmlui.administrative.validatemetadata.general.validate_metadata_trail">Validacija metapdataka</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.title">Validacija metapdataka</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.head">Validacija metapdataka</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.para1">Ovo je Validacija metapdataka za odabrane objekte.</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.column1">Status</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.column2">Poruka</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.column3">URL</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.totalitems">Stavke sa greškom / Ukupno validiranih stavki</message>
+        
+    <message key="xmlui.administrative.Navigation.context_validate_collection">Validacija metapdataka</message>
+    <message key="xmlui.administrative.Navigation.context_validate_community">Validacija metapdataka</message>
+    <message key="xmlui.administrative.Navigation.context_validate_item">Validacija metapdataka</message>
 </catalogue>

@@ -63,13 +63,13 @@
             <xsl:when test="not($isModal)">
 
 
-            <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
-            </xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js lt-ie9 lt-ie8 lt-ie7&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+                <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
+                </xsl:text>
+                <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js lt-ie9 lt-ie8 lt-ie7&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
             &lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js lt-ie9 lt-ie8&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
             &lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js lt-ie9&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
             &lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
-            </xsl:text>
+                </xsl:text>
 
                 <!-- First of all, build the HTML head element -->
 
@@ -78,11 +78,11 @@
                 <!-- Then proceed to the body -->
                 <body>
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-                   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+                    chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
                     <xsl:choose>
                         <xsl:when
-                                test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='framing'][@qualifier='popup']">
+                            test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='framing'][@qualifier='popup']">
                             <xsl:apply-templates select="dri:body/*"/>
                         </xsl:when>
                         <xsl:otherwise>
@@ -116,12 +116,12 @@
                                 </div>
 
                                 <!--
-                            The footer div, dropping whatever extra information is needed on the page. It will
-                            most likely be something similar in structure to the currently given example. -->
-                            <div class="hidden-xs hidden-sm">
-                            <xsl:call-template name="buildFooter"/>
-                             </div>
-                         </div>
+                                The footer div, dropping whatever extra information is needed on the page. It will
+                                most likely be something similar in structure to the currently given example. -->
+                                <div class="hidden-xs hidden-sm">
+                                    <xsl:call-template name="buildFooter"/>
+                                </div>
+                            </div>
 
 
                         </xsl:otherwise>
@@ -148,7 +148,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
             <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-             More info: h5bp.com/i/378 -->
+            More info: h5bp.com/i/378 -->
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
             <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -268,8 +268,12 @@
             </script>
 
             <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 9]&gt;
-                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
-                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/respond/dest/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+                &lt;script src="</xsl:text>
+            <xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/>
+            <xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+                &lt;script src="</xsl:text>
+            <xsl:value-of select="concat($theme-path, 'vendor/respond/dest/respond.min.js')"/>
+            <xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
                 &lt;![endif]--&gt;</xsl:text>
 
             <!-- Modernizr enables HTML5 elements & feature detects -->
@@ -306,22 +310,22 @@
             <xsl:if test="confman:getProperty('webui.browse.render-scientific-formulas') = 'true'">
                 <script type="text/x-mathjax-config">
                     MathJax.Hub.Config({
-                      tex2jax: {
-                        inlineMath: [['$','$'], ['\\(','\\)']],
-                        ignoreClass: "detail-field-data|detailtable|exception"
-                      },
-                      TeX: {
-                        Macros: {
-                          AA: '{\\mathring A}'
-                        }
-                      }
+                    tex2jax: {
+                    inlineMath: [['$','$'], ['\\(','\\)']],
+                    ignoreClass: "detail-field-data|detailtable|exception"
+                    },
+                    TeX: {
+                    Macros: {
+                    AA: '{\\mathring A}'
+                    }
+                    }
                     });
                 </script>
                 <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
-			<!--
-                        <script src="{concat($theme-path, 'js/OpenLayers/OpenLayers.js')}">&#160;</script>
-                        <script src="{concat($theme-path, 'js/spatial.js')}">&#160;</script>-->
+            <!--
+            <script src="{concat($theme-path, 'js/OpenLayers/OpenLayers.js')}">&#160;</script>
+            <script src="{concat($theme-path, 'js/spatial.js')}">&#160;</script>-->
 
             <link rel="stylesheet" href="{concat($theme-path, 'map/ol-4.3.1/ol.css')}"/>
             <script src="{concat($theme-path, 'map/ol-4.3.1/ol.js')}">&#160;</script>
@@ -333,7 +337,7 @@
 
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
-        placeholders for header images -->
+    placeholders for header images -->
     <xsl:template name="buildHeader">
 
 
@@ -357,80 +361,80 @@
 
 
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
-                        <ul class="nav nav-pills pull-left ">
+                            <ul class="nav nav-pills pull-left ">
 
-                            <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
-                                <li id="ds-language-selection-xs" class="dropdown">
-                                    <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
-                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link" data-toggle="dropdown">
-                                        <b class="visible-xs glyphicon glyphicon-globe" aria-hidden="true"/>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
-                                        <xsl:for-each
-                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
-                                            <xsl:variable name="locale" select="."/>
-                                            <li role="presentation">
-                                                <xsl:if test="$locale = $active-locale">
-                                                    <xsl:attribute name="class">
-                                                        <xsl:text>disabled</xsl:text>
-                                                    </xsl:attribute>
-                                                </xsl:if>
-                                                <a>
-                                                    <xsl:attribute name="href">
-                                                        <xsl:value-of select="$current-uri"/>
-                                                        <xsl:text>?locale-attribute=</xsl:text>
-                                                        <xsl:value-of select="$locale"/>
-                                                    </xsl:attribute>
-                                                    <xsl:value-of
-                                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
-                                                </a>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
-                                </li>
-                            </xsl:if>
-
-                            <xsl:choose>
-                                <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
-                                    <li class="dropdown">
-                                        <button class="dropdown-toggle navbar-toggle navbar-link" id="user-dropdown-toggle-xs" href="#" role="button"  data-toggle="dropdown">
-                                            <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
+                                <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
+                                    <li id="ds-language-selection-xs" class="dropdown">
+                                        <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
+                                        <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link" data-toggle="dropdown">
+                                            <b class="visible-xs glyphicon glyphicon-globe" aria-hidden="true"/>
                                         </button>
-                                        <ul class="dropdown-menu pull-right" role="menu"
-                                            aria-labelledby="user-dropdown-toggle-xs" data-no-collapse="true">
-                                            <li>
-                                                <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='url']}">
-                                                    <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
-                                                    <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
-                                                </a>
-                                            </li>
+                                        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
+                                            <xsl:for-each
+                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
+                                                <xsl:variable name="locale" select="."/>
+                                                <li role="presentation">
+                                                    <xsl:if test="$locale = $active-locale">
+                                                        <xsl:attribute name="class">
+                                                            <xsl:text>disabled</xsl:text>
+                                                        </xsl:attribute>
+                                                    </xsl:if>
+                                                    <a>
+                                                        <xsl:attribute name="href">
+                                                            <xsl:value-of select="$current-uri"/>
+                                                            <xsl:text>?locale-attribute=</xsl:text>
+                                                            <xsl:value-of select="$locale"/>
+                                                        </xsl:attribute>
+                                                        <xsl:value-of
+                                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
+                                                    </a>
+                                                </li>
+                                            </xsl:for-each>
                                         </ul>
                                     </li>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <li>
-                                        <form style="display: inline" action="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}" method="get">
-                                            <button class="navbar-toggle navbar-link">
-                                            <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
+                                </xsl:if>
+
+                                <xsl:choose>
+                                    <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+                                        <li class="dropdown">
+                                            <button class="dropdown-toggle navbar-toggle navbar-link" id="user-dropdown-toggle-xs" href="#" role="button"  data-toggle="dropdown">
+                                                <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
                                             </button>
-                                        </form>
-                                    </li>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </ul>
-                              </div>
+                                            <ul class="dropdown-menu pull-right" role="menu"
+                                                aria-labelledby="user-dropdown-toggle-xs" data-no-collapse="true">
+                                                <li>
+                                                    <a href="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='url']}">
+                                                        <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
+                                                        <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <li>
+                                            <form style="display: inline" action="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='loginURL']}" method="get">
+                                                <button class="navbar-toggle navbar-link">
+                                                    <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="navbar-header pull-right hidden-xs">
                         <ul class="nav navbar-nav pull-left">
-                              <xsl:call-template name="languageSelection"/>
+                            <xsl:call-template name="languageSelection"/>
                         </ul>
                         <ul class="nav navbar-nav pull-left">
                             <xsl:choose>
@@ -479,7 +483,9 @@
                         </ul>
 
                         <button data-toggle="offcanvas" class="navbar-toggle visible-sm" type="button">
-                            <span class="sr-only"><i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text></span>
+                            <span class="sr-only">
+                                <i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text>
+                            </span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -494,7 +500,7 @@
 
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
-        placeholders for header images -->
+    placeholders for header images -->
     <xsl:template name="buildTrail">
         <div class="trail-wrapper hidden-print">
             <div class="container">
@@ -611,10 +617,10 @@
 
         <xsl:variable name="ccLicenseName"
                       select="document($externalMetadataURL)//dim:field[@element='rights']"
-                />
+        />
         <xsl:variable name="ccLicenseUri"
                       select="document($externalMetadataURL)//dim:field[@element='rights'][@qualifier='uri']"
-                />
+        />
         <xsl:variable name="handleUri">
             <xsl:for-each select="document($externalMetadataURL)//dim:field[@element='identifier' and @qualifier='uri']">
                 <a>
@@ -631,23 +637,24 @@
 
         <xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
             <div about="{$handleUri}" class="row">
-            <div class="col-sm-3 col-xs-12">
-                <a rel="license"
-                   href="{$ccLicenseUri}"
-                   alt="{$ccLicenseName}"
-                   title="{$ccLicenseName}"
-                        >
-                    <xsl:call-template name="cc-logo">
-                        <xsl:with-param name="ccLicenseName" select="$ccLicenseName"/>
-                        <xsl:with-param name="ccLicenseUri" select="$ccLicenseUri"/>
-                    </xsl:call-template>
-                </a>
-            </div> <div class="col-sm-8">
-                <span>
-                    <i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
-                    <xsl:value-of select="$ccLicenseName"/>
-                </span>
-            </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a rel="license"
+                       href="{$ccLicenseUri}"
+                       alt="{$ccLicenseName}"
+                       title="{$ccLicenseName}"
+                    >
+                        <xsl:call-template name="cc-logo">
+                            <xsl:with-param name="ccLicenseName" select="$ccLicenseName"/>
+                            <xsl:with-param name="ccLicenseUri" select="$ccLicenseUri"/>
+                        </xsl:call-template>
+                    </a>
+                </div> 
+                <div class="col-sm-8">
+                    <span>
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
+                        <xsl:value-of select="$ccLicenseName"/>
+                    </span>
+                </div>
             </div>
         </xsl:if>
     </xsl:template>
@@ -656,105 +663,111 @@
         <xsl:param name="ccLicenseName"/>
         <xsl:param name="ccLicenseUri"/>
         <xsl:variable name="ccLogo">
-             <xsl:choose>
-                  <xsl:when test="starts-with($ccLicenseUri,
+            <xsl:choose>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by/')">
-                       <xsl:value-of select="'cc-by.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-sa/')">
-                       <xsl:value-of select="'cc-by-sa.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-sa.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nd/')">
-                       <xsl:value-of select="'cc-by-nd.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nd.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nc/')">
-                       <xsl:value-of select="'cc-by-nc.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nc.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nc-sa/')">
-                       <xsl:value-of select="'cc-by-nc-sa.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nc-sa.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nc-nd/')">
-                       <xsl:value-of select="'cc-by-nc-nd.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nc-nd.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/publicdomain/zero/')">
-                       <xsl:value-of select="'cc-zero.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-zero.png'" />
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/publicdomain/mark/')">
-                       <xsl:value-of select="'cc-mark.png'" />
-                  </xsl:when>
-                  <xsl:otherwise>
-                       <xsl:value-of select="'cc-generic.png'" />
-                  </xsl:otherwise>
-             </xsl:choose>
+                    <xsl:value-of select="'cc-mark.png'" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="'cc-generic.png'" />
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
         <img class="img-responsive">
-             <xsl:attribute name="src">
+            <xsl:attribute name="src">
                 <xsl:value-of select="concat($theme-path,'/images/creativecommons/', $ccLogo)"/>
-             </xsl:attribute>
-             <xsl:attribute name="alt">
-                 <xsl:value-of select="$ccLicenseName"/>
-             </xsl:attribute>
+            </xsl:attribute>
+            <xsl:attribute name="alt">
+                <xsl:value-of select="$ccLicenseName"/>
+            </xsl:attribute>
         </img>
     </xsl:template>
 
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
-                <div class="row">
-                    <hr/>
-                    <div class="col-xs-7 col-sm-8">
-                        <div>
-                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2016&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
-                            <br/>
-                            <a href="http://www.gauss.ba/" target="_blank">Customized by Gauss</a>     
-                        </div>
-                        <div class="hidden-print">
-                            <a>
-                                <xsl:attribute name="href">
-                                    <xsl:value-of
-                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                                    <xsl:text>/contact</xsl:text>
-                                </xsl:attribute>
-                                <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
-                            </a>
-                            <xsl:text> | </xsl:text>
-                            <a>
-                                <xsl:attribute name="href">
-                                    <xsl:value-of
-                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                                    <xsl:text>/feedback</xsl:text>
-                                </xsl:attribute>
-                                <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
-                            </a>
-                        </div>
+            <div class="row">
+                <hr/>
+                <div class="col-xs-7 col-sm-8">
+                    <div>
+                        <a href="ProtocolImageScan:" target="_blank">Image Scan  Cleanup</a>  
+                        <a href="static/images/DAKorisnickiprirucnik.pdf" target="_blank">
+                            Korisničko upustvo
+                        </a>  
+                        <a href="https://wiki.duraspace.org/display/DSDOC6x/DSpace+6.x+Documentation" target="_blank">Kompletna dokumentacija</a>  
+                        <br/>
+                        <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2016&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
+                        <br/>
+                        <a href="http://www.gauss.ba/" target="_blank">Customized by Gauss</a>     
                     </div>
-                    <div class="col-xs-5 col-sm-4 hidden-print">
-                        <div class="pull-right">
-                            <span class="theme-by">Theme by&#160;</span>
-                            <br/>
-                            <a title="Atmire NV" target="_blank" href="http://atmire.com">
-                                <img alt="Atmire NV" src="{concat($theme-path, 'images/atmire-logo-small.svg')}"/>
-                            </a>
-                        </div>
-
+                    <div class="hidden-print">
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of
+                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                                <xsl:text>/contact</xsl:text>
+                            </xsl:attribute>
+                            <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
+                        </a>
+                        <xsl:text> | </xsl:text>
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of
+                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                                <xsl:text>/feedback</xsl:text>
+                            </xsl:attribute>
+                            <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
+                        </a>
                     </div>
                 </div>
-                <!--Invisible link to HTML sitemap (for search engines) -->
-                <a class="hidden">
-                    <xsl:attribute name="href">
-                        <xsl:value-of
-                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
-                        <xsl:text>/htmlmap</xsl:text>
-                    </xsl:attribute>
-                    <xsl:text>&#160;</xsl:text>
-                </a>
+                <div class="col-xs-5 col-sm-4 hidden-print">
+                    <div class="pull-right">
+                        <span class="theme-by">Theme by&#160;</span>
+                        <br/>
+                        <a title="Atmire NV" target="_blank" href="http://atmire.com">
+                            <img alt="Atmire NV" src="{concat($theme-path, 'images/atmire-logo-small.svg')}"/>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!--Invisible link to HTML sitemap (for search engines) -->
+            <a class="hidden">
+                <xsl:attribute name="href">
+                    <xsl:value-of
+                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                    <xsl:text>/htmlmap</xsl:text>
+                </xsl:attribute>
+                <xsl:text>&#160;</xsl:text>
+            </a>
             <p>&#160;</p>
         </footer>
     </xsl:template>
@@ -784,8 +797,12 @@
             <xsl:choose>
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
-                        <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
+                        <h1>
+                            <i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text>
+                        </h1>
+                        <p>
+                            <i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text>
+                        </p>
                     </div>
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
@@ -799,7 +816,7 @@
 
 
     <!-- Currently the dri:meta element is not parsed directly. Instead, parts of it are referenced from inside
-        other elements (like reference). The blank template below ends the execution of the meta branch -->
+    other elements (like reference). The blank template below ends the execution of the meta branch -->
     <xsl:template match="dri:meta">
     </xsl:template>
 
@@ -813,17 +830,26 @@
 
     <xsl:template name="addJavascript">
 
-        <script type="text/javascript"><xsl:text>
-                         if(typeof window.publication === 'undefined'){
-                            window.publication={};
-                          };
-                        window.publication.contextPath= '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/><xsl:text>';</xsl:text>
-            <xsl:text>window.publication.themePath= '</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>
+        <script type="text/javascript">
+            <xsl:text>
+                if(typeof window.publication === 'undefined'){
+                window.publication={};
+                };
+                window.publication.contextPath= '</xsl:text>
+            <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+            <xsl:text>';</xsl:text>
+            <xsl:text>window.publication.themePath= '</xsl:text>
+            <xsl:value-of select="$theme-path"/>
+            <xsl:text>';</xsl:text>
         </script>
         <!--TODO concat & minify!-->
 
         <script>
-            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text><xsl:value-of select="$context-path"/><xsl:text>';window.DSpace.theme_path='</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>
+            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text>
+            <xsl:value-of select="$context-path"/>
+            <xsl:text>';window.DSpace.theme_path='</xsl:text>
+            <xsl:value-of select="$theme-path"/>
+            <xsl:text>';</xsl:text>
         </script>
 
         <!--inject scripts.html containing all the theme specific javascript references
@@ -846,7 +872,8 @@
                 <xsl:attribute name="src">
                     <xsl:value-of select="$theme-path"/>
                     <xsl:value-of select="."/>
-                </xsl:attribute>&#160;</script>
+                </xsl:attribute>&#160;
+            </script>
         </xsl:for-each>
 
         <!-- add "shared" javascript from static, path is relative to webapp root-->
@@ -861,16 +888,18 @@
                         <xsl:attribute name="src">
                             <xsl:value-of select="$theme-path"/>
                             <xsl:text>js/choice-support.js</xsl:text>
-                        </xsl:attribute>&#160;</script>
+                        </xsl:attribute>&#160;
+                    </script>
                 </xsl:when>
                 <xsl:when test="not(starts-with(text(), 'static/js/scriptaculous'))">
                     <script>
                         <xsl:attribute name="src">
                             <xsl:value-of
-                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                             <xsl:text>/</xsl:text>
                             <xsl:value-of select="."/>
-                        </xsl:attribute>&#160;</script>
+                        </xsl:attribute>&#160;
+                    </script>
                 </xsl:when>
             </xsl:choose>
         </xsl:for-each>
@@ -886,20 +915,26 @@
     <xsl:template name="addJavascript-google-analytics">
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
-            <script><xsl:text>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            <script>
+                <xsl:text>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/><xsl:text>');
-                ga('send', 'pageview');
-            </xsl:text></script>
+                    ga('create', '</xsl:text>
+                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/>
+                <xsl:text>', '</xsl:text>
+                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/>
+                <xsl:text>');
+                    ga('send', 'pageview');
+                </xsl:text>
+            </script>
         </xsl:if>
     </xsl:template>
 
     <!--The Language Selection
-        Uses a page metadata curRequestURI which was introduced by in /xmlui-mirage2/src/main/webapp/themes/Mirage2/sitemap.xmap-->
+    Uses a page metadata curRequestURI which was introduced by in /xmlui-mirage2/src/main/webapp/themes/Mirage2/sitemap.xmap-->
     <xsl:template name="languageSelection">
         <xsl:variable name="curRequestURI">
             <xsl:value-of select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='curRequestURI'],/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'])"/>
@@ -911,14 +946,14 @@
                 <a id="language-dropdown-toggle" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="hidden-xs">
                         <xsl:value-of
-                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$active-locale]"/>
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$active-locale]"/>
                         <xsl:text>&#160;</xsl:text>
                         <b class="caret"/>
                     </span>
                 </a>
                 <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle" data-no-collapse="true">
                     <xsl:for-each
-                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
+                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
                         <xsl:variable name="locale" select="."/>
                         <li role="presentation">
                             <xsl:if test="$locale = $active-locale">
@@ -933,7 +968,7 @@
                                     <xsl:value-of select="$locale"/>
                                 </xsl:attribute>
                                 <xsl:value-of
-                                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
+                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
                             </a>
                         </li>
                     </xsl:for-each>
@@ -943,7 +978,7 @@
     </xsl:template>
 
     <!-- Builds the Query String part of the language URL. If there already is an existing query string
-like: ?filtertype=subject&filter_relational_operator=equals&filter=keyword1 it appends the locale parameter with the ampersand (&) symbol -->
+    like: ?filtertype=subject&filter_relational_operator=equals&filter=keyword1 it appends the locale parameter with the ampersand (&) symbol -->
     <xsl:template name="getLanguageURL">
         <xsl:variable name="queryString" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='queryString']"/>
         <xsl:choose>

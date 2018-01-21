@@ -556,8 +556,9 @@
             <xsl:when test="@type= 'select'">
                     <select>
                         <xsl:call-template name="fieldAttributes"/>
+                         <xsl:attribute name="onchange">changeCM(this.id);</xsl:attribute>
                         <xsl:apply-templates/>
-                    </select>
+                    </select>                    
             </xsl:when>
             <xsl:when test="@type= 'textarea'">
                     <textarea>
@@ -691,6 +692,11 @@
                         <xsl:if test="@rend='submit-location'">
                             <xsl:attribute name="onchange">updateMap(this.id)</xsl:attribute>
                         </xsl:if>
+                        <!--Filter cadaster municipalities and old sp when municipality has changed-->
+                        <!--<xsl:if test="@name='da_Municipality_Name'">
+                            <xsl:attribute name="onchange">changeCM(this.id)</xsl:attribute>
+                        </xsl:if>-->
+                       
                         <xsl:attribute name="value">
                             <xsl:choose>
                                 <xsl:when test="./dri:value[@type='raw']">
@@ -706,7 +712,12 @@
                         </xsl:if>
                         <xsl:apply-templates/>
                     </input>
-
+                    
+                <!--<xsl:if test="@dim:field[@element=['CadastralMunicipality'] and @qualifier=['Name']/child::node() ">
+                            <xsl:attribute name="onchange">changeCM(this.id)</xsl:attribute>
+                        </xsl:if> -->
+                        
+                        <!--end filter-->   
                 <!-- For spatial query form element!! -->
                 <xsl:if test="@rend='spatial-search'">
                     <div class="spatial-search-div">

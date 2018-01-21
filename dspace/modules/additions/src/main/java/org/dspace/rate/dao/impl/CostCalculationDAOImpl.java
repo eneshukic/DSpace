@@ -27,21 +27,22 @@ public class CostCalculationDAOImpl extends AbstractHibernateDAO<CostCalculation
         String strQuery = "select   mv.text_value, count (mv.text_value)as kol, r.rate_description, r.calculation_unit, sum(r.price) as price\n" +
 "from metadatavalue mv\n " +
 "inner join metadatafieldregistry mfr on mfr.metadata_field_id = mv.metadata_field_id\n" +
+"inner join metadataschemaregistry msr on msr.metadata_schema_id = mfr.metadata_schema_id\n" +
 "inner join rate r on r.rate_grade = mv.text_value\n" +
 "inner join item i on i.uuid = mv.dspace_object_id\n" +
 "inner join collection2item c2i on c2i.item_id = i.uuid\n" +
 "inner join collection c on c.uuid = c2i.collection_id\n" +
 "inner join community2collection c2c on c2c.collection_id = c.uuid\n" +
-"where mfr.element = 'tarrif'  and mfr.qualifier is null ) ";
+"where msr.short_id = 'da' and mfr.element = 'tarrif'  and mfr.qualifier = 'code' ) ";
         switch (costTypeId) {
             case ("communityID"):
-                strQuery.concat("c2c.community_id = :community_id ");
+                strQuery.concat("and c2c.community_id = :community_id ");
                 break;
             case ("collectionID"):
-                strQuery.concat("c.uuid = :collection_id ");
+                strQuery.concat("and c.uuid = :collection_id ");
                 break;
             case ("itemID"):
-                strQuery.concat("i.uuid = :item_id ");
+                strQuery.concat("and i.uuid = :item_id ");
                 break;
             default:
                 strQuery.concat("1=2 ");

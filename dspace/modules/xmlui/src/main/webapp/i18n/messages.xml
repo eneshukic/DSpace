@@ -140,12 +140,16 @@
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Authors Name</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.municipality.column_heading">Municipality</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Author {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Author</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Browsing {0} by Subject {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Browsing {0} by Subject</message>
+        
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.municipality">Browsing {0} by Municipality {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.municipality">Browsing {0} by Municipality</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.title">Browsing {0} by Title {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.title">Browsing {0} by Title</message>
@@ -259,6 +263,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.browse_municipality">Municipality</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">By Issue Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">By Submit Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">This Collection</message>
@@ -807,7 +812,7 @@
     <!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Upload File(s)</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">File</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Please enter the full path of the file on your computer corresponding to your item. If you click "Browse...", a new window will allow you to select the file from your computer.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Please enter the full path of the file on your computer corresponding to your item. If you click "Browse...", a new window will allow you to select the file from your computer. Maximum size allowed is 1GB.</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_error">The item must contain at least one file.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">There was a problem uploading your file.  Either the filename you entered was incorrect, there was a network problem which prevented the file from reaching us correctly, or you have attempted to upload a file format marked for internal system use only.  Please try again.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">The file has not been uploaded as it appears to contain a virus. Please contact the system administrator.</message>
@@ -1032,6 +1037,7 @@
     <message key="xmlui.administrative.Navigation.administrative_batch_import">Batch Import (ZIP)</message>
     <message key="xmlui.administrative.Navigation.administrative_import_metadata">Import Metadata</message>
     <message key="xmlui.administrative.Navigation.administrative_curation">Curation Tasks</message>
+    <message key="xmlui.administrative.Navigation.administrative_audit">Audit</message>
 
     <!-- my account items -->
 	<message key="xmlui.administrative.Navigation.account_export">My Exports</message>
@@ -2155,252 +2161,255 @@
 
 		                  dri2xhtml
 
-		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
 
 
 
 
-	<!-- structural.xsl -->
-	<message key="xmlui.dri2xhtml.structural.footer-promotional">
-		<a href="http://di.tamu.edu" id="ds-logo-link">
-			<span id="ds-footer-logo">&#160;</span>
-		</a>
-		<p>
-			This website is using Manakin, a new front end for DSpace created by Texas A&amp;M University
-			Libraries. The interface can be extensively modified through Manakin Aspects and XSL based Themes.
-			For more information visit
-			<a href="http://di.tamu.edu">http://di.tamu.edu</a> and
-			<a href="http://dspace.org">http://dspace.org</a>
-		</p>
-	</message>
-	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
-	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
+    <!-- structural.xsl -->
+    <message key="xmlui.dri2xhtml.structural.footer-promotional">
+        <a href="http://di.tamu.edu" id="ds-logo-link">
+            <span id="ds-footer-logo">&#160;</span>
+        </a>
+        <p>
+            This website is using Manakin, a new front end for DSpace created by Texas A&amp;M University
+            Libraries. The interface can be extensively modified through Manakin Aspects and XSL based Themes.
+            For more information visit
+            <a href="http://di.tamu.edu">http://di.tamu.edu</a> and
+            <a href="http://dspace.org">http://dspace.org</a>
+        </p>
+    </message>
+    <message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
+    <message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repository</message>
+    <message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repository</message>
 
-	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
-	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
-	<message key="xmlui.dri2xhtml.structural.login">Login</message>
+    <message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
+    <message key="xmlui.dri2xhtml.structural.logout">Logout</message>
+    <message key="xmlui.dri2xhtml.structural.login">Login</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Search DSpace</message>
-	<message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-community">This Community</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-collection">This Collection</message>
+    <message key="xmlui.dri2xhtml.structural.search">Search DSpace</message>
+    <message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
+    <message key="xmlui.dri2xhtml.structural.search-in-community">This Community</message>
+    <message key="xmlui.dri2xhtml.structural.search-in-collection">This Collection</message>
 
-	<message key="xmlui.dri2xhtml.structural.pagination-previous">Previous Page</message>
-	<message key="xmlui.dri2xhtml.structural.pagination-info">Now showing items {0}-{1} of {2}</message>
-	<message key="xmlui.dri2xhtml.structural.pagination-next">Next Page</message>
+    <message key="xmlui.dri2xhtml.structural.pagination-previous">Previous Page</message>
+    <message key="xmlui.dri2xhtml.structural.pagination-info">Now showing items {0}-{1} of {2}</message>
+    <message key="xmlui.dri2xhtml.structural.pagination-next">Next Page</message>
 
-	<message key="xmlui.dri2xhtml.structural.link_cc">Creative Commons</message>
-	<message key="xmlui.dri2xhtml.structural.link_original_license">Original License</message>
+    <message key="xmlui.dri2xhtml.structural.link_cc">Creative Commons</message>
+    <message key="xmlui.dri2xhtml.structural.link_original_license">Original License</message>
 
 
-	<!-- DS-METS-1.0-MODS.xsl -->
-	<!-- DS-METS-1.0-DIM.xsl -->
-	<!-- DS-METS-1.0-QDC.xsl -->
-	<message key="xmlui.dri2xhtml.METS-1.0.no-preview">No preview available</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.no-title">Untitled</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.no-author">Unknown author</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
-		This is not a DSpace object conformant to the METS 1.0 profile and as such cannot be
+    <!-- DS-METS-1.0-MODS.xsl -->
+    <!-- DS-METS-1.0-DIM.xsl -->
+    <!-- DS-METS-1.0-QDC.xsl -->
+    <message key="xmlui.dri2xhtml.METS-1.0.no-preview">No preview available</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.no-title">Untitled</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.no-author">Unknown author</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
+        This is not a DSpace object conformant to the METS 1.0 profile and as such cannot be
         rendered effectively. You can override either the template that handles the general
         case in dri2xhtml to perform the needed function, or create your template to match
         whatever profile you use.
     </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Preview</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Title</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Author</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-preview">Preview</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-title">Title</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-author">Author</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-name">Name</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-size">Size</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-format">Format</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-view">View</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-description">Description</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">View/<wbr/>Open</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">There are no files associated with this item.</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-name">Name</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-size">Size</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-format">Format</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-view">View</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-description">Description</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">View/<wbr/>Open</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.item-no-files">There are no files associated with this item.</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bytes</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bytes</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-kilobytes">Kb</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-megabytes">Mb</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.size-gigabytes">Gb</message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.license-text">The following license files are associated with this item:</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.license-text">The following license files are associated with this item:</message>
     <message key="xmlui.dri2xhtml.METS-1.0.cc-license-text">Except where otherwise noted, this item's license is described as </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.collection-not-implemented">
-		The summaryView of a collection is not currently used or implemented. This can be fixed
-		by overriding the dri2xhtml's template named collectionSummaryView.
-	</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.community-not-implemented">
-		The summaryView of a community is not currently used or implemented. This can be fixed
-		by overriding the dri2xhtml's template named communitySummaryView.
-	</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.collection-not-implemented">
+        The summaryView of a collection is not currently used or implemented. This can be fixed
+        by overriding the dri2xhtml's template named collectionSummaryView.
+    </message>
+    <message key="xmlui.dri2xhtml.METS-1.0.community-not-implemented">
+        The summaryView of a community is not currently used or implemented. This can be fixed
+        by overriding the dri2xhtml's template named communitySummaryView.
+    </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.collection-logo-alt">The collection's logo</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.community-logo-alt">The community's logo</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.no-logo-alt">No logo</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.news">News</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.collection-logo-alt">The collection's logo</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.community-logo-alt">The community's logo</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.no-logo-alt">No logo</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.news">News</message>
 
-	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
-		DS-METS-1.0-QDC.xsl -->
-	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
-		Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
-		this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
-		DIM or MODS for processing of communities and collections.
-	</message>
+    <!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
+    DS-METS-1.0-QDC.xsl -->
+    <message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
+        Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
+        this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
+        DIM or MODS for processing of communities and collections.
+    </message>
 
-	<message key="xmlui.dri2xhtml.METS-1.0.header-qdc-elements">Dublin Core elements</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.header-qdc-terms">Dublin Core terms</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.header-qdc-elements">Dublin Core elements</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.header-qdc-terms">Dublin Core terms</message>
 
-        <message key="xmlui.dri2xhtml.METS-1.0.blocked">Blocked</message>
+    <message key="xmlui.dri2xhtml.METS-1.0.blocked">Blocked</message>
 
 
-	<!-- Special pioneer model related text, wherever it might end up -->
-	<message key="xmlui.dri2xhtml.pioneer.preview">Preview</message>
-	<message key="xmlui.dri2xhtml.pioneer.date">Date</message>
-	<message key="xmlui.dri2xhtml.pioneer.title">Title</message>
-	<message key="xmlui.dri2xhtml.pioneer.author">Author</message>
+    <!-- Special pioneer model related text, wherever it might end up -->
+    <message key="xmlui.dri2xhtml.pioneer.preview">Preview</message>
+    <message key="xmlui.dri2xhtml.pioneer.date">Date</message>
+    <message key="xmlui.dri2xhtml.pioneer.title">Title</message>
+    <message key="xmlui.dri2xhtml.pioneer.author">Author</message>
 
-	<!-- tag used to handle the empty textarea tag added 09/28/2006 -->
-	<message key="xmlui.dri2xhtml.default.textarea.value"> </message>
+    <!-- tag used to handle the empty textarea tag added 09/28/2006 -->
+    <message key="xmlui.dri2xhtml.default.textarea.value"> </message>
 
-  <!--###### File Format MIME Type Mappings ######-->
+    <!--###### File Format MIME Type Mappings ######-->
 
-  <!-- Application-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.application/marc">MARC record</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/mathematica">Mathematica</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/msword">Microsoft Word</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/octet-stream">Unknown</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/pdf">PDF</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/postscript">Postscript</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/sgml">SGML</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-excel">Microsoft Excel</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-powerpoint">Microsoft PowerPoint</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-project">Microsoft Project</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.database">OpenOffice Base</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.formula">OpenOffice Math</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.graphics">OpenOffice Draw</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.presentation">OpenOffice Impress</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.spreadsheet">OpenOffice Calc</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.text">OpenOffice Writer</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation">Microsoft PowerPoint 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Microsoft Excel 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document">Microsoft Word 2007</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.calc">OpenOffice Calc (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.draw">OpenOffice Draw (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.impress">OpenOffice Impress (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.writer.global">OpenOffice Writer (1.x)</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/vnd.visio">Microsoft Visio</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/wordperfect5.1">WordPerfect</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-dvi">TeX DVI</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-filemaker">FileMaker Pro</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-java-applet">Java applet</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-latex">LaTeX</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-photoshop">Photoshop</message>
-  <message key="xmlui.dri2xhtml.mimetype.application/x-tex">TeX</message>
+    <!-- Application-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.application/marc">MARC record</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/mathematica">Mathematica</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/msword">Microsoft Word</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/octet-stream">Unknown</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/pdf">PDF</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/postscript">Postscript</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/sgml">SGML</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-excel">Microsoft Excel</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-powerpoint">Microsoft PowerPoint</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.ms-project">Microsoft Project</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.database">OpenOffice Base</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.formula">OpenOffice Math</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.graphics">OpenOffice Draw</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.presentation">OpenOffice Impress</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.spreadsheet">OpenOffice Calc</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.oasis.opendocument.text">OpenOffice Writer</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation">Microsoft PowerPoint 2007</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Microsoft Excel 2007</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document">Microsoft Word 2007</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.calc">OpenOffice Calc (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.draw">OpenOffice Draw (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.impress">OpenOffice Impress (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.sun.xml.writer.global">OpenOffice Writer (1.x)</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/vnd.visio">Microsoft Visio</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/wordperfect5.1">WordPerfect</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-dvi">TeX DVI</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-filemaker">FileMaker Pro</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-java-applet">Java applet</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-latex">LaTeX</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-photoshop">Photoshop</message>
+    <message key="xmlui.dri2xhtml.mimetype.application/x-tex">TeX</message>
 
-  <!-- Audio-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.audio/basic">Basic Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/flac">FLAC Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/m4a">AAC audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/m4a-latm">AAC audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/mpeg">mp3 audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-aiff">AIFF audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-mpeg">MPEG Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wma">WMA Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wmv">WMV Audio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-ogg">Ogg Vorbis</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-pn-realaudio">RealAudio</message>
-  <message key="xmlui.dri2xhtml.mimetype.audio/x-wav">WAV audio</message>
+    <!-- Audio-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.audio/basic">Basic Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/flac">FLAC Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/m4a">AAC audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/m4a-latm">AAC audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/mpeg">mp3 audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-aiff">AIFF audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-mpeg">MPEG Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wma">WMA Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-ms-wmv">WMV Audio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-ogg">Ogg Vorbis</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-pn-realaudio">RealAudio</message>
+    <message key="xmlui.dri2xhtml.mimetype.audio/x-wav">WAV audio</message>
 
-  <!-- Image-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.image/gif">GIF image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/jp2">JPEG 2000 image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/jpeg">JPEG image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/png">PNG image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/tiff">TIFF image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/x-ms-bmp">BMP image</message>
-  <message key="xmlui.dri2xhtml.mimetype.image/x-photo-cd">Photo CD</message>
+    <!-- Image-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.image/gif">GIF image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/jp2">JPEG 2000 image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/jpeg">JPEG image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/png">PNG image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/tiff">TIFF image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/x-ms-bmp">BMP image</message>
+    <message key="xmlui.dri2xhtml.mimetype.image/x-photo-cd">Photo CD</message>
 
-  <!-- Text-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.text/css">CSS file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/csv">CSV file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/html">HTML</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/javascript">Javascript</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/plain">Text file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/richtext">RTF file</message>
-  <message key="xmlui.dri2xhtml.mimetype.text/xml">XML</message>
+    <!-- Text-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.text/css">CSS file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/csv">CSV file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/html">HTML</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/javascript">Javascript</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/plain">Text file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/richtext">RTF file</message>
+    <message key="xmlui.dri2xhtml.mimetype.text/xml">XML</message>
 
-  <!-- Video-based formats -->
-  <message key="xmlui.dri2xhtml.mimetype.video/avi">AVI video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mjp2">Motion JPEG 2000</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mpeg">MPEG video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mpeg2">MPEG-2 video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/mp4">MPEG-4 video</message>
-  <message key="xmlui.dri2xhtml.mimetype.video/quicktime">QuickTime video</message>
+    <!-- Video-based formats -->
+    <message key="xmlui.dri2xhtml.mimetype.video/avi">AVI video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mjp2">Motion JPEG 2000</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mpeg">MPEG video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mpeg2">MPEG-2 video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/mp4">MPEG-4 video</message>
+    <message key="xmlui.dri2xhtml.mimetype.video/quicktime">QuickTime video</message>
 
-  <!-- explanatory messages for choice authority confidence values -->
-  <message key="xmlui.authority.confidence.description.cf_unset">Confidence was never recorded for this value</message>
-  <message key="xmlui.authority.confidence.description.cf_novalue">No reasonable confidence value was returned from the authority</message>
-  <message key="xmlui.authority.confidence.description.cf_rejected">The authority recommends this submission be rejected</message>
-  <message key="xmlui.authority.confidence.description.cf_failed">The authority encountered an internal failure</message>
-  <message key="xmlui.authority.confidence.description.cf_notfound">There are no matching answers in the authority</message>
-  <message key="xmlui.authority.confidence.description.cf_ambiguous">There are multiple matching authority values of equal validity</message>
-  <message key="xmlui.authority.confidence.description.cf_uncertain">Value is singular and valid but has not been seen and accepted by a human so it is still uncertain</message>
-  <message key="xmlui.authority.confidence.description.cf_accepted">This authority value has been confirmed as accurate by an interactive user</message>
-  <!-- help message on "unlock" button in EditItemMetadata display -->
-  <message key="xmlui.authority.confidence.unlock.help">Unlock the authority key value for manual editing, or toggle it locked again</message>
+    <!-- explanatory messages for choice authority confidence values -->
+    <message key="xmlui.authority.confidence.description.cf_unset">Confidence was never recorded for this value</message>
+    <message key="xmlui.authority.confidence.description.cf_novalue">No reasonable confidence value was returned from the authority</message>
+    <message key="xmlui.authority.confidence.description.cf_rejected">The authority recommends this submission be rejected</message>
+    <message key="xmlui.authority.confidence.description.cf_failed">The authority encountered an internal failure</message>
+    <message key="xmlui.authority.confidence.description.cf_notfound">There are no matching answers in the authority</message>
+    <message key="xmlui.authority.confidence.description.cf_ambiguous">There are multiple matching authority values of equal validity</message>
+    <message key="xmlui.authority.confidence.description.cf_uncertain">Value is singular and valid but has not been seen and accepted by a human so it is still uncertain</message>
+    <message key="xmlui.authority.confidence.description.cf_accepted">This authority value has been confirmed as accurate by an interactive user</message>
+    <!-- help message on "unlock" button in EditItemMetadata display -->
+    <message key="xmlui.authority.confidence.unlock.help">Unlock the authority key value for manual editing, or toggle it locked again</message>
 
-  <!-- Choice Lookup popup window -->
-  <!-- NOTE: These messages necessarily use a *different* format for
+    <!-- Choice Lookup popup window -->
+    <!-- NOTE: These messages necessarily use a *different* format for
      - parameters, unfortunately, since substitution happens in the
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">DSpace Value Lookup</message>
-  <message key="xmlui.ChoiceLookupTransformer.accept">Accept</message>
-  <message key="xmlui.ChoiceLookupTransformer.add">Add</message>
-  <message key="xmlui.ChoiceLookupTransformer.cancel">Cancel</message>
-  <message key="xmlui.ChoiceLookupTransformer.more">See More Results</message>
-  <!-- params are: start, end, total-count, search-value -->
-  <message key="xmlui.ChoiceLookupTransformer.results">Results @1@ to @2@ of @3@ for "@4@"</message>
-  <message key="xmlui.ChoiceLookupTransformer.fail">Failed to load choice data: </message>
-  <message key="xmlui.ChoiceLookupTransformer.lookup">Lookup</message>
+    <message key="xmlui.ChoiceLookupTransformer.title">DSpace Value Lookup</message>
+    <message key="xmlui.ChoiceLookupTransformer.accept">Accept</message>
+    <message key="xmlui.ChoiceLookupTransformer.add">Add</message>
+    <message key="xmlui.ChoiceLookupTransformer.cancel">Cancel</message>
+    <message key="xmlui.ChoiceLookupTransformer.more">See More Results</message>
+    <!-- params are: start, end, total-count, search-value -->
+    <message key="xmlui.ChoiceLookupTransformer.results">Results @1@ to @2@ of @3@ for "@4@"</message>
+    <message key="xmlui.ChoiceLookupTransformer.fail">Failed to load choice data: </message>
+    <message key="xmlui.ChoiceLookupTransformer.lookup">Lookup</message>
 
-  <!-- Choice Lookup - sample config for dc.publisher field -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Name of Publisher</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Look up Publisher</message>
-  <!-- Params are: search-value -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Non-authority value: @1@</message>
+    <!-- Choice Lookup - sample config for dc.publisher field -->
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Name of Publisher</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Look up Publisher</message>
+  
+    <message key="xmlui.ChoiceLookupTransformer.field.da_CadastralMunicipality_Name.help">Cadastal Municipality</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.da_CadastralMunicipality_Name.title">Look up Cadastral Municipality</message>
+    <!-- Params are: search-value -->
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Non-authority value: @1@</message>
 
-  <!-- Choice Lookup - sample config for dc.contributor.author field -->
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Name in "Last, First" format</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Last name, e.g. "Smith"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">First name(s) e.g. "Fred"</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Name Authority author lookup</message>
-  <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
+    <!-- Choice Lookup - sample config for dc.contributor.author field -->
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Name in "Last, First" format</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Last name, e.g. "Smith"</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">First name(s) e.g. "Fred"</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Name Authority author lookup</message>
+    <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
 
-  <!-- mobile theme -->
-  <message key="xmlui.mobile.home_mobile">DSpace Mobile</message>
-  <message key="xmlui.mobile.search_all">Search ALL</message>
-  <message key="xmlui.mobile.browse_all">Browse ALL by</message>
-  <message key="xmlui.mobile.browse_date">Date</message>
-  <message key="xmlui.mobile.browse_author">Author</message>
-  <message key="xmlui.mobile.browse_title">Title</message>
-  <message key="xmlui.mobile.browse_subject">Subject</message>
-  <message key="xmlui.mobile.related_google_scholar">Related</message>
-  <message key="xmlui.mobile.items_in_google_scholar">Items in Google Scholar</message>
-  <message key="xmlui.mobile.download">Download</message>
+    <!-- mobile theme -->
+    <message key="xmlui.mobile.home_mobile">DSpace Mobile</message>
+    <message key="xmlui.mobile.search_all">Search ALL</message>
+    <message key="xmlui.mobile.browse_all">Browse ALL by</message>
+    <message key="xmlui.mobile.browse_date">Date</message>
+    <message key="xmlui.mobile.browse_author">Author</message>
+    <message key="xmlui.mobile.browse_title">Title</message>
+    <message key="xmlui.mobile.browse_subject">Subject</message>
+    <message key="xmlui.mobile.related_google_scholar">Related</message>
+    <message key="xmlui.mobile.items_in_google_scholar">Items in Google Scholar</message>
+    <message key="xmlui.mobile.download">Download</message>
 
 
     <!-- Versioning -->
@@ -2517,77 +2526,77 @@
     <!--Rate feature messages -->
     <message key="xmlui.administrative.registries.general.rate_registry_trail">Rate registry</message>
     <!-- org.dspace.app.xmlui.administrative.registries.FormatRegistryMain.java -->
-	<message key="xmlui.administrative.registries.RateRegistryMain.title">Rate Registry</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.head">Tarrif registry</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.para1">This list of active tarrifs and rates. You can edit or add new tarrif with this tool.</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.new_link">Add a new rate</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column1"></message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column2">ID</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column3">Rate Grade</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column4">Calculation Unit</message>
-	<message key="xmlui.administrative.registries.RateRegistryMain.column5">Rate Price</message>
-        <message key="xmlui.administrative.registries.RateRegistryMain.column6">Rate Description</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.title">Rate Registry</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.head">Tarrif registry</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.para1">This list of active tarrifs and rates. You can edit or add new tarrif with this tool.</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.new_link">Add a new rate</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column1"></message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column2">ID</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column3">Rate Grade</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column4">Calculation Unit</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column5">Rate Price</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.column6">Rate Description</message>
 	
-	<message key="xmlui.administrative.registries.RateRegistryMain.submit_delete">Delete rates</message>
-        <!-- org.dspace.app.xmlui.administrative.registries.EditRateRegistry.java -->
-	<message key="xmlui.administrative.registries.EditRateRegistry.title">Rate Registry</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.trail">Rate registry</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head1">Rate Registry: "{0}"</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.para1">This is the rate registry for "{0}". You may add new or update existing rates. Rates may also be selected for deletion. </message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head2">Rate fields</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column1"></message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column2">ID</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column3">Rate Grade</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.column4">Calculation Unit</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.empty">No rates</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.submit_delete">Delete rates</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head3">Add new rate</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.rateGrade">Rate Grade</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.calculationUnit">Calculation Unit</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.rateDescription">Rate Description.</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.price">Price.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.submit_add">Add new rate</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.head4">Update Rate: {0}</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.submit_update">Update rate</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error">Error</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.error_rate_grade">Enter rate grade</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.error_price">Enter price</message>
-        <message key="xmlui.administrative.registries.EditRateRegistry.error_calculation_unit">Enter calculation unit</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_duplicate_field">The rate grade is already in use, all rate grades must be unique.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_empty">The rate's element is required.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">The rates's element contains a bad character. The element may NOT contain: periods, underscores, or spaces.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_element_tolong">The rate's element is to long, it must be less than 50 characters.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_tolong">The rate's qualifier is to long, it must be less than 32 characters.</message>
-	<message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">The rate's qualifier contains a bad character. The qualifier may NOT contain: periods, underscores, or spaces.</message>
+    <message key="xmlui.administrative.registries.RateRegistryMain.submit_delete">Delete rates</message>
+    <!-- org.dspace.app.xmlui.administrative.registries.EditRateRegistry.java -->
+    <message key="xmlui.administrative.registries.EditRateRegistry.title">Rate Registry</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.trail">Rate registry</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head1">Rate Registry: "{0}"</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.para1">This is the rate registry for "{0}". You may add new or update existing rates. Rates may also be selected for deletion. </message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head2">Rate fields</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column1"></message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column2">ID</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column3">Rate Grade</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.column4">Calculation Unit</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.empty">No rates</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.submit_delete">Delete rates</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head3">Add new rate</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.rateGrade">Rate Grade</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.calculationUnit">Calculation Unit</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.rateDescription">Rate Description.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.price">Price.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.submit_add">Add new rate</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.head4">Update Rate: {0}</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.submit_update">Update rate</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error">Error</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_rate_grade">Enter rate grade</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_price">Enter price</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_calculation_unit">Enter calculation unit</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_duplicate_field">The rate grade is already in use, all rate grades must be unique.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_empty">The rate's element is required.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">The rates's element contains a bad character. The element may NOT contain: periods, underscores, or spaces.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_tolong">The rate's element is to long, it must be less than 50 characters.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_tolong">The rate's qualifier is to long, it must be less than 32 characters.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">The rate's qualifier contains a bad character. The qualifier may NOT contain: periods, underscores, or spaces.</message>
         
-        <message key="xmlui.administrative.registries.DeleteRateConfirm.title">Delete Rate</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.trail">Delete rate</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.head">Confirm Deletion</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.para1">Are you sure the rate should be deleted? Any existing rates of will be reverted to the unknown bitstream format.</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.column1">ID</message>
-	<message key="xmlui.administrative.registries.DeleteRateConfirm.column2">Rate Grade</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.title">Delete Rate</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.trail">Delete rate</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.head">Confirm Deletion</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.para1">Are you sure the rate should be deleted? Any existing rates of will be reverted to the unknown bitstream format.</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.column1">ID</message>
+    <message key="xmlui.administrative.registries.DeleteRateConfirm.column2">Rate Grade</message>
         
-        <message key="xmlui.administrative.FlowRateRegistryUtils.edit_rate_success_notice">The rate was successfully saved.</message>
-	<message key="xmlui.administrative.FlowRateRegistryUtils.delete_rate_success_notice">The rate(s) were successfully deleted.</message>
+    <message key="xmlui.administrative.FlowRateRegistryUtils.edit_rate_success_notice">The rate was successfully saved.</message>
+    <message key="xmlui.administrative.FlowRateRegistryUtils.delete_rate_success_notice">The rate(s) were successfully deleted.</message>
         
-        <message key="xmlui.administrative.registries.general.calculate_cost_trail">Cost Calculation</message>
-        <message key="xmlui.administrative.registries.CalculateCostMain.title">Cost Calculation</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.head">Cost calculation</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.para1">This is a cost calculation for selected objects.</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column1">Rate Grade</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column2">Rate Description</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column3">Calculation Unit</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column4">Number of Units</message>
-        <message key="xmlui.administrative.registries.CalculateCostMain.column5">Unit Price</message>
-	<message key="xmlui.administrative.registries.CalculateCostMain.column6">Amount</message>
-        <message key="xmlui.administrative.registries.CalculateCostMain.totalprice">Total</message>
+    <message key="xmlui.administrative.registries.general.calculate_cost_trail">Cost Calculation</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.title">Cost Calculation</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.head">Cost calculation</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.para1">This is a cost calculation for selected objects.</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column1">Rate Grade</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column2">Rate Description</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column3">Calculation Unit</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column4">Number of Units</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column5">Unit Price</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.column6">Amount</message>
+    <message key="xmlui.administrative.registries.CalculateCostMain.totalprice">Total</message>
         
-        <message key="xmlui.administrative.Navigation.context_cost_collection">Cost Calculation</message>
-        <message key="xmlui.administrative.Navigation.context_cost_community">Cost Calculation</message>
-        <message key="xmlui.administrative.Navigation.context_cost_item">Cost Calculation</message>
+    <message key="xmlui.administrative.Navigation.context_cost_collection">Cost Calculation</message>
+    <message key="xmlui.administrative.Navigation.context_cost_community">Cost Calculation</message>
+    <message key="xmlui.administrative.Navigation.context_cost_item">Cost Calculation</message>
 	
-        <!--end rate feature messages-->
-        <!-- Spatial Functionality -->
+    <!--end rate feature messages-->
+    <!-- Spatial Functionality -->
     <message key="xmlui.Spatial.Map.Search">Spatial Search</message>
     <message key="xmlui.Spatial.Map.Clear">Clear Map</message>
     <message key="xmlui.Spatial.Map.Relation">Spatial Relation </message>
@@ -2602,5 +2611,37 @@
     <message key="xmlui.administrative.importsearch.ImportSearchMain.submit_upload">Upload Search File</message>
     <message key="xmlui.administrative.importsearch.ImportSearchUpload.submit_confirm">Uploded file did not return anz results. Go to the spatial search page.</message>
 
+    <!-- org.dspace.app.xmlui.administrative.eperson.AuditSearch -->
+    <message key="xmlui.administrative.eperson.AuditSearch.title">Bitstream / Item Access Log</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.main_head">Bitstream / Item Access Log</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_head">Enter search parameters. Leave blank to view all</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_search">Enter date range in yyyy-mm</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_startdate">Start date (yyyy-mm)</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_enddate">End date (yyyy-mm)</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_email">Email</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.actions_handle">Handle DSpace Object</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_help">E-People are searched by any partial match on email or name</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_para1">Below is the list of E-People that matched your search query. </message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_head">Search results</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column1">User</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column11">Email</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column2">Bitstream/Item</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column3">Time Accessed</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.search_column4">Referer</message>
+    <message key="xmlui.administrative.eperson.AuditSearch.no_results">Your search found no results...</message>
+    
+    <!-- custum validation metadata output screen -->
+    <message key="xmlui.administrative.validatemetadata.general.validate_metadata_trail">Validate Metadata</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.title">Validate Metadata</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.head">Validate Metadata</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.para1">This is a Validate Metadata for selected objects.</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.column1">Status</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.column2">Message</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.column3">URL</message>
+    <message key="xmlui.administrative.validatemetadata.ValidateMetadataMain.totalitems">Invalid Items / Total Items Processed</message>
+        
+    <message key="xmlui.administrative.Navigation.context_validate_collection">Validate Metadata</message>
+    <message key="xmlui.administrative.Navigation.context_validate_community">Validate Metadata</message>
+    <message key="xmlui.administrative.Navigation.context_validate_item">Validate Metadata</message>
 
 </catalogue>

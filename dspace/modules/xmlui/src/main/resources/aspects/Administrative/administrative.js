@@ -487,7 +487,7 @@ function startManageFormatRegistry()
 
 function startCostCalculation()
 {
-	assertAdministrator();
+	//assertAdministrator();
 
 	doManageCostCalculation();
 
@@ -499,13 +499,73 @@ function startCostCalculation()
 }
 function doManageCostCalculation()
 {
-    assertAdministrator();
+    //assertAdministrator();
 
-    var ID = UUID.fromString(cocoon.request.get("ID"));; 
+    var ID = UUID.fromString(cocoon.request.get("ID")); 
     var costTypeId = cocoon.request.get("costTypeId"); 
+    if (costTypeId == "communityID"){
+        assertAuthorized(Constants.COMMUNITY,ID,Constants.READ);
+    }
+    else if (costTypeId == "collectionID"){
+        assertAuthorized(Constants.COLLECTION,ID,Constants.READ);
+    }
+    else if(costTypeId == "itemID"){
+        assertAuthorized(Constants.ITEM,ID,Constants.READ);
+    }
+    else {
+        //do nothing - deny access
+        assertAdministrator();
+    }
+    
     var result = null;
     do {
         sendPageAndWait("admin/cost-calculation/main",{"ID":ID,"costTypeId":costTypeId},result);
+        assertAdministrator();
+		result = null;
+
+        
+    } while (true)
+}
+
+/**
+ * Start metadata validation
+ */
+
+function startValidateMetadata()
+{
+	//assertAdministrator();
+
+	doManageValidateMetadata();
+
+	// This should never return, but just in case it does then point
+	// the user to the home page.
+	cocoon.redirectTo(cocoon.request.getContextPath());
+	getDSContext().complete();
+        cocoon.exit();
+}
+function doManageValidateMetadata()
+{
+    //assertAdministrator();
+	var ID = UUID.fromString(cocoon.request.get("ID")); 
+    var handle = cocoon.request.get("handle"); 
+	 var TypeId = cocoon.request.get("TypeId"); 
+    if (TypeId == "communityID"){
+        assertAuthorized(Constants.COMMUNITY,ID,Constants.READ);
+    }
+    else if (TypeId == "collectionID"){
+        assertAuthorized(Constants.COLLECTION,ID,Constants.READ);
+    }
+    else if(TypeId == "itemID"){
+        assertAuthorized(Constants.ITEM,ID,Constants.READ);
+    }
+    else {
+        //do nothing - deny access
+        assertAdministrator();
+    }
+    
+    var result = null;
+    do {
+        sendPageAndWait("admin/validate-metadata/main",{"ID":ID,"handle":handle,"TypeId":TypeId},result);
         assertAdministrator();
 		result = null;
 
@@ -615,7 +675,7 @@ function startMetadataImport()
 function startSearchImport()
 {
 
-        assertAdministrator();
+        //assertAdministrator();
 
 	doSearchImport();
 
@@ -627,9 +687,19 @@ function startSearchImport()
 function startBatchImport()
 {
 
-    assertAdministrator();
+    //assertAdministrator();
+    var collectionID = cocoon.request.get("collectionID");
+    if (collectionID != null) {
+        collectionID = UUID.fromString(cocoon.request.get("collectionID"));
+        assertEditCollection(collectionID);
+    }
+    else {
+       
+        assertAdministrator();
+    }
 
-    doBatchImport();
+    doBatchImport(collectionID);
+    //doBatchImport();
 
     cocoon.redirectTo(cocoon.request.getContextPath());
     getDSContext().complete();
@@ -725,9 +795,63 @@ function startCurate()
         cocoon.exit();
 }
 
+/**
+ * Start managing audit
+ */
+function startManageAudit()
+{
+	assertAdministrator();
 
+	doManageAudit();
 
+	// This should never return, but just in case it does then point
+	// the user to the home page.
+	cocoon.redirectTo(cocoon.request.getContextPath());
+	getDSContext().complete();
+	cocoon.exit();
+}
 
+function doManageAudit()
+{
+    assertAdministrator();
+
+    var query = null;
+    var page = 0;
+    var highlightID = -1;
+    var result;
+    var epersonID;
+    var dStart;
+    var dEnd;
+    var handle;
+    do {
+
+        sendPageAndWait("admin/audit/main",{"page":page,"query":query,"highlightID":highlightID,"epersonID":epersonID,"dStart":dStart,"dEnd":dEnd,"handle":handle},result);
+        result = null;
+
+        // Update the page parameter if supplied.
+        if (cocoon.request.get("page"))
+            page = cocoon.request.get("page");
+
+        if (cocoon.request.get("submit_search"))
+        {
+            // Grab the new query and reset the page parameter
+            epersonID = cocoon.request.get("epersonID");
+            query = cocoon.request.get("query");
+            dStart = cocoon.request.get("dStart");
+            dEnd = cocoon.request.get("dEnd");
+            handle = cocoon.request.get("handle");
+            page = 0
+            highlightID = -1;
+        }
+        
+        else if (cocoon.request.get("submit_return"))
+        {
+            // Not implemented in the UI, but should be in case someone links to us.
+            return;
+        }
+
+    } while (true) // only way to exit is to hit the submit_back button.
+}
 /********************
  * EPerson flows
  ********************/
@@ -1976,10 +2100,12 @@ function doMoveItem(itemID)
 function doAddBitstream(itemID)
 {
     assertAuthorized(Constants.ITEM,itemID,Constants.ADD);
+    //assertEditItem(itemID);
     var result;
     do {
         sendPageAndWait("admin/item/add-bitstream",{"itemID":itemID},result);
 		assertAuthorized(Constants.ITEM,itemID,Constants.ADD);
+                //assertEditItem(itemID);
         result = null;
 
         if (cocoon.request.get("submit_cancel"))
@@ -2095,7 +2221,7 @@ function doSearchImport()
     var result;
     var hid = cocoon.request.get("hid");
 
-    assertAdministrator();
+    //assertAdministrator();
     do
     {
         sendPageAndWait("admin/import-search/main",{"hid":hid},result);
@@ -2114,7 +2240,7 @@ function doSearchImportUpload(hid)
 {
     var result = FlowImportSearchUtils.processUpload(cocoon.request);
 
-    assertAdministrator();
+    //assertAdministrator();
     
         sendPageAndWait("admin/import-search/upload",{"hid":hid},result);
         return null; //???
@@ -2129,7 +2255,7 @@ function doMetadataImport()
 {
     var result;
 
-    assertAdministrator();
+    //assertAdministrator();
     do
     {
         sendPageAndWait("admin/metadataimport/main",{},result);
@@ -2179,12 +2305,12 @@ function doMetadataImportConfirm()
  * Manage batch metadata import
  *
  */
-
+/*
 function doBatchImport()
 {
     var result;
 
-    assertAdministrator();
+    //assertAdministrator();
     do
     {
         sendPageAndWait("admin/batchimport/main",{},result);
@@ -2203,7 +2329,7 @@ function doBatchImportUpload()
 {
     var result = FlowBatchImportUtils.processUploadZIP(getDSContext(),cocoon.request);
 
-    assertAdministrator();
+    //assertAdministrator();
     do
     {
         sendPageAndWait("admin/batchimport/upload",{},result);
@@ -2226,6 +2352,71 @@ function doBatchImportConfirm()
 {
     var result = FlowBatchImportUtils.processBatchImport(getDSContext(),cocoon.request);
     assertAdministrator();
+    sendPageAndWait("admin/batchimport/confirm",{},result);
+    return null;
+}
+*/
+
+function doBatchImport(collectionID)
+{
+    var result;
+   if (collectionID != null) {
+        assertAuthorized(Constants.COLLECTION,collectionID,Constants.ADD);
+    }
+    else {
+        assertAdministrator();
+    }
+    do
+    {
+        sendPageAndWait("admin/batchimport/main",{"collectionID":collectionID},result);
+        result = null;
+
+        if (cocoon.request.get("submit_upload"))
+        {
+            result = doBatchImportUpload(collectionID);
+
+        }
+
+    } while (true);
+}
+
+function doBatchImportUpload(collectionID)
+{
+    var result = FlowBatchImportUtils.processUploadZIP(getDSContext(),cocoon.request);
+
+   if (collectionID != null) {
+        assertAuthorized(Constants.COLLECTION,collectionID,Constants.ADD);
+    }
+    else {
+        assertAdministrator();
+    }
+    do
+    {
+        sendPageAndWait("admin/batchimport/upload",{},result);
+        result = null;
+
+        if (cocoon.request.get("submit_return"))
+        {
+            return null;
+        }
+        else if (cocoon.request.get("submit_confirm"))
+        {
+
+            result = doBatchImportConfirm(collectionID);
+            return result;
+        }
+    } while (true);
+}
+
+function doBatchImportConfirm(collectionID)
+{
+    var result = FlowBatchImportUtils.processBatchImport(getDSContext(),cocoon.request);
+    if (collectionID != null) {
+        assertAuthorized(Constants.COLLECTION,collectionID,Constants.ADD);
+    }
+    else {
+        assertAdministrator();
+    }
     sendPageAndWait("admin/batchimport/confirm",{},result);
     return null;
 }

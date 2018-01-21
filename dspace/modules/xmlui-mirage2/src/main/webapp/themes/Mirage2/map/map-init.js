@@ -27,8 +27,7 @@ var vector = new ol.layer.Vector({
 });
 
 var draw;
-
-
+//document.getElementById("aspect_submission_StepTransformer_field_da_Municipality_Name").addEventListener("change",changeCM);
 //get query strings
 function getQueryStrings() { 
   var assoc  = {};
@@ -126,3 +125,34 @@ function clearMap() {
     document.getElementById(fieldID).value = "";
     source.clear();
 }
+
+//add filter to cadaster municipality based on municipality name
+function changeCM(id){
+    source.clear();
+    if (id == "aspect_submission_StepTransformer_field_da_Municipality_Name"){
+    var cmexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_Name");
+    var cmoldexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_NameSP");
+    if (cmexists != null){
+         document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_Name").value = document.getElementById(id).value;
+    }
+    if (cmoldexists != null){
+         document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_NameSP").value = document.getElementById(id).value;
+    }
+}
+    
+}
+
+/*
+function changeCM(){
+    //source.clear();
+    var cmexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_Name");
+    var cmoldexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_NameSP");
+    if (cmexists != null){
+         cmexists.value = document.getElementById(id).value;
+    }
+    if (cmoldexists != null){
+         cmoldexists.value = document.getElementById(id).value;
+    }
+    
+}
+*/

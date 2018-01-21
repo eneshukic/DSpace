@@ -44,6 +44,8 @@ to administer DSpace.
                         <map:transformer name="EditRateRegistry" src="org.dspace.app.xmlui.aspect.administrative.registries.EditRateRegistry"/>
                         <map:transformer name="DeleteRateConfirm" src="org.dspace.app.xmlui.aspect.administrative.registries.DeleteRateConfirm"/>
                         <map:transformer name="CalculateCostMain" src="org.dspace.app.xmlui.aspect.administrative.registries.CalculateCostMain"/>
+                        <map:transformer name="ValidateMetadataMain" src="org.dspace.app.xmlui.aspect.administrative.validatemetadata.ValidateMetadataMain"/>
+                        <map:transformer name="AuditSearchMain" src="org.dspace.app.xmlui.aspect.administrative.audit.AuditSearchMain"/>
 			
 			<map:transformer name="FindItemForm" src="org.dspace.app.xmlui.aspect.administrative.item.FindItemForm"/>
 			<map:transformer name="EditItemStatusForm" src="org.dspace.app.xmlui.aspect.administrative.item.EditItemStatusForm"/>
@@ -146,6 +148,17 @@ to administer DSpace.
 						</map:match>
 						<map:call function="startManageEPeople"/>
 					</map:match>
+                                        
+                                        <!--
+						This is the general entry / resume point for the 
+						audit of epeople item/bitstream access.
+						-->
+					<map:match pattern="admin/audit">
+						<map:match type="request" pattern="administrative-continue">
+							<map:call continuation="{1}"/>
+						</map:match>
+						<map:call function="startManageAudit"/>
+					</map:match>
 								
 					<!--
 						This is the general entry / resume point for the 
@@ -206,6 +219,23 @@ to administer DSpace.
 						</map:match>
                                                 <map:call function="startCostCalculation"/>
 					</map:match>
+                                        
+                                        <!--
+						This is the general entry / resume point for the
+						metadata validation
+						-->
+					<map:match pattern="admin/validate-metadata">
+                                            <map:match type="request" pattern="administrative-continue">
+							<map:call continuation="{1}"/>
+						</map:match>
+                                                <map:match type="request" pattern="ID">
+						</map:match>
+                                                <map:match type="request" pattern="handle">
+						</map:match>
+                                                <map:match type="request" pattern="TypeId">
+						</map:match>
+                                                <map:call function="startValidateMetadata"/>
+					</map:match>
 					
 					
 					<!--
@@ -262,14 +292,19 @@ to administer DSpace.
 
                     <!--
 						This is the general entry / resume point for the
-						batch metadata editor
+                                                batch metadata editor
 					-->
                     <map:match pattern="admin/batchimport">
                         <map:match type="request" pattern="administrative-continue">
                             <map:call continuation="{1}"/>
                         </map:match>
+                        <!--<map:match type="request" pattern="collectionID">
+                            </map:match>
+                             <map:match type="request" pattern="hid">
+                            </map:match>-->
 
                         <map:call function="startBatchImport"/>
+                        
 
                     </map:match>
 
@@ -431,7 +466,20 @@ to administer DSpace.
 		        				<map:parameter name="epeopleIDs" value="{flow-attribute:epeopleIDs}"/>
 		        			</map:transform>
 		        		</map:match>
-		        		
+		        	<!-- 
+		        			The main audit eperson page allows for seaching of epeople 
+		        			-->
+		        		<map:match pattern="admin/audit/main">
+		        			<map:transform type="AuditSearchMain">
+		        				<map:parameter name="query" value="{flow-attribute:query}"/>
+		        				<map:parameter name="page" value="{flow-attribute:page}"/>
+		        				<map:parameter name="highlightID" value="{flow-attribute:highlightID}"/>
+                                                        <map:parameter name="epersonID" value="{flow-attribute:epersonID}"/>
+                                                        <map:parameter name="dStart" value="{flow-attribute:dStart}"/>
+                                                        <map:parameter name="dEnd" value="{flow-attribute:dEnd}"/>
+                                                        <map:parameter name="handle" value="{flow-attribute:handle}"/>
+		        			</map:transform>
+		        		</map:match>	
 		        		
 		        	<!-- Group management pages -->
 		        		
@@ -571,6 +619,14 @@ to administer DSpace.
 		        				<map:parameter name="ID" value="{flow-attribute:ID}"/>
                                                         <map:parameter name="costTypeId" value="{flow-attribute:costTypeId}"/>
                                                         
+		        			</map:transform>
+		        		</map:match>
+                                         <!-- Validate metadata -->
+		        		<map:match pattern="admin/validate-metadata/main">
+		        			<map:transform type="ValidateMetadataMain">
+                                                        <map:parameter name="ID" value="{flow-attribute:ID}"/>
+		        				<map:parameter name="handle" value="{flow-attribute:handle}"/> 
+                                                        <map:parameter name="TypeId" value="{flow-attribute:TypeId}"/>                                                       
 		        			</map:transform>
 		        		</map:match>
 		        		<!--
@@ -798,16 +854,22 @@ to administer DSpace.
 
                         <map:match pattern="admin/batchimport/main">
                             <map:transform type="BatchImportMain">
+                                <map:parameter name="collectionID" value="{flow-attribute:collectionID}"/>
+                                 <map:parameter name="hid" value="{flow-attribute:hid}"/>
                             </map:transform>
                         </map:match>
 
                         <map:match pattern="admin/batchimport/upload">
                             <map:transform type="BatchImportUpload">
+                                <!--<map:parameter name="collectionID" value="{flow-attribute:collectionID}"/>
+                                 <map:parameter name="hid" value="{flow-attribute:hid}"/>-->
                             </map:transform>
                         </map:match>
 
                         <map:match pattern="admin/batchimport/confirm">
                             <map:transform type="BatchImportConfirm">
+                                <!--<map:parameter name="collectionID" value="{flow-attribute:collectionID}"/>
+                                 <map:parameter name="hid" value="{flow-attribute:hid}"/>-->
                             </map:transform>
                         </map:match>
 		        		

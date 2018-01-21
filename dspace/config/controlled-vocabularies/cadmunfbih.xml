@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Katastarske opstine
+-->
+
+<node id="cm" label="">
+	<isComposedBy>
+		<node id="Gradačac" label="Gradačac">
+			<isComposedBy>
+				<node id="Gradačac - 36001 - AVRAMOVINA" label="Gradačac - 36001 - AVRAMOVINA" />
+				<node id="Gradačac - 36002 - BIBEROVO POLJE" label="Gradačac - 36002 - BIBEROVO POLJE" />
+				<node id="Gradačac - 36003 - BLAŽEVAC" label="Gradačac - 36003 - BLAŽEVAC" />
+				<node id="Gradačac - 36004 - DONJA MEÐIÐA" label="Gradačac - 36004 - DONJA MEÐIÐA" />
+				<node id="Gradačac - 36005 - DONJA TRAMOŠNICA" label="Gradačac - 36005 - DONJA TRAMOŠNICA" />
+				<node id="Gradačac - 36006 - DONJE LEDENICE" label="Gradačac - 36006 - DONJE LEDENICE" />
+				<node id="Gradačac - 36007 - DONJI LUKAVAC" label="Gradačac - 36007 - DONJI LUKAVAC" />
+				<node id="Gradačac - 36008 - DONJI SKUGRIĆ I" label="Gradačac - 36008 - DONJI SKUGRIĆ I" />
+				<node id="Gradačac - 36009 - DONJI SKUGRIĆ II" label="Gradačac - 36009 - DONJI SKUGRIĆ II" />
+				<node id="Gradačac - 36041 - GAJEVI" label="Gradačac - 36041 - GAJEVI" />
+				<node id="Gradačac - 36010 - GORNJA MEÐIÐA" label="Gradačac - 36010 - GORNJA MEÐIÐA" />
+				<node id="Gradačac - 36011 - GORNJA TRAMOŠNICA" label="Gradačac - 36011 - GORNJA TRAMOŠNICA" />
+				<node id="Gradačac - 36012 - GORNJE LEDENICE" label="Gradačac - 36012 - GORNJE LEDENICE" />
+				<node id="Gradačac - 36013 - GORNJI LUKAVAC" label="Gradačac - 36013 - GORNJI LUKAVAC" />
+				<node id="Gradačac - 36014 - Gradačac -  I" label="Gradačac - 36014 - Gradačac -  I" />
+				<node id="Gradačac - 36015 - Gradačac -  II" label="Gradačac - 36015 - Gradačac -  II" />
+				<node id="Gradačac - 36016 - HRGOVI DONJI" label="Gradačac - 36016 - HRGOVI DONJI" />
+				<node id="Gradačac - 36017 - JASENICA" label="Gradačac - 36017 - JASENICA" />
+				<node id="Gradačac - 36018 - JELOVČE SELO" label="Gradačac - 36018 - JELOVČE SELO" />
+				<node id="Gradačac - 36019 - KEREP" label="Gradačac - 36019 - KEREP" />
+				<node id="Gradačac - 36020 - KREČANE" label="Gradačac - 36020 - KREČANE" />
+				<node id="Gradačac - 36021 - MIONICA I" label="Gradačac - 36021 - MIONICA I" />
+				<node id="Gradačac - 36022 - MIONICA II" label="Gradačac - 36022 - MIONICA II" />
+				<node id="Gradačac - 36025 - POREBRICE" label="Gradačac - 36025 - POREBRICE" />
+				<node id="Gradačac - 36027 - RAJSKA" label="Gradačac - 36027 - RAJSKA" />
+				<node id="Gradačac - 36028 - SAMAREVAC" label="Gradačac - 36028 - SAMAREVAC" />
+				<node id="Gradačac - 36029 - SIBOVAC" label="Gradačac - 36029 - SIBOVAC" />
+				<node id="Gradačac - 36030 - SRNICE DONJE" label="Gradačac - 36030 - SRNICE DONJE" />
+				<node id="Gradačac - 36031 - SRNICE GORNJE" label="Gradačac - 36031 - SRNICE GORNJE" />
+				<node id="Gradačac - 36034 - TURIĆ I" label="Gradačac - 36034 - TURIĆ I" />
+				<node id="Gradačac - 36035 - TURIĆ II" label="Gradačac - 36035 - TURIĆ II" />
+				<node id="Gradačac - 36036 - VIDA" label="Gradačac - 36036 - VIDA" />
+				<node id="Gradačac - 36037 - VUČKOVCI" label="Gradačac - 36037 - VUČKOVCI" />
+				<node id="Gradačac - 36038 - ZELINJA DONJA" label="Gradačac - 36038 - ZELINJA DONJA" />
+				<node id="Gradačac - 36040 - ZELINJA GORNJA" label="Gradačac - 36040 - ZELINJA GORNJA" />
+				<node id="Gradačac - 36039 - ZELINJA SREDNJA" label="Gradačac - 36039 - ZELINJA SREDNJA" />
+
+			</isComposedBy>
+		</node>
+	</isComposedBy>
+</node>

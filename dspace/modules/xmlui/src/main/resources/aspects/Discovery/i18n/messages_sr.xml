@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!--
+
+    The contents of this file are subject to the license and copyright
+    detailed in the LICENSE and NOTICE files at the root of the source
+    tree and available online at
+
+    http://www.dspace.org/license/
+
+-->
+<catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://apache.org/cocoon/i18n/2.1">
+
+    <!--
+		The format used by all keys is as follows
+
+		xmlui.<Aspect>.<Java Class>.<name>
+
+		There are a few exceptions to this naming format,
+		1) Some general keys are in the xmlui.general namespace
+		   because they are used very frequently.
+		2) Some general keys which are specific to a particular aspect
+		   may be found at xmlui.<Aspect> without specifiying a
+		   particular java class.
+
+		Advanced Search related keys
+		Filter name:               xmlui.ArtifactBrowser.SimpleSearch.filter.author
+		Facet heading:             xmlui.ArtifactBrowser.AdvancedSearch.type_author
+		"Filtriraj po" page heading:  xmlui.Discovery.AbstractSearch.type_author
+		
+		To overlay this file, copy it to [dspace-source]/dspace/modules/xmlui/src/main/resources/aspects/Discovery/i18n/messages.xml.
+		-->
+
+
+    <!-- org.dspace.app.xmlui.artifactbrowser.AbstractSearch.java -->
+
+
+
+
+    <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
+    <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.AdvancedSearch has been removed.
+         The following i18n keys will be left as is as they're referenced by the Discovery SidebarFacetsTransformer
+         but in future, they should be refactored to a more relevant key prefix -->
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.contributor.author_filter">Autor</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Subjekt</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Tip Sadržaja</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Datum izdavanja</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Datum izdavanja</message>
+    
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_has_content_in_original_bundle">Sadrži fajlove</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.value_has_content_in_original_bundle_true">Da</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.value_has_content_in_original_bundle_false">Ne</message>
+
+
+    <!-- Site Level Skoro dodani Content -->
+    <message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Skoro dodani</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractRecentSubmissionTransformer.recent_submissions_more">Prikaži više</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.head">{0}: Skora dodavanja</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.trail">Skora dodavanja</message>
+    <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.recent.head">Skoro dodani</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">Tip</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher_filter">Izdavač</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">Pripadnost</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Grupiraj razultate prema</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">Ne</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publikacija</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Skup</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Kolekcija</message>
+
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Serija</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Prikaži po: Autoru</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Prikaži po: Naslovu</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Prikaži po: Subjektu</message>
+        
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Prikaži po: Abstraktu</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Prikaži po: Seriji</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_sponsor_browse">Prikaži po: Sponzoru</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_identifier_browse">Prikaži po: Identifier</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_language_browse">Prikaži po: Jeziku (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_keyword_browse">Prikaži po: Ključnoj riječi</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_taxon_browse">Prikaži po: Scientific Name</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_contributor_browse">Prikaži po: Kontributor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_creator_browse">Prikaži po: Creator</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">Prikaži po: Subject</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_description_browse">Prikaži po: Description</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">Prikaži po: Relation</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">Prikaži po: Mime-Type</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">Prikaži po: Other Contributor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">Prikaži po: Advisor</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">Prikaži po: Department</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">Prikaži po: Issue date</message>
+
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Naslov</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.municipality">Općina</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.catmunicipality">Katastarska općina</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.tarrif">Tarifa</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Datum izdavanja</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.has_content_in_original_bundle">Sadrži fajlove</message>
+
+
+    <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Prikazane stavke {0}-{1}</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.type_author">Filtriraj po: Autoru</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Autor</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_subject">Filtriraj po: Subjektu</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subjekt</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Subjekt</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Datum izdavanja</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.startswith">Počinje sa</message>
+    <message key="xmlui.Discovery.AbstractSearch.startswith.help">Ili unesite prvih nekoliko slova:</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.head">Sort Options:</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.relevance">Relevance</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_desc">Title Desc</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_desc">Issue Date Desc</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.title_sort_asc">Title Asc</message>
+    <message key="xmlui.Discovery.AbstractSearch.sort_by.dc.date.issued_dt_asc">Issue Date Asc</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.rpp">Results Per Page:</message>
+
+
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.add-filter">Dodaj filter</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.apply-filters">Apliciraj</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.remove-filter">Izbriši</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.new-filters.head">Novi filter:</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.controls.current-filters.head">Trenutni filteri:</message>
+    <message key="xmlui.Discovery.AbstractSearch.filters.display">Dodaj filtere</message>
+
+    <message key="xmlui.discovery.SearchFacetFilter.no-results">Filtrirane vrijednosti nisu nađene</message>
+
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Discover</message>
+    <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... Prikaži više</message>
+
+
+    <message key="xmlui.Discovery.SimpleSearch.search_scope">Pretraga</message>
+    <message key="xmlui.discovery.SimpleSearch.search_label">Pretraga</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_head">Filteri</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter_help">Koristi filtere za smanjivanje razultata pretrage</message>
+
+    <message key="xmlui.Discovery.SimpleSearch.filter.contains">Sadrži</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.equals">Jednako</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.authority">ID</message>
+	<message key="xmlui.Discovery.SimpleSearch.filter.notcontains">Ne sadrži</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notequals">Nije jednako</message>
+    <message key="xmlui.Discovery.SimpleSearch.filter.notauthority">Nije ID</message>
+    
+    <message key="xmlui.Discovery.RelatedItems.head">Related items</message>
+    <message key="xmlui.Discovery.RelatedItems.help">Showing items related by title, author, creator and subject.</message>
+
+    <message key="xmlui.Discovery.AbstractSearch.head1_community">Showing {0} out of a total of {1} results for community: {2}. <span class="searchTime">({3} seconds)</span></message>
+   	<message key="xmlui.Discovery.AbstractSearch.head1_collection">Showing {0} out of a total of {1} results for collection: {2}. <span class="searchTime">({3} seconds)</span></message>
+   	<message key="xmlui.Discovery.AbstractSearch.head1_none">Showing {0} out of a total of {1} results. <span class="searchTime">({2} seconds)</span></message>
+
+    <message key="xmlui.Discovery.AbstractSearch.head2">Communities or Collections matching your query</message>
+   	<message key="xmlui.Discovery.AbstractSearch.head3">Items matching your query</message>
+
+   	<message key="xmlui.Discovery.SimpleSearch.did_you_mean">Da li ste mislili: </message>
+
+</catalogue>
