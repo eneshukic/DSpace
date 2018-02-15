@@ -131,12 +131,12 @@ function changeCM(id){
     source.clear();
     if (id == "aspect_submission_StepTransformer_field_da_Municipality_Name"){
     var cmexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_Name");
-    var cmoldexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_NameSP");
+    var cmoldexists = document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipalitySP_Name");
     if (cmexists != null){
          document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_Name").value = document.getElementById(id).value;
     }
     if (cmoldexists != null){
-         document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipality_NameSP").value = document.getElementById(id).value;
+         document.getElementById("aspect_submission_StepTransformer_field_da_CadastralMunicipalitySP_Name").value = document.getElementById(id).value;
     }
 }
     

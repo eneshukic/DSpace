@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Katastarske opstine
+-->
+
+<node id="cm" label="">
+	<isComposedBy>
+		<node id="Gradačac" label="Gradačac">
+			<isComposedBy>
+				<node id="Gradačac - 36000001 - SP_AVRAMOVINA" label="Gradačac - 36000001 - SP_AVRAMOVINA" />
+				<node id="Gradačac - 36000002 - SP_BIBEROVO POLJE" label="Gradačac - 36000002 - SP_BIBEROVO POLJE" />
+				<node id="Gradačac - 36000003 - SP_BLAŽEVAC" label="Gradačac - 36000003 - SP_BLAŽEVAC" />
+				<node id="Gradačac - 36000004 - SP_GUŠTEIÐA" label="Gradačac - 36000004 - SP_GUŠTE" />
+				<node id="Gradačac - 36000005 - SP_HRGOVI DONJI" label="Gradačac - 36000005 - SP_HRGOVI DONJI" />
+				<node id="Gradačac - 36000006 - SP_JELOVČE SELO" label="Gradačac - 36000006 - SP_JELOVČE SELO" />
+				<node id="Gradačac - 36000007 - SP_KEREP" label="Gradačac - 36000007 - SP_KEREP" />
+				<node id="Gradačac - 36000008 - SP_KREČANE" label="Gradačac - 36000008 - SP_KREČANE" />
+				<node id="Gradačac - 36000009 - SP_DONJE LEDENICE" label="Gradačac - 36000009 - SP_DONJE LEDENICE" />
+				<node id="Gradačac - 36000010 - SP_GORNJE LEDENICE" label="Gradačac - 36000010 - SP_GORNJE LEDENICE" />
+				<node id="Gradačac - 36000011 - SP_DONJI LUKAVAC" label="Gradačac - 36000011 - SP_DONJI LUKAVAC" />
+				<node id="Gradačac - 36000012 - SP_GORNJI LUKAVAC" label="Gradačac - 36000012 - SP_GORNJI LUKAVAC" />
+				<node id="Gradačac - 36000013 - SP_DONJA MEĐIĐA" label="Gradačac - 36000013 - SP_DONJA MEĐIĐA" />
+				<node id="Gradačac - 36000014 - SP_GORNJA MEĐIĐA" label="Gradačac - 36000014 - SP_GORNJA MEĐIĐA" />
+				<node id="Gradačac - 36000015 - SP_DONJA MIONICA" label="Gradačac - 36000015 - SP_DONJA MIONICA" />
+				<node id="Gradačac - 36000016 - SP_SIBOVAC" label="Gradačac - 36000016 - SP_SIBOVAC" />
+				<node id="Gradačac - 36000017 - SP_ORLOVO POLJE" label="Gradačac - 36000017 - SP_ORLOVO POLJE" />
+				<node id="Gradačac - 36000018 - SP_POREBRICE" label="Gradačac - 36000018 - SP_POREBRICE" />
+				<node id="Gradačac - 36000019 - SP_SAMAREVAC" label="Gradačac - 36000019 - SP_SAMAREVAC" />
+				<node id="Gradačac - 36000020 - SP_DONJI SKUGRIĆ" label="Gradačac - 36000020 - SP_DONJI SKUGRIĆ" />
+				<node id="Gradačac - 36000021 - SP_DONJE SRNICE" label="Gradačac - 36000021 - SP_DONJE SRNICE" />
+				<node id="Gradačac - 36000022 - SP_GORNJE SRNICE" label="Gradačac - 36000022 - SP_GORNJE SRNICE" />
+				<node id="Gradačac - 36000023 - SP_GRADAČAC" label="Gradačac - 36000023 - SP_GRADAČAC" />
+				<node id="Gradačac - 36000024 - SP_TOLISA" label="Gradačac - 36000024 - SP_TOLISA" />
+				<node id="Gradačac - 36000025 - SP_DONJA TRAMOŠNICA" label="Gradačac - 36000025 - SP_DONJA TRAMOŠNICA" />
+				<node id="Gradačac - 36000026 - SP_GORNJA TRAMOŠNICA" label="Gradačac - 36000026 - SP_GORNJA TRAMOŠNICA" />
+				<node id="Gradačac - 36000027 - SP_TURIĆ" label="Gradačac - 36000027 - SP_TURIĆ" />
+				<node id="Gradačac - 36000028 - SP_VIDA" label="Gradačac - 36000028 - SP_VIDA" />
+				<node id="Gradačac - 36000029 - SP_VUČKOVCI" label="Gradačac - 36000029 - SP_VUČKOVCI" />
+				<node id="Gradačac - 36000030 - SP_DONJA ZELINJA" label="Gradačac - 36000030 - SP_DONJA ZELINJA" />
+				<node id="Gradačac - 36000031 - SP_SREDNJA ZELINJA" label="Gradačac - 36000031 - SP_SREDNJA ZELINJA" />
+				<node id="Gradačac - 36000032 - SP_GORNJA ZELINJA" label="Gradačac - 36000032 - SP_GORNJA ZELINJA" />
+				<node id="Gradačac - 36000033 - SP_PELAGIĆEVO" label="Gradačac - 36000033 - SP_PELAGIĆEVO" />
+
+			</isComposedBy>
+		</node>
+	</isComposedBy>
+</node>
