@@ -2603,6 +2603,8 @@
     <message key="xmlui.Spatial.Map.isWithin">Is Within</message>
     <message key="xmlui.Spatial.Map.Intersect">Intersects</message>
     <message key="xmlui.Discovery.AbstractSearch.filters.controls.spatial.head">Spatial</message>
+    <message key="xmlui.Spatial.Search.hide">Hide Map</message>
+    <message key="xmlui.Spatial.Search.show">Show Map</message>
     <!-- Spatial import search -->
     <message key="xmlui.administrative.importsearch.general.title">Upload Search File Results</message>
     <message key="xmlui.administrative.importsearch.general.head1">Upload Search File</message>

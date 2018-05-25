@@ -156,3 +156,15 @@ function changeCM(){
     
 }
 */
+
+function hideSpatialSearch(){
+    document.getElementById("spatial-search-div").style.display = "none";
+    document.getElementById("hideSpatialSearch").style.display = "none";
+    document.getElementById("showSpatialSearch").style.display = "inline";
+}
+
+function showSpatialSearch(){
+    document.getElementById("spatial-search-div").style.display = "block";
+    document.getElementById("hideSpatialSearch").style.display = "inline";
+    document.getElementById("showSpatialSearch").style.display = "none";
+}

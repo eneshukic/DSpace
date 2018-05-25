@@ -2604,6 +2604,8 @@
     <message key="xmlui.Spatial.Map.isWithin">Je unutar</message>
     <message key="xmlui.Spatial.Map.Intersect">Presijeca</message>
     <message key="xmlui.Discovery.AbstractSearch.filters.controls.spatial.head">Prostorno</message>
+    <message key="xmlui.Spatial.Search.hide">Sakrij kartu</message>
+    <message key="xmlui.Spatial.Search.show">Prikaži kartu</message>
     
     <!-- Spatial import search -->
     <message key="xmlui.administrative.importsearch.general.title">Razultati učitavanja fajla za pretragu</message>

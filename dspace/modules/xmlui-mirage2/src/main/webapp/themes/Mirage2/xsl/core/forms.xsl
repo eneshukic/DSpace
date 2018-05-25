@@ -720,9 +720,12 @@
                         <!--end filter-->   
                 <!-- For spatial query form element!! -->
                 <xsl:if test="@rend='spatial-search'">
-                    <div class="spatial-search-div">
+                    <a id="hideSpatialSearch" href="#" onclick="hideSpatialSearch();return false;" style="display: none;"><i18n:text>xmlui.Spatial.Search.hide</i18n:text></a>
+                    <a id="showSpatialSearch" href="#" onclick="showSpatialSearch();return false;"><i18n:text>xmlui.Spatial.Search.show</i18n:text></a>
+
+                    <div class="spatial-search-div" id="spatial-search-div">
                         <!--<p style="width:100%; "><b><i18n:text>xmlui.Spatial.Map.Search</i18n:text></b></p>-->
-                        <div class="smallmap" style="width: 100%; height: 225px; border: 1px solid #ccc; display:inline-block; clear: both; ">
+                        <div id="smallmap" class="smallmap" style="width: 100%; height: 225px; border: 1px solid #ccc; display:inline-block; clear: both; ">
                             <xsl:attribute name="id">
                                 <xsl:value-of select="@id"/>
                             </xsl:attribute>
@@ -736,6 +739,9 @@
                             if (window.location.href.indexOf('?') != -1){
                             var qs = getQueryStrings();
                             var sq = qs["sq"];
+                            if (typeof sq == "undefined"){
+				sq = "";
+                            }
                             if (sq != ""){
                                 document.getElementById(fieldID).value = sq;
                             }
@@ -747,6 +753,8 @@
                                 var coords=val.split(" ");
                                 addItemsBoxToMap(coords[0],coords[1],coords[2],coords[3]);
                             }
+                            
+                            hideSpatialSearch();
 
                         </script>
                         <!--<p><i18n:text>xmlui.Spatial.Map.Relation</i18n:text></p>&#160;-->
