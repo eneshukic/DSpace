@@ -459,7 +459,7 @@
 	<message key="xmlui.EPerson.EditProfile.email_address">Email adresa</message>
 	<message key="xmlui.EPerson.EditProfile.first_name">Lično ime</message>
 	<message key="xmlui.EPerson.EditProfile.last_name">Prezime</message>
-	<message key="xmlui.EPerson.EditProfile.telephone">Kontakt telfon</message>
+	<message key="xmlui.EPerson.EditProfile.telephone">Kontakt telefon</message>
         <message key="xmlui.EPerson.EditProfile.Language">Jezik</message>
 	<message key="xmlui.EPerson.EditProfile.subscriptions">Pretplate</message>
 	<message key="xmlui.EPerson.EditProfile.subscriptions_help">Možete se pretplatiti na kolekcije da dobijate dnevne e-mail poruke o dodanim stavkama. Možete se pretplatiti na više kolekcija. Kao alternativu dnevnim e-mail porukama možete koristiti RSS feeds koji su dostupni za sve kolekcije.</message>
@@ -813,7 +813,7 @@
 	<message key="xmlui.Submission.submit.UploadStep.head">Dodavanje fajlova</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Fajl</message>
 	<message key="xmlui.Submission.submit.UploadStep.file_help">Unesite punu putanju do fajla na vašem računaru koji odgovara ovoj stavci. Ako kliknete "Pretraži...", novi prozor će vam dozvoliti da selektujete fajl sa vašeg računara. Maksimalna dozvoljena veličina je 1GB.</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_error">Ova stavka mora sadržati barem jedan fajl.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_error">Ova stavka mora sadržavati barem jedan fajl.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Pojavio se problem pri dodavanju vašeg fajla.  Može biti da naziv fajla koji ste unijeli nije korektan ili postoji problem u mreži koji sprečava da fajl dođe do sistema, ili ste pokušali da dodate fajl formata obilježenog samo za internu upotrebu.  Pokušajte ponovo.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Fajl nije dodan jer izgleda da sadrži virus. Kontaktirajte administratora sistema.</message>
     <message key="xmlui.Submission.submit.UploadStep.virus_checker_error">Desio se tehnički problem prilikom pokušaja skeniranja fajla za virusima. Kontaktirajte administratora sistema.</message>
@@ -842,7 +842,7 @@
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.head">Učitaj fajlove</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file">Fajl</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file_help">Unesite punu putanju do na vašem računaru koji odgovara ovoj stavci. Ako kliknete "Pretraži...", novi prozor će vam dozvoliti da selektujete fajl sa vašeg računara.</message>
-    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file_error">Ova stavka mora sadržati barem jedan fajl.</message>
+    <message key="xmlui.Submission.submit.UploadWithEmbargoStep.file_error">Ova stavka mora sadržavati barem jedan fajl.</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.upload_error">Pojavio se problem pri dodavanju vašeg fajla.  Može biti da naziv fajla koji ste unijeli nije korektan ili postoji problem u mreži koji sprečava da fajl dođe do sistema, ili ste pokušali da dodate fajl formata obilježenog samo za internu upotrebu.  Pokušajte ponovo.</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_error">Fajl nije dodan jer izgleda da sadrži virus. Kontaktirajte administratora sistema.</message>
     <message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_checker_error">Desio se tehnički problem prilikom pokušaja skeniranja fajla za virusima. Kontaktirajte administratora sistema.</message>
@@ -1260,7 +1260,7 @@
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.internal">Interno</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.internal_help">Formati obilježeni kao interni su skriveni za korisnika i koriste se za administrativne potrebe.</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.extensions">Ekstenzije fajlova</message>
-	<message key="xmlui.administrative.registries.EditBitstreamFormat.extensions_help">Ekstenzije fajlova su dodaci koji se koriste za automatsku identifikaciju formata učitanih fajlova. MOžete unijti više ekstenzija za svaki format.</message>
+	<message key="xmlui.administrative.registries.EditBitstreamFormat.extensions_help">Ekstenzije fajlova su dodaci koji se koriste za automatsku identifikaciju formata učitanih fajlova. Možete unijeti više ekstenzija za svaki format.</message>
 
 	<!-- org.dspace.app.xmlui.administrative.registries.EditMetadataSchema.java -->
 	<message key="xmlui.administrative.registries.EditMetadataSchema.title">Shema metapodataka</message>
@@ -1285,15 +1285,15 @@
 	<message key="xmlui.administrative.registries.EditMetadataSchema.error">Greška</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.error_duplicate_field">Ovaj naziv polja se već koristi, svi elementi i kvalifikatori moraju biti jedinstveni.</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.error_element_empty">Element polja je obavezan.</message>
-	<message key="xmlui.administrative.registries.EditMetadataSchema.error_element_badchar">Element polja  sadrži neprihvatljiv karakter. Element NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+	<message key="xmlui.administrative.registries.EditMetadataSchema.error_element_badchar">Element polja  sadrži neprihvatljiv karakter. Element NE smije sadržavati: zareze, donje crtice ili prazna mjesta.</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.error_element_tolong">Element polja je predugačak, mora biti manji od 32 karaktera.</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.error_qualifier_tolong">Kvalifikator polja je predugačak, mora biti manji od 32 karaktera.</message>
-	<message key="xmlui.administrative.registries.EditMetadataSchema.error_qualifier_badchar">Kvalifikator polja  sadrži neprihvatljiv karakter. Kvalifikator NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+	<message key="xmlui.administrative.registries.EditMetadataSchema.error_qualifier_badchar">Kvalifikator polja  sadrži neprihvatljiv karakter. Kvalifikator NE smije sadržavati: zareze, donje crtice ili prazna mjesta.</message>
 
 	<!-- org.dspace.app.xmlui.administrative.registries.FormatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.FormatRegistryMain.title">Registar formata</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.head">Registar bitstream formata</message>
-	<message key="xmlui.administrative.registries.FormatRegistryMain.para1">Ova lista bitstream formata daje informacije o poznatim formatima i njihom nivou podrške. Možete editovati ili dodavati nove bitstream formate ovim alatom. Formati obilježeni kao 'interni' su skriveni od korisnika i služe samo za administratorske namjene.</message>
+	<message key="xmlui.administrative.registries.FormatRegistryMain.para1">Ova lista bitstream formata daje informacije o poznatim formatima i njihovom nivou podrške. Možete editovati ili dodavati nove bitstream formate ovim alatom. Formati obilježeni kao 'interni' su skriveni od korisnika i služe samo za administratorske namjene.</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.new_link">Dodaj novi bitstream format</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.column2">ID</message>
@@ -1320,8 +1320,8 @@
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.namespace_help">Imenski prostor treba biti uspostavljena URI lokacija za novu shemu.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.namespace_error">Ovo polje je obavezno.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.name">Naziv</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.name_help">Skraćena notacija za shemu. Ovo će biti prefiks naziva polja (npr. dc.element.kvalifikator). Naziv mora biti manji od 32 karaktera i ne smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.name_error">Ovo polje je obavezno i mora biti manje od 32 karaktera i ne smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.name_help">Skraćena notacija za shemu. Ovo će biti prefiks naziva polja (npr. dc.element.kvalifikator). Naziv mora biti manji od 32 karaktera i ne smije sadržavati: zareze, donje crtice ili prazna mjesta.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.name_error">Ovo polje je obavezno i mora biti manje od 32 karaktera i ne smije sadržavati: zareze, donje crtice ili prazna mjesta.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.submit_add">Dodaj novu shemu</message>
 
 	<!-- org.dspace.app.xmlui.administrative.registries.MoveMetadataField.java -->
@@ -1380,7 +1380,7 @@
 	<message key="xmlui.administrative.authorization.EditItemPolicies.trail">Lista polica</message>
 	<message key="xmlui.administrative.authorization.EditItemPolicies.main_head">Police za stavku {0} (ID={1})</message>
 	<message key="xmlui.administrative.authorization.EditItemPolicies.main_para1">Sa ovim editorom možete vidjeti ili promijeniti police za stavku, plus promijeniti police za individualne komponente stavke: pakete i bitstream. Ukratko, jedna stavka je kontejner za pakete, a paket je kontejner za bitstreamove. Kontejneri obično imaju police ADD/REMOVE/READ/WRITE (dodaj/ukloniIčitaj/piši), dok bitstream ima samo police READ/WRITE (čitaj/piši).</message>
-	<message key="xmlui.administrative.authorization.EditItemPolicies.main_para2">Primijetiti ćete oiseban paket i bitstream za svaku stavku koji sadrže tekst licence za svaku stavku.</message>
+	<message key="xmlui.administrative.authorization.EditItemPolicies.main_para2">Primijetiti ćete poseban paket i bitstream za svaku stavku koji sadrže tekst licence za svaku stavku.</message>
 	<message key="xmlui.administrative.authorization.EditItemPolicies.subhead_item">Police stavke</message>
 	<message key="xmlui.administrative.authorization.EditItemPolicies.subhead_bundle">Police za paket {0} ({1})</message>
 	<message key="xmlui.administrative.authorization.EditItemPolicies.subhead_bitstream">Bitstream {0} ({1})</message>
@@ -1809,7 +1809,7 @@
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_provenance_description">Porijeklo</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_logo">Učitaj novi logo</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_existing_logo">Trenutni logo</message>
-	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_item_template">Predložal</message>
+	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_item_template">Predložak</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.submit_create_template">Kreiraj...</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.submit_edit_template">Edituj...</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.submit_delete_logo">Ukloni logo</message>
@@ -1867,7 +1867,7 @@
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.option_md_and_bs">Prati metapodatke i bitstream (puna replikacija).</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.submit_change_settings">Promjena postavki</message>
 	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.submit_import_now">Importuj sada</message>
-	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.submit_reimport_collection">Resetuj i pono importuj kolekciju</message>
+	<message key="xmlui.administrative.collection.EditCollectionHarvestingForm.submit_reimport_collection">Resetuj i ponovo importuj kolekciju</message>
 
 	<message key="xmlui.administrative.ControlPanel.option_harvest">Praćenje</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_scheduler_head">Kontrole rasporeda praćenja</message>
@@ -1883,7 +1883,7 @@
 	<message key="xmlui.administrative.ControlPanel.harvest_label_active">Aktivna praćenja</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_queued">Praćenja na čekanju</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_oai_errors">OAI greške</message>
-	<message key="xmlui.administrative.ControlPanel.harvest_label_internal_errors">Internae greške</message>
+	<message key="xmlui.administrative.ControlPanel.harvest_label_internal_errors">Interne greške</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_head_generator_settings">Postavke</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_oai_url">OAI-PMH URL</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_oai_source">ORE izvor</message>
@@ -2049,7 +2049,7 @@
 	<message key="xmlui.administrative.ControlPanel.tabs.Current Activity">Trenutna aktivnost</message>
 
 	<!-- org.dspace.app.xmlui.administrative.SystemwideAlerts -->
-	<message key="xmlui.administrative.SystemwideAlerts.countdown"><strong>U {0} minuta</strong>: </message>
+	<message key="xmlui.administrative.SystemwideAlerts.countdown"><strong>Za {0} minuta</strong>: </message>
 
 	<!-- org.dspace.app.xmlui.administrative.NotAuthorized -->
 	<message key="xmlui.administrative.NotAuthorized.title">Niste autorizovani</message>
@@ -2565,10 +2565,10 @@
     <message key="xmlui.administrative.registries.EditRateRegistry.error_calculation_unit">Unos jedinice mjere</message>
     <message key="xmlui.administrative.registries.EditRateRegistry.error_duplicate_field">Tarifni broj se već koristi, svi tarifni brojevi mortaju biti jedinstveni.</message>
     <message key="xmlui.administrative.registries.EditRateRegistry.error_element_empty">Polje tarife je obavezno.</message>
-    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">Tarifa sadrži neodgovarajući karakter. Element NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_element_badchar">Tarifa sadrži neodgovarajući karakter. Element NE smije sadržavati: zareze, donje crtice ili prazna mjesta.</message>
     <message key="xmlui.administrative.registries.EditRateRegistry.error_element_tolong">Element tarife je predugačak, ne smije biti duži od 50 karaktera.</message>
     <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_tolong">Kvalifikator tarife je predugačak, mora biti manji od 32 karaktera.</message>
-    <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">Kvalifikator tarife sadrži neodgovarajući karakter. Kvalifikator NE smije sadržati: zareze, donje crtice ili prazna mjesta.</message>
+    <message key="xmlui.administrative.registries.EditRateRegistry.error_qualifier_badchar">Kvalifikator tarife sadrži neodgovarajući karakter. Kvalifikator NE smije sadržavati: zareze, donje crtice ili prazna mjesta.</message>
         
     <message key="xmlui.administrative.registries.DeleteRateConfirm.title">Brisanje tarife</message>
     <message key="xmlui.administrative.registries.DeleteRateConfirm.trail">Brisanje tarife</message>
