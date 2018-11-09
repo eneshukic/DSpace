@@ -558,7 +558,7 @@
                         <xsl:call-template name="fieldAttributes"/>
                          <xsl:attribute name="onchange">changeCM(this.id);</xsl:attribute>
                         <xsl:apply-templates/>
-                    </select>                    
+                    </select>
             </xsl:when>
             <xsl:when test="@type= 'textarea'">
                     <textarea>
@@ -696,7 +696,7 @@
                         <!--<xsl:if test="@name='da_Municipality_Name'">
                             <xsl:attribute name="onchange">changeCM(this.id)</xsl:attribute>
                         </xsl:if>-->
-                       
+
                         <xsl:attribute name="value">
                             <xsl:choose>
                                 <xsl:when test="./dri:value[@type='raw']">
@@ -712,14 +712,63 @@
                         </xsl:if>
                         <xsl:apply-templates/>
                     </input>
-                    
+
                 <!--<xsl:if test="@dim:field[@element=['CadastralMunicipality'] and @qualifier=['Name']/child::node() ">
                             <xsl:attribute name="onchange">changeCM(this.id)</xsl:attribute>
                         </xsl:if> -->
-                        
-                        <!--end filter-->   
+
+                        <!--end filter-->
                 <!-- For spatial query form element!! -->
                 <xsl:if test="@rend='spatial-search'">
+                    <style>
+                        .modal {
+                        text-align: center;
+                        padding: 0!important;
+                        }
+
+                        .modal:before {
+                        content: '';
+                        display: inline-block;
+                        height: 100%;
+                        vertical-align: middle;
+                        margin-right: -4px;
+                        }
+
+                        .modal-dialog {
+                        display: inline-block;
+                        text-align: left;
+                        vertical-align: middle;
+                        }
+                    </style>
+                    <p class="paragraph">
+                        <button type="button" class="btn btn-default" id="btnOpenBBox" data-toggle="modal" data-target="#selectBBox">Select area</button>
+                    </p>
+                    <div class="modal" id="selectBBox" tabindex="-1" role="dialog" data-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <xsl:text disable-output-escaping="yes">&amp;</xsl:text>times;
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Select area</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <p class="paragraph">
+                                            <select class="form-control" id="areasGroup">
+                                            </select>
+                                        </p>
+                                        <p class="paragraph">
+                                            <select class="form-control" id="areas">
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-default btn-block" id="selectArea" data-dismiss="modal">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a id="hideSpatialSearch" href="#" onclick="hideSpatialSearch();return false;" style="display: none;"><i18n:text>xmlui.Spatial.Search.hide</i18n:text></a>
                     <a id="showSpatialSearch" href="#" onclick="showSpatialSearch();return false;"><i18n:text>xmlui.Spatial.Search.show</i18n:text></a>
 
@@ -737,14 +786,14 @@
                             addMap(mapID,'search');
                             //set fieldID value from query string
                             if (window.location.href.indexOf('?') != -1){
-                            var qs = getQueryStrings();
-                            var sq = qs["sq"];
-                            if (typeof sq == "undefined"){
-				sq = "";
-                            }
-                            if (sq != ""){
-                                document.getElementById(fieldID).value = sq;
-                            }
+                                var qs = getQueryStrings();
+                                var sq = qs["sq"];
+                                if (typeof sq == "undefined"){
+                                    sq = "";
+                                }
+                                if (sq != ""){
+                                    document.getElementById(fieldID).value = sq;
+                                }
                             }
 
                             // Keep Spatial query Bounding Box from response and add it to map
@@ -753,7 +802,7 @@
                                 var coords=val.split(" ");
                                 addItemsBoxToMap(coords[0],coords[1],coords[2],coords[3]);
                             }
-                            
+
                             hideSpatialSearch();
 
                         </script>
@@ -788,7 +837,7 @@
                         </input>
                         <div style="clear: both;">
                             <!-- Clear Spatial search query -->
-                            <button name="clearmap" class="ds-button-field" >
+                            <button name="clearmap" class="btn btn-default" >
                                 <xsl:attribute name="onclick">clearMap()</xsl:attribute>
                                 <xsl:attribute name="type">button</xsl:attribute>
                                 <i18n:text>xmlui.Spatial.Map.Clear</i18n:text>
