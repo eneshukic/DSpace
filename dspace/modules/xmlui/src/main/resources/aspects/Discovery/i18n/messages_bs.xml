@@ -106,6 +106,8 @@
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.tarrif">Tarifa</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Datum izdavanja</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.has_content_in_original_bundle">Sadrži fajlove</message>
+    <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.original_bundle_filenames">Ime fajla</message>
++   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.original_bundle_descriptions">Opis fajla</message>
 
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Prikazane stavke {0}-{1}</message>
